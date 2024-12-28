@@ -706,6 +706,7 @@ module Tutorial = struct
     description : string;
     section : Section.t;
     category : string;
+    external_html : string option;
     external_tutorial : external_tutorial option;
     body_md : string;
     toc : toc list;

@@ -7,6 +7,7 @@ type metadata = {
   short_title : string option;
   description : string;
   category : string;
+  external_html : string option;
   external_tutorial : external_tutorial option;
   recommended_next_tutorials : recommended_next_tutorials option;
   prerequisite_tutorials : prerequisite_tutorials option;
@@ -59,14 +60,24 @@ let decode (fpath, (head, body_md)) =
     |> Result.get_ok ~error:(fun (`Msg msg) ->
            Exn.Decode_error (fpath ^ ":" ^ msg))
   in
-  let doc = Markdown.Content.of_string body_md in
-  let toc = Markdown.Toc.generate ~start_level:2 ~max_level:4 doc in
-  let body_html = 
-    (* TODO plug in alectryon here *)
-     Markdown.Content.render ~syntax_highlighting:true doc in
-  Result.map
-    (of_metadata ~fpath ~section ~toc:(toc_toc toc) ~body_md ~body_html)
-    metadata
+  Result.bind metadata (fun metadata ->
+      match metadata.external_html with
+      | Some path ->
+          path |> Fpath.of_string |> Result.map Utils.read_file
+          |> Result.map (fun body_html ->
+                 (of_metadata ~fpath ~section ~toc:[] ~body_md:""
+                    ~body_html:(Option.value ~default:"" body_html))
+                   metadata)
+      | None ->
+          let doc = Markdown.Content.of_string body_md in
+          let toc = Markdown.Toc.generate ~start_level:2 ~max_level:4 doc in
+          let body_html =
+            (* TODO plug in alectryon here *)
+            Markdown.Content.render ~syntax_highlighting:true doc
+          in
+          Ok
+            ((of_metadata ~fpath ~section ~toc:(toc_toc toc) ~body_md ~body_html)
+               metadata))
 
 let all () =
   Utils.map_md_files decode "tutorials/*/*.md"
