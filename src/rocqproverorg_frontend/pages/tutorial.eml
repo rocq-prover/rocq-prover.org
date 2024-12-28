@@ -1,6 +1,15 @@
 let render_title (tutorial: Data.Tutorial.t) = 
     <h1 id="<%s tutorial.slug %>" ><a class="anchor" aria-hidden="true" href="#<%s tutorial.slug %>"></a><%s tutorial.title %></h1>
 
+let render_author (tutorial: Data.Tutorial.t) =
+  match tutorial.author with
+  | None -> ""
+  | Some author ->
+      <h2 class="mb-4 mt-0 text-lg font-bold leading-6">Main contributor(s)</h2>
+      <p class="text-sm text-gray-600 dark:text-gray-400">
+        <%s author %>
+      </p>
+
 let rec tutorial_toc_to_toc (toc : Data.Tutorial.toc) =
   Toc.{
     title = toc.title;
@@ -40,7 +49,6 @@ let render_related_exercises exercises =
 
 let render_prerequisite_tutorials tutorials =
   if List.length tutorials > 0 then
-    <div class="mb-6 pt-8 border-t border-separator_20 dark:border-dark-separator_30">
         <h2 class="mb-4 mt-0 text-lg font-bold leading-6"">Prerequisites</h2>
         <ul class="list-disc marker:text-primary dark:marker:text-dark-primary">
           <% tutorials |> List.iter (fun (tutorial : Data.Tutorial.t) -> %>
@@ -49,7 +57,6 @@ let render_prerequisite_tutorials tutorials =
             </li>
           <% ); %>
         </ul>
-      </div>
   else
     ""
 
@@ -71,10 +78,10 @@ let href, description = match tutorial.external_tutorial with
     external_tutorial.contribute_link.description
 in
 let render_external_tutorial_banner (opt_external_tutorial : Data.Tutorial.external_tutorial option) = match opt_external_tutorial with
-  | None -> ""
-  | Some external_tutorial ->
-    <a href="<%s external_tutorial.banner.url %>" target="_blank">
-      <img src="<%s Rocqproverorg_static.Media.url external_tutorial.banner.image %>" alt="<%s external_tutorial.banner.alt %>">
+  | None | Some {banner=None; _} -> ""
+  | Some {banner = Some banner; _} ->
+    <a href="<%s banner.url %>" target="_blank">
+      <img src="<%s Rocqproverorg_static.Media.url banner.image %>" alt="<%s banner.alt %>">
     </a>
 in
 Learn_layout.three_column_layout
@@ -87,8 +94,11 @@ Learn_layout.three_column_layout
   <div class="prose prose-orange dark:prose-invert max-w-full">
     <%s! render_external_tutorial_banner tutorial.external_tutorial %>
     <%s! render_title tutorial %>
+    <%s! render_author tutorial %>
     <%s! render_prerequisite_tutorials prerequisite_tutorials %>
+    <div class="border-t border-separator_20 dark:border-dark-separator_30">
     <%s! tutorial.body_html %>
+    </div>
     <%s! render_related_exercises related_exercises %>
     <%s! Learn_components.contribute_footer ~href ~description ~recommended_next_tutorials %>
   </div>

@@ -1,9 +1,9 @@
 ---
 id: "rocq-docs"
-title: "Documentation of Rocq"
+title: "List of available tutorials"
 description: |
   Documentation of Rocq
-category: "Documentation"
+category: "Documentation of Rocq"
 ---
 
 
