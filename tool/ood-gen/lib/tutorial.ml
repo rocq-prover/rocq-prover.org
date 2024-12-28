@@ -5,6 +5,7 @@ type metadata = {
   id : string;
   title : string;
   short_title : string option;
+  author : string option;
   description : string;
   category : string;
   external_html : string option;

@@ -677,8 +677,8 @@ module Tutorial = struct
   [@@deriving of_yaml, show]
 
   type external_tutorial = {
-    tag : string;
-    banner : banner;
+    tag : string option;
+    banner : banner option;
     contribute_link : contribute_link;
   }
   [@@deriving of_yaml, show]
@@ -701,6 +701,7 @@ module Tutorial = struct
   type t = {
     title : string;
     short_title : string;
+    author : string option;
     fpath : string;
     slug : string;
     description : string;
