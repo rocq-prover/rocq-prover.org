@@ -3,7 +3,7 @@
 <p>The Rocq Prover is an interactive theorem prover. It means that it is designed to develop mathematical proofs, and especially to write formal specifications, programs and proofs that programs comply to their specifications. An interesting additional feature of Rocq is that it can automatically extract executable programs from specifications, as either OCaml or Haskell source code.</p>
 <p>Properties, programs and proofs are formalized in the same language called the Calculus of Inductive Constructions (CIC). Then, all logical judgments in Rocq are typing judgments: the very heart of Rocq is in fact a type-checking algorithm.</p>
 <div class="section" id="the-language-of-rocq">
-<h1>The language of Rocq</h1>
+<h2>The language of Rocq</h2>
 <p>Rocq objects are sorted into three categories: the Prop sort, the SProp sort and the Type sort:</p>
 <ul class="simple">
 <li><code class="highlight coq"><span class="kt">Prop</span></code> is the sort for propositions, i.e. well-formed propositions are of type <code class="highlight coq"><span class="kt">Prop</span></code>. Typical propositions are:</li>
@@ -61,7 +61,7 @@ Using Σ-types, a sorting function over lists of natural numbers can be given th
 </pre>
 </div>
 <div class="section" id="proving-in-rocq">
-<h1>Proving in Rocq</h1>
+<h2>Proving in Rocq</h2>
 <p>Proof development in Rocq is done through a language of tactics that allows a user-guided proof process. At the end, the curious user can check that tactics build lambda-terms. For example the tactic intro n, where n is of type nat, builds the term (with a hole):</p>
 <pre class="code coq literal-block">
 <span class="kr">fun</span> <span class="o">(</span><span class="nv">n</span><span class="o">:</span><span class="n">nat</span><span class="o">)</span> <span class="o">=&gt;</span> <span class="n">_</span> 

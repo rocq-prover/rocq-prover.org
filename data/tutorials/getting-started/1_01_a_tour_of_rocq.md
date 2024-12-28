@@ -7,3 +7,7 @@ category: "First Steps"
 external_html: tutorials/getting-started/1_01_a_tour_of_rocq.html
 recommended_next_tutorials:
 ---
+
+## The language of Rocq
+
+## Proving in Rocq
