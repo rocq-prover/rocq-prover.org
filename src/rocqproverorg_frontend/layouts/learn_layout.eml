@@ -1,33 +1,37 @@
 type section =
   | Overview
-  | GetStarted
-  | Language
-  | Platform
+  | Tutorials
   | Guides
+  | Explanations
+  | References
   | Exercises
   | Books
+  | Papers
 
 let tabs
 ~current =
   let url_of_section = function
     | Overview -> Url.learn
-    | GetStarted -> Url.getting_started
-    | Language -> Url.learn_docs
-    | Platform -> Url.tutorial "platform-docs"
-    | Guides -> Url.learn_guides
+    | Tutorials -> Url.tutorials
+    | Guides -> Url.guides
+    | Explanations -> Url.explanations
+    | References -> Url.references
     | Exercises -> Url.exercises
     | Books -> Url.books
+    | Papers -> Url.papers
   in
   let title_of_section = function
     | Overview -> "Overview"
-    | GetStarted -> "Get Started"
-    | Language -> "Language"
-    | Platform -> "Documentation"
-    | Guides -> "Guides"
+    | Tutorials -> "Tutorials"
+    | Guides -> "How-to Guides"
+    | Explanations -> "Explanations"
+    | References -> "References"
     | Exercises -> "Exercises"
     | Books -> "Books"
+    | Papers -> "Papers"
   in
-  Layout.subnav_tabs ~title:"Learn" ~current ~sections:[Overview; GetStarted; Platform ; Guides; Exercises; Books] ~url_of_section ~title_of_section
+  Layout.subnav_tabs ~title:"Docs" ~current ~url_of_section ~title_of_section
+    ~sections:[Overview; Tutorials; Guides; Explanations; References; Exercises; Books; Papers]
 
 let render_sidebar
   ~current_tutorial

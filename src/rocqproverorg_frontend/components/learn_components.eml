@@ -61,7 +61,7 @@ let block_container ~icon ~title ~heading inner_html =
     </div>
   </div>
 
-let tutorial_block ~icon ~title ~heading ~description ~(tutorial_links: link list) ~see_more  =
+let tutorial_block ~icon ~title ~heading ~description ~(tutorial_links: link list)  =
   block_container ~icon ~title ~heading @@
   <div class="mt-4 text-content dark:text-dark-content text-base font-normal h-14 text-ellipsis overflow-hidden leading-7 max-w-prose"> <%s description %> </div>
   <ul class="flex flex-col grow gap-4 mt-5 md:h-60">
@@ -75,9 +75,6 @@ let tutorial_block ~icon ~title ~heading ~description ~(tutorial_links: link lis
     </li>
     <% ); %>
   </ul>
-  <a href="<%s see_more.href %>" class="mt-4 text-primary dark:text-dark-title hover:underline dark:hover:text-dark-primary dark:underline items-center leading-10">
-    <%s see_more.title %>
-  </a>
 
 let book_cover ~free cover_src = 
   <div class="relative">

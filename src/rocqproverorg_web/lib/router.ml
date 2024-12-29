@@ -26,8 +26,9 @@ let page_routes _t =
       Dream.get Url.index Handler.index;
       Dream.get Url.install Handler.install;
       Dream.get Url.learn Handler.learn;
-      Dream.get Url.learn_docs Handler.learn_docs;
-      Dream.get Url.learn_guides Handler.learn_guides;
+      Dream.get Url.tutorials Handler.learn_tutorials;
+      Dream.get Url.guides Handler.learn_guides;
+      Dream.get Url.explanations Handler.learn_explanations;
       Dream.get Url.community Handler.community;
       Dream.get Url.consortium Handler.consortium;
       Dream.get (Url.consortium_page ":id") (Handler.consortium_page Commit.hash);

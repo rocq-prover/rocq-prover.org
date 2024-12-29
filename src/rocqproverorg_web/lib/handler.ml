@@ -24,10 +24,10 @@ let learn _req =
   let latest_platform_version = Data.Release.latest_platform.version in
   Dream.html (Rocqproverorg_frontend.learn ~papers ~latest_platform_version)
 
-let learn_docs req =
+let learn_tutorials req =
   let tutorials =
     Data.Tutorial.all
-    |> List.filter (fun (t : Data.Tutorial.t) -> t.section = Language)
+    |> List.filter (fun (t : Data.Tutorial.t) -> t.section = Tutorials)
   in
   Dream.redirect req (Url.tutorial (List.hd tutorials).slug)
 
@@ -37,6 +37,13 @@ let learn_guides req =
     |> List.filter (fun (t : Data.Tutorial.t) -> t.section = Guides)
   in
   Dream.redirect req (Url.tutorial (List.hd tutorials).slug)
+
+  let learn_explanations req =
+    let tutorials =
+      Data.Tutorial.all
+      |> List.filter (fun (t : Data.Tutorial.t) -> t.section = Explanations)
+    in
+    Dream.redirect req (Url.tutorial (List.hd tutorials).slug)
 
 let community _req =
   let query = Dream.query _req "e" in

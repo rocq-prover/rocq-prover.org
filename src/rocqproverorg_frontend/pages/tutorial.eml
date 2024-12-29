@@ -29,10 +29,9 @@ let left_sidebar ~tutorials ~current_tutorial ~section =
 
 let of_tutorial_section (s: Data.Tutorial.Section.t) =
   match s with
-  | GetStarted -> Learn_layout.GetStarted
-  | Language -> Learn_layout.Language
-  | Platform -> Learn_layout.Platform
+  | Tutorials -> Learn_layout.Tutorials
   | Guides -> Learn_layout.Guides
+  | Explanations -> Learn_layout.Explanations
 
 let render_related_exercises exercises =
   if List.length exercises > 0 then

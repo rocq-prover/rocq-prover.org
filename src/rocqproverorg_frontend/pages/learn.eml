@@ -61,22 +61,21 @@ Learn_layout.single_column_layout
 
     <div class="grid gap-6 md:gap-10 mt-6 md:grid-cols-2">
       <%s! Learn_components.tutorial_block
-              ~icon:Learn_components.beginner_section_icon ~title:"GET STARTED" ~heading:"Introduction To Rocq"
+              ~icon:Learn_components.beginner_section_icon ~title:"GET STARTED" ~heading:"Introduction to the Rocq Prover"
               ~description:"Install Rocq and gain a high-level understanding of the language"
               ~tutorial_links:[
                   {href = Url.tutorial "installing-rocq"; title = "Installing Rocq"};
                   {href = Url.tutorial "set-up-editor"; title = "Configuring Your Editor"};
-                  {href = Url.tutorial "tour-of-rocq"; title = "A Tour of Rocq"}
-(*                {href = Url.tutorial "opam-switch-introduction"; title = "Introduction to opam Switches"} *)
+                  {href = Url.tutorial "tour-of-rocq"; title = "A Tour of Rocq"};
+                  {href = Url.tutorial "chaining-tactics"; title = "Chaining Tactics"}
               ]
-              ~see_more:{href = Url.getting_started; title = "Get Started"}
               %>
-      <%s! Learn_components.tutorial_block ~icon:Learn_components.beginner_section_icon ~title:"Documentation" ~heading:"The Rocq Prover" 
-              ~description:"An in-depth explanation of language features and data structures from the Standard Library" 
+      <%s! Learn_components.tutorial_block ~icon:Learn_components.beginner_section_icon ~title:"ROCQ PLATFORM" ~heading:"Introduction to the Rocq Platform" 
+              ~description:"Discover the essential packages in the Rocq Platform" 
               ~tutorial_links:[
-                  {href = Url.tutorial "platform-docs"; title = "Rocq Platform Docs"};
+                  {href = Url.tutorial "equations"; title = "Pattern-matching with Equations"};
+                  {href = Url.tutorial "ltac2"; title = "Writing tactics with Ltac2"}
               ]
-              ~see_more:{href = Url.tutorial "platform-docs"; title = "Documentation"}
               %>
     </div>
 
@@ -102,49 +101,44 @@ Learn_layout.single_column_layout
     -->
   </div>
 
+  <!--
   <div class="section-mild-contrast bg-sand dark:dark-section-strong-contrast">
     <div class="container-fluid flex flex-col py-9">
-      <%s! Learn_components.block_heading ~icon:"" ~title:"PLATFORM TOOLS" ~heading:"The Rocq Platform" %>
+      <%s! Learn_components.block_heading ~icon:"" ~title:"The Rocq Platform" ~heading:"The Rocq Platform" %>
       <div class="mt-10 flex flex-col md:flex-row gap-10">
         <%s! Learn_components.tool_card ~img_src:"img/learn/opam_logo.png"
             ~title:"opam" ~text:"OCaml's package manager for managing Rocq and libraries"
             ~url:"https://opam.ocaml.org" %>
       </div>
-      <a class="pt-6 pb-3 text-primary dark:text-dark-title hover:underline dark:underline dark:hover:text-dark-primary" href="<%s Url.learn_platform %>">Go to Platform Tools Documentation</a>
+      <a class="pt-6 pb-3 text-primary dark:text-dark-title hover:underline dark:underline dark:hover:text-dark-primary" href="<%s Url.tutorials %>">Go to Rocq Platform tutorials.</a>
     </div>
   </div>
+  -->
 
   <div class="container-fluid">
     <h2 id="intermediate_section" class="mt-16 mb-8 text-content dark:text-dark-title text-3xl font-regular leading-9 tracking-widest">
       <span class="text-gray-700 dark:text-dark-tertiary font-bold">EXPLORING</span>
       THE INTERMEDIATE LEVEL
     </h2>
-  <!--
     <div class="grid gap-6 md:gap-10 mt-6 md:grid-cols-2">
-      <%s! Learn_components.tutorial_block ~icon:Learn_components.intermediate_section_icon ~title:"GUIDES" ~heading:"Practical-Minded Tutorials and Guides" 
-              ~description:"How to solve real-world problems in OCaml" 
+      <%s! Learn_components.tutorial_block ~icon:Learn_components.intermediate_section_icon ~title:"FEATURES" ~heading:"Diving into the Rocq Prover features" 
+              ~description:"Learn all the Rocq features you need to be productive" 
               ~tutorial_links:[
-                  {href = Url.tutorial "formatting-text"; title = "Formatting and Wrapping Text"};
-                  {href = Url.tutorial "debugging"; title = "Debugging"};
-                  {href = Url.tutorial "error-handling"; title = "Error Handling"};
-                  {href = Url.tutorial "profiling"; title = "Profiling"}
+                  {href = Url.tutorial "search"; title = "Searching lemmas"};
+                  {href = Url.tutorial "require-import"; title = "Module management"};
+                  {href = Url.tutorial "template-poly"; title = "Understanding template vs. universe polymorphism"}
               ]
-              ~see_more:{href = Url.learn_guides; title = "See More Guides"}
               %>
-      <%s! Learn_components.tutorial_block ~icon:Learn_components.intermediate_section_icon ~title:"PLATFORM" ~heading:"The OCaml Platform" 
-          ~description:"Learn to leverage the tooling around OCaml and create your own projects and libraries" 
+      <%s! Learn_components.tutorial_block ~icon:Learn_components.intermediate_section_icon ~title:"ROCQ PLATFORM" ~heading:"Doing more with the Rocq Platform" 
+          ~description:"Take full advantage of the power of the Rocq ecosystem" 
           ~tutorial_links:[
-              {href = Url.tutorial "bootstrapping-a-dune-project"; title = "Bootstrapping a Project"};
-              {href = Url.tutorial "managing-dependencies"; title = "Managing Dependencies"};
-              {href = Url.tutorial "install-a-specific-ocaml-compiler-version"; title = "Install a Specific Compiler Version"};
-              {href = Url.tutorial "configuring-your-editor"; title = "Configuring Your Editor"}
+              {href = Url.tutorial "equations-obligations"; title = "Solving obligations generated by Equations"};
+              {href = Url.tutorial "equations-wf"; title = "Defining well-founded functions with Equations"}
           ]
-          ~see_more:{href = Url.learn_platform; title = "Platform Tools Documentation"}
           %>
     </div>
 
     <div class="border-t border-separator_30 dark:border-dark-separator_30 my-6"></div>
-  -->
     <div class="grid gap-6 mt-6 lg:grid-cols-2">
       <%s! Learn_components.book_recommendation
         (Data.Book.get_by_slug "mathcomp" |> Option.get)

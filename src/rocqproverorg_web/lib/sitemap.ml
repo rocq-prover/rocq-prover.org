@@ -17,9 +17,10 @@ let urls =
     Url.consortium;
     Url.events;
     Url.exercises;
-    Url.getting_started;
+    Url.explanations;
     Url.governance;
     Url.governance_policy;
+    Url.guides;
     Url.index;
     Url.industrial_users;
     Url.industrial_businesses;
@@ -32,7 +33,9 @@ let urls =
     Url.platform;
     Url.playground;
     Url.privacy_policy;
+    Url.references;
     Url.releases;
+    Url.tutorials;
   ]
 
 let to_url u = "\n<url><loc>https://rocq-prover.org" ^ u ^ "</loc></url>"

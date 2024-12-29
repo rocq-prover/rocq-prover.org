@@ -91,9 +91,10 @@ let papers = "/papers"
 
 let paper id = "/papers/" ^ id
 let learn = "/docs"
-let learn_docs = "/docs/docs"
-let learn_guides = "/docs/guides"
-let learn_platform = "/docs/platform-docs"
+let tutorials = "/docs/tutorials"
+let guides = "/docs/guides"
+let explanations = "/docs/explanations"
+let references = "/docs/references"
 let platform = "/platform"
 let platform_page name = platform ^ "/" ^ name
 let consortium_page name = consortium ^ "/" ^ name

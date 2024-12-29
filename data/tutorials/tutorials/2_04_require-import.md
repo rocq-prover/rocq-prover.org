@@ -4,7 +4,7 @@ title: "Basic Library Files and Module Management"
 description: |
   This tutorial explains how to use the `Require` and `Import` commands to load libraries and modules in Rocq.
 category: "Documentation of Rocq"
-external_html: tutorials/platform/2_04_require-import.html
+external_html: tutorials/tutorials/2_04_require-import.html
 external_tutorial:
     contribute_link:
         url: https://github.com/coq/platform-docs

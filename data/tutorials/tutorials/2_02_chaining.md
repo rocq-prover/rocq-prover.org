@@ -5,7 +5,7 @@ author: Thomas Lamiaux
 description: |
    In this tutorial, we explain how to chain tactics together to write more concise code.
 category: "Documentation of Rocq"
-external_html: tutorials/platform/2_02_chaining.html
+external_html: tutorials/tutorials/2_02_chaining.html
 external_tutorial:
     contribute_link:
         url: https://github.com/coq/platform-docs
