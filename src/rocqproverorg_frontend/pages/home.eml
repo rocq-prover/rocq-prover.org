@@ -360,9 +360,22 @@ Layout.render
               </p>
             </div>
           </div>
-          <div class="lg:flex-1 lg:mt-0 mt-10 flex justify-center">
-            <img src="<%s Rocqproverorg_static.Asset.url "img/home/perf.png" %>" alt="">
-          </div>
+
+          <div class="lg:flex-1 lg:mt-0 mt-10 flex justify-center max-w-xl">
+            <div style="--swiper-navigation-color: #fff;--swiper-pagination-color: #fff;" class="swiper mySwiper_simple">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <div class="lg:flex-1 lg:mt-0 mt-10 flex justify-center">
+                    <img src="<%s Rocqproverorg_static.Asset.url "img/home/perf.png" %>" alt="perf">
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="lg:flex-1 lg:mt-0 mt-10 flex justify-center">
+                    <img src="<%s Rocqproverorg_static.Asset.url "img/home/perf2.png" %>" alt="profiler">
+                  </div>
+                </div>
+              </div>
+            </div>
         </div>
       </div>
     </div>
