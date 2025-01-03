@@ -1,9 +1,9 @@
 ---
 id: "equations-docs"
-title: "Documentation of Equations"
+title: "List of available tutorials"
 description: |
   Documentation of Equations
-category: "Documentation"
+category: "Equations"
 ---
 
 ## What is Equations? 

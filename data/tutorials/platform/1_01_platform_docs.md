@@ -3,7 +3,7 @@ id: "platform-docs"
 title: "The Rocq Platform Docs"
 description: |
   Documentation and Tutorials for the Rocq Platform
-category: "Documentation"
+category: "Introduction"
 ---
 
 ## About

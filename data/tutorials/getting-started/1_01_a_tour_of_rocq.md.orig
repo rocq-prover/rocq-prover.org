@@ -8,20 +8,14 @@ Instructions to generate 1_01_a_tour_of_rocq.md from 1_01_a_tour_of_rocq.md.orig
    $ source .venv/bin/activate
    $ pip install alectryon myst_parser
 3. Run the following command:
-   $ alectryon --frontend md --backend webpage data/tutorials/getting-started/1_01_a_tour_of_rocq.md.orig -o data/tutorials/getting-started/1_01_a_tour_of_rocq.md
+   $ alectryon --frontend md --backend webpage data/tutorials/getting-started/1_01_a_tour_of_rocq.md.orig -o data/tutorials/getting-started/1_01_a_tour_of_rocq.html
 4. Remove the untracked generated files:
    $ rm data/tutorials/getting-started/alectryon.css data/tutorials/getting-started/alectryon.js data/tutorials/getting-started/docutils_basic.css data/tutorials/getting-started/pygments.css
-5. Remove the `</body>`, and `</html>` closing tags at the end of the generated 1_01_a_tour_of_rocq.md file.
-6. Remove everything before the following in the generated 1_01_a_tour_of_rocq.md file (as well as the closing comment marker):
----
-id: tour-of-rocq
-title: A Tour of Rocq
-description: >
-  Hop on the Rocq sightseeing bus. This absolute beginner tutorial will drive you through the marvels and wonders of the Rocq Prover.
-category: "First Steps"
-recommended_next_tutorials:
----
-
+5. Replace all `<h1>` tags with `<h2>` tags in the generated 1_01_a_tour_of_rocq.html file (e.g. using `sed`):
+   $ sed -i 's/<h1>/<h2>/g' data/tutorials/getting-started/1_01_a_tour_of_rocq.html
+   $ sed -i 's/<\/h1>/<\/h2>/g' data/tutorials/getting-started/1_01_a_tour_of_rocq.html
+6. Remove the `</body>`, and `</html>` closing tags at the end of the generated 1_01_a_tour_of_rocq.html file.
+7. Remove everything before the following in the generated 1_01_a_tour_of_rocq.html file (as well as the closing comment marker):
 <div class="document">
 <div class="alectryon-container docutils container">
 -->
