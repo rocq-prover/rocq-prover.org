@@ -266,7 +266,7 @@ Layout.render
           </div>
           <!--<div class="lg:flex-1 lg:mt-0 mt-10 flex justify-center" style="max-width: calc(50vw - 5rem);">  Other fix max width calculation-->
           <div class="lg:flex-1 lg:mt-0 mt-10 flex justify-center max-w-xl">
-            <div style="--swiper-navigation-color: #fff;--swiper-pagination-color: #fff;" class="swiper mySwiper_simple">
+            <div class="swiper mySwiper">
               <div class="swiper-wrapper">
                 <div class="swiper-slide">
                   <div>
@@ -305,6 +305,7 @@ Layout.render
                   </div>
                 </div>
               </div>
+              <div class="swiper-pagination"></div>
             </div>
           </div>
         </div>
@@ -362,7 +363,7 @@ Layout.render
           </div>
 
           <div class="lg:flex-1 lg:mt-0 mt-10 flex justify-center max-w-xl">
-            <div style="--swiper-navigation-color: #fff;--swiper-pagination-color: #fff;" class="swiper mySwiper_simple">
+            <div class="swiper mySwiper">
               <div class="swiper-wrapper">
                 <div class="swiper-slide">
                   <div class="lg:flex-1 lg:mt-0 mt-10 flex justify-center">
@@ -375,6 +376,7 @@ Layout.render
                   </div>
                 </div>
               </div>
+              <div class="swiper-pagination"></div>
             </div>
         </div>
       </div>
@@ -566,23 +568,25 @@ Layout.render
 </div>
 <script>
   var swiper = new Swiper(".mySwiper", {
-    loop: true,
     autoHeight: true,
-    autoplay: {
-      delay: 5000,
-      disableOnInteraction: false,
-    },
-    slidesPerView: 'auto',
-    spaceBetween: 10
-  });
-  var swiper_simple = new Swiper(".mySwiper_simple", {
-    loop: false,
-    autoHeight: true,
-    autoplay: {
-      delay: 5000,
+    autoplay : {
+      delay: 99999999,
       disableOnInteraction: true,
     },
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true
+    },
     slidesPerView: 1,
-    spaceBetween: 10,
+    spaceBetween: 0,
+    breakpoints: {
+      768: {
+        autoHeight: false,
+        autoplay: {
+          delay: 5000,
+          disableOnInteraction: true,
+        },
+      }
+    }
   });
 </script>
