@@ -65,7 +65,6 @@ Learn_layout.single_column_layout
               ~description:"Install Rocq and gain a high-level understanding of the language"
               ~tutorial_links:[
                   {href = Url.install; title = "Installing the Rocq Prover"};
-                  {href = Url.tutorial "set-up-editor"; title = "Configuring Your Editor"};
                   {href = Url.tutorial "tour-of-rocq"; title = "A Tour of Rocq"}
               ]
               ~see_more:{href = Url.getting_started; title = "Get Started"}
