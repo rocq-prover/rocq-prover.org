@@ -16,6 +16,7 @@ type package = {
   maintainers : Data.Opam_user.t list;
   publication : float;
   homepages : string list;
+  doc: string option; 
   source : (string * string list) option;
       (* TODO: these should be part of package.json coming from voodoo, but they
          currently aren't

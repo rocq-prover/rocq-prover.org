@@ -60,19 +60,20 @@ Layout.base
             <li class="flex flex-auto">
               <a class="w-full h-10 flex justify-center rounded-r-lg p-1 items-center font-semibold border border-l-0  border-primary dark:border-dark-primary <%s (match path with | Documentation _ -> "bg-primary dark:bg-dark-primary text-white dark:text-dark-title" | _ -> "text-primary dark:text-dark-primary bg-sand dark:bg-dark-card")%>" href="<%s Url.Package.documentation package.name ?version:(Package.url_version package) %>">Docs</a>
             </li>
-            <% | Unknown -> ( %>
+            <% | _ ->
+              let title, link = match package.Package.doc with
+                | Some doc -> "Doc", doc
+                | None -> match package.Package.homepages with
+                  | [] -> "No Docs", ""
+                  | hd :: _ -> "Homepage", hd
+              in
+            %>
             <li class="flex flex-auto">
-              <span aria-label="Documentation status is unknown" class="w-full h-10 flex justify-center gap-2 rounded-r-lg p-1 items-center font-semibold border border-l-0 border-separator_20 dark:border-dark-separator_30 <%s (match path with | Documentation _ -> "bg-primary dark:bg-dark-primary text-title dark:text-dark-title" | _ -> "text-title dark:text-dark-title bg-sand dark:bg-dark-card")%>"><%s! Icons.error "" %> No Docs</span>
+              <a class="w-full h-10 flex justify-center rounded-r-lg p-1 items-center font-semibold border border-l-0  border-primary dark:border-dark-primary <%s (match path with | Documentation _ -> "bg-primary dark:bg-dark-primary text-white dark:text-dark-title" | _ -> "text-primary dark:text-dark-primary bg-sand dark:bg-dark-card")%>" href="<%s link %>"><%s title %></a>
             </li>
-            <% )
-            | Failure -> ( %>
-            <li class="flex flex-auto">
-              <a title="Documentation failed to build!" class="w-full h-10 flex justify-center gap-2 rounded-r-lg p-1 items-center font-semibold border border-l-0  border-gray-400 <%s (match path with | Documentation _ -> "bg-primary text-white" | _ -> "text-gray-500 bg-sand")%>" href="<%s Url.Package.documentation package.name ?version:(Package.url_version package) %>"><%s! Icons.error "" %> No Docs</a>
-            </li>
-            <% ));%>
+            <% ); %>
           </li>
         </ol>
-
         <div id="in-package-search" class="relative w-full">
           <div class="flex w-full items-center overflow-hidden">
             <% if Option.is_some search_index_digest then (%>

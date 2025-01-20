@@ -11,6 +11,7 @@ type t = {
   maintainers : string list;
   license : string;
   homepage : string list;
+  doc : string option;
   tags : string list;
   dependencies : (OpamPackage.Name.t * string option) list;
   rev_deps : (OpamPackage.Name.t * string option * OpamPackage.Version.t) list;
@@ -152,6 +153,7 @@ let make ~package ~packages ~rev_deps ~timestamps opam =
     description =
       descr opam |> Option.map OpamFile.Descr.body |> Option.value ~default:"";
     homepage = homepage opam;
+    doc = List.nth_opt (doc opam) 0;
     tags = tags opam;
     rev_deps;
     conflicts = get_conflicts opam;

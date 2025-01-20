@@ -797,6 +797,7 @@ module Package_helper = struct
         license = info.license;
         publication = info.publication;
         homepages = info.Rocqproverorg_package.Info.homepage;
+        doc = info.Rocqproverorg_package.Info.doc;
         source =
           Option.map
             (fun url ->

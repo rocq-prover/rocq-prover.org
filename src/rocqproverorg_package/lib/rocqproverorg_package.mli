@@ -40,6 +40,7 @@ module Info : sig
     maintainers : string list;
     license : string;
     homepage : string list;
+    doc : string option;
     tags : string list;
     dependencies : (Name.t * string option) list;
     rev_deps : (Name.t * string option * Version.t) list;
