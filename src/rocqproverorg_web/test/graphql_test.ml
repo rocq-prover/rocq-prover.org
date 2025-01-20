@@ -19,6 +19,7 @@ let empty_info =
     maintainers = [];
     license = "";
     homepage = [];
+    doc = None;
     tags = [];
     dependencies;
     rev_deps = [];
