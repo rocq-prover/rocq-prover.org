@@ -29,6 +29,7 @@ Learn_layout.single_column_layout
           ~href:(Url.install) "" %>
         <%s!  Hero_section.hero_button ~left_icon:(Icons.book "w-5 h-5") ~right_icon:(Icons.link "w-5 h-5") ~text:("Rocq Reference Manual") ~href:(Url.manual) "" %>
         <%s!  Hero_section.hero_button ~left_icon:(Icons.book "w-5 h-5") ~right_icon:(Icons.link "w-5 h-5") ~text:("Rocq Core Library API") ~href:(Url.corelib) "" %>
+        <%s!  Hero_section.hero_button ~left_icon:(Icons.book "w-5 h-5") ~right_icon:(Icons.link "w-5 h-5") ~text:("Rocq OCaml API") ~href:(Url.api) "" %>
         <%s!  Hero_section.hero_button ~left_icon:(Icons.book "w-5 h-5") ~right_icon:(Icons.link "w-5 h-5") ~text:("Rocq Standard Library Manual") ~href:(Url.stdlib_manual) "" %>
         <%s!  Hero_section.hero_button ~left_icon:(Icons.book "w-5 h-5") ~right_icon:(Icons.link "w-5 h-5") ~text:("Rocq Standard Library API") ~href:(Url.stdlib) "" %>
       </div>
