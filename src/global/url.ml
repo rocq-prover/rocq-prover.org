@@ -58,7 +58,11 @@ let minor v =
 let patch v =
   match String.split_on_char '.' v with
   | x :: y :: z :: _ -> x ^ "." ^ y ^ "." ^ z
-  | x :: y :: [] -> x ^ "." ^ y
+  | x :: y :: [] -> 
+    (match String.split_on_char '+' y with
+    | [] -> assert false
+    | [y] -> x ^ "." ^ y
+    | y :: _ -> x ^ "." ^ y)
   | _ -> invalid_arg (v ^ ": invalid  version")
 
 let v2 = "https://v2.ocaml.org"

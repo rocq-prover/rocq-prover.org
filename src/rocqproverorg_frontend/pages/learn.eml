@@ -28,9 +28,9 @@ Learn_layout.single_column_layout
         <%s!  Hero_section.hero_button ~left_icon:(Icons.rocq "w-5 h-5") ~right_icon:(Icons.download "w-5 h-5") ~text:("Install Rocq Platform " ^ latest_platform_version) 
           ~href:(Url.install) "" %>
         <%s!  Hero_section.hero_button ~left_icon:(Icons.book "w-5 h-5") ~right_icon:(Icons.link "w-5 h-5") ~text:("Rocq Reference Manual") ~href:(Url.manual) "" %>
-        <%s!  Hero_section.hero_button ~left_icon:(Icons.book "w-5 h-5") ~right_icon:(Icons.link "w-5 h-5") ~text:("Core Library") ~href:(Url.corelib) "" %>
-        <%s!  Hero_section.hero_button ~left_icon:(Icons.book "w-5 h-5") ~right_icon:(Icons.link "w-5 h-5") ~text:("Standard Library Manual") ~href:(Url.stdlib_manual) "" %>
-        <%s!  Hero_section.hero_button ~left_icon:(Icons.book "w-5 h-5") ~right_icon:(Icons.link "w-5 h-5") ~text:("Standard Library") ~href:(Url.stdlib) "" %>
+        <%s!  Hero_section.hero_button ~left_icon:(Icons.book "w-5 h-5") ~right_icon:(Icons.link "w-5 h-5") ~text:("Rocq Core Library API") ~href:(Url.corelib) "" %>
+        <%s!  Hero_section.hero_button ~left_icon:(Icons.book "w-5 h-5") ~right_icon:(Icons.link "w-5 h-5") ~text:("Rocq Standard Library Manual") ~href:(Url.stdlib_manual) "" %>
+        <%s!  Hero_section.hero_button ~left_icon:(Icons.book "w-5 h-5") ~right_icon:(Icons.link "w-5 h-5") ~text:("Rocq Standard Library API") ~href:(Url.stdlib) "" %>
       </div>
     </div>
   </div>
