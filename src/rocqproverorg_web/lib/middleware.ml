@@ -30,7 +30,7 @@ let language_manual_version next_handler request =
       :: (("api" | "corelib" | "refman" | "stdlib" | "refman-stdlib") :: _ as
           path) ->
         let version = patch Release.latest in
-        "" :: "doc" :: ("V" ^ version) :: tweak_base path
+        "" :: "doc" :: version :: tweak_base path
     | u -> u
   in
   if init_path = path then next_handler request

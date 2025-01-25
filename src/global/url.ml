@@ -56,25 +56,29 @@ let minor v =
   | _ -> invalid_arg (v ^ ": invalid  version")
 
 let patch v =
-  match String.split_on_char '.' v with
-  | x :: y :: z :: _ -> x ^ "." ^ y ^ "." ^ z
-  | x :: y :: [] -> 
-    (match String.split_on_char '+' y with
-    | [] -> assert false
-    | [y] -> x ^ "." ^ y
-    | y :: _ -> x ^ "." ^ y)
-  | _ -> invalid_arg (v ^ ": invalid  version")
+  let pre, version = 
+    match String.split_on_char '.' v with
+    | x :: y :: z :: _ -> false, x ^ "." ^ y ^ "." ^ z
+    | x :: y :: [] -> 
+      (match String.split_on_char '+' y with
+      | [] -> assert false
+      | [y] -> false, x ^ "." ^ y
+      | y :: _ -> true, x ^ "." ^ y)
+    | _ -> invalid_arg (v ^ ": invalid  version")
+  in
+  if pre then "v" ^ version
+  else "V" ^ version
 
 let v2 = "https://v2.ocaml.org"
-let manual_with_version v = "/doc/V" ^ patch v ^ "/refman/index.html"
+let manual_with_version v = "/doc/" ^ patch v ^ "/refman/index.html"
 let manual = "/refman"
-let corelib_with_version v = "/doc/V" ^ patch v ^ "/corelib/index.html"
+let corelib_with_version v = "/doc/" ^ patch v ^ "/corelib/index.html"
 let corelib = "/corelib"
-let stdlib_with_version v = "/doc/V" ^ patch v ^ "/stdlib/index.html"
+let stdlib_with_version v = "/doc/" ^ patch v ^ "/stdlib/index.html"
 let stdlib = "/stdlib"
-let stdlib_manual_with_version v = "/doc/V" ^ patch v ^ "/refman-stdlib/index.html"
+let stdlib_manual_with_version v = "/doc/" ^ patch v ^ "/refman-stdlib/index.html"
 let stdlib_manual = "/refman-stdlib"
-let api_with_version v = "/doc/V" ^ patch v ^ "/api/index.html"
+let api_with_version v = "/doc/" ^ patch v ^ "/api/index.html"
 let api = "/api"
 let books = "/books"
 let changelog = "/changelog"
