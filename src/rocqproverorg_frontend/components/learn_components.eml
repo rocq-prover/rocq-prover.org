@@ -201,7 +201,7 @@ let contribute_footer ~href ~description ~recommended_next_tutorials =
       <div class="border-b border-gray-200 px-6 pb-3 md:border-b-0 md:border-r">
         <h2 class="mb-2 text-lg font-bold leading-6">Still need help?</h2>
         <div class="mb-2 text-sm">
-          <a href="https://coq.zulipchat.com/" class="flex items-center gap-2 font-normal sm:text-lg no-underline bg-transparent cursor-pointer hover:underline">
+          <a href="https://rocq-prover.zulipchat.com/" class="flex items-center gap-2 font-normal sm:text-lg no-underline bg-transparent cursor-pointer hover:underline">
             <%s! Icons.user_group "h-5 w-5" %>
             Ask the Rocq Community</a
           >

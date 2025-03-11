@@ -28,6 +28,6 @@ Data collected includes referral sources, top pages, visit duration, information
 
 We may update this policy as needed to comply with relevant regulations and reflect any new practices. Whenever we make a significant change to our policies, we will also announce them on our company blog or social media profiles.
 
-[Contact us](https://coq.zulipchat.com) if you have any questions, comments, or concerns about this privacy policy, your data, or your rights with respect to your information.
+[Contact us](https://rocq-prover.zulipchat.com) if you have any questions, comments, or concerns about this privacy policy, your data, or your rights with respect to your information.
 
 Last updated: Dec 18, 2024

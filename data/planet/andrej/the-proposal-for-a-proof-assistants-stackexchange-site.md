@@ -9,7 +9,7 @@ authors:
 source:
 ---
 
-<p>Proof assistant communities have grown quite a bit lately. They have active Zulip chats: <a href="https://leanprover.zulipchat.com/">Lean</a>, <a href="https://coq.zulipchat.com/">Coq</a>, <a href="https://agda.zulipchat.com/">Agda</a>, <a href="https://isabelle.zulipchat.com/">Isabelle</a>. These are good for discussions, but less so for knowledge accumulation and organization, and are not indexed by the search engines.</p>
+<p>Proof assistant communities have grown quite a bit lately. They have active Zulip chats: <a href="https://leanprover.zulipchat.com/">Lean</a>, <a href="https://rocq-prover.zulipchat.com/">Coq</a>, <a href="https://agda.zulipchat.com/">Agda</a>, <a href="https://isabelle.zulipchat.com/">Isabelle</a>. These are good for discussions, but less so for knowledge accumulation and organization, and are not indexed by the search engines.</p>
 
 <p>I have therefore created a <a href="https://area51.stackexchange.com/proposals/126242/proof-assistants?referrer=YjczN2ZjMzMyYWRkYjYwOTMzMzJhMjRmZDNiZDJkZGQ1ZGE4MzFiZWQ3YzRlMjYzMzdiMTMxZTBkOTg1ZWNkMdt2-If5yCiayS9kTjQT0iElh8l0mRnZ3CnkNXRmWJGq0">proposal for a new &ldquo;Proof assistants&rdquo;</a> StackExchange site. I believe that such a site would complement very well various Zulips dedicated to specific proof assistants. If you favor the idea, please support it by visiting the proposal and</p>
 

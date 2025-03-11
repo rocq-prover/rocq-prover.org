@@ -17,7 +17,7 @@ with VsRocq).
 
 Some Ressources:
 
--   The [Zulip channel](https://coq.zulipchat.com/#narrow/stream/437203-Platform-docs)
+-   The [Zulip channel](https://rocq-prover.zulipchat.com/#narrow/stream/437203-Platform-docs)
     we use to discuss and work on the project
 -   The associated [RFC](https://github.com/coq/ceps/pull/91) describing the
     project in details
@@ -29,10 +29,10 @@ We welcome contributions, and there are plenty to do depending on how
 much available time you have:
 
 -   Give feedback on the existing tutorial and how-to guides on
-    [Zulip](https://coq.zulipchat.com/#narrow/stream/437203-Platform-docs)
+    [Zulip](https://rocq-prover.zulipchat.com/#narrow/stream/437203-Platform-docs)
 -   Answer people's questions and share folklore that should be known
     by all on
-    [Zulip](https://coq.zulipchat.com/#narrow/stream/437203-Platform-docs)
+    [Zulip](https://rocq-prover.zulipchat.com/#narrow/stream/437203-Platform-docs)
 -   Help to review tutorials and how-to guides, whether you are an
     expert or not
 -   Help to improve and write tutorial and how-to guides
