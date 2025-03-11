@@ -107,7 +107,7 @@ Layout.render
           It also alludes to the mythological bird Roc (or Rokh), symbolizing strength and not so disconnected to a rooster.
           Furthermore, the name conveys a sense of solidity, and its unintended connection to music adds a pleasant resonance.
           The new name was chosen by the <a href="<%s Url.rocq_team (Some "core") %>">Core team</a> after a poll of the users, see
-          <a href="https://coq.discourse.group/t/coq-community-survey-2022-results-part-iv-and-itp-paper-announcement/2001#renaming-coq-8">this page</a>
+          <a href="https://discourse.rocq-prover.org/t/coq-community-survey-2022-results-part-iv-and-itp-paper-announcement/2001#renaming-coq-8">this page</a>
           for a detailed breakdown of the results.
           </p>
           <h2 id="awards">Awards</h2>

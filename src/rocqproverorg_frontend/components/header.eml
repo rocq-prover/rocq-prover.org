@@ -166,7 +166,7 @@ in
           <a aria-label="Rocq's Zulip" href="https://coq.zulipchat.com" class="opacity-60 hover:opacity-100 text-content dark:text-dark-title hover:text-primary dark:hover:text-dark-primary">
             <%s! Icons.zulip "w-6 h-6" %>
           </a>
-          <a aria-label="Rocq's Discourse" href="https://coq.discourse.group" class="opacity-60 hover:opacity-100 text-content dark:text-dark-title hover:text-primary dark:hover:text-dark-primary">
+          <a aria-label="Rocq's Discourse" href="https://discourse.rocq-prover.org" class="opacity-60 hover:opacity-100 text-content dark:text-dark-title hover:text-primary dark:hover:text-dark-primary">
             <%s! Icons.discourse "w-6 h-6" %>
           </a>
           <a aria-label="The Rocq Prover on GitHub" href="https://github.com/coq/coq" class="opacity-60 hover:opacity-100 text-content dark:text-dark-title hover:text-primary dark:hover:text-dark-primary">

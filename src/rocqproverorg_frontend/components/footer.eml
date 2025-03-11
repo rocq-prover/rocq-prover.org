@@ -38,7 +38,7 @@ let policies = [
 let socials = [
   ("https://coq.zulipchat.com", "Zulip", Icons.zulip);
   ("https://github.com/rocq-prover", "GitHub", Icons.github);
-  ("https://coq.discourse.group", "Discourse", Icons.discourse);
+  ("https://discourse.rocq-prover.org", "Discourse", Icons.discourse);
   ("https://mastodon.acm.org/@RocqProver", "Mastodon", Icons.mastodon);
   (* ("https://watch.ocaml.org/", "Peertube", Icons.peertube); *)
   ("/planet.xml", "RSS", Icons.rss);
