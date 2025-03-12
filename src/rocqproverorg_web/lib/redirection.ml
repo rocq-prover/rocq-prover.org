@@ -23,7 +23,7 @@ let opam_www req =
   Dream.(redirect ~status:`Moved_Permanently req "/packages")
 
 let opam req =
-  Dream.(redirect ~status:`Found req ("https://coq.github.io" ^ target req))
+  Dream.(redirect ~status:`Found req ("https://rocq-prover.github.io" ^ target req))
 
 let http_or_404 ?(not_found = Rocqproverorg_frontend.not_found) opt f =
   Option.fold ~none:(Dream.html ~code:404 (not_found ())) ~some:f opt
@@ -50,16 +50,16 @@ let distrib req =
   http_or_404 newurl Dream.(redirect ~status:`Found req)
 
 let old_sites_modules req =
-  Dream.(redirect ~status:`Found req ("https://coq.github.io" ^ target req))
+  Dream.(redirect ~status:`Found req ("https://rocq-prover.github.io" ^ target req))
 
 let documentation req =
   Dream.(redirect ~status:`Moved_Permanently req "/docs")
   
 let opam_packaging req =
-  Dream.(redirect ~status:`Found req ("https://coq.github.io" ^ target req))
+  Dream.(redirect ~status:`Found req ("https://rocq-prover.github.io" ^ target req))
   
 let platform_docs req =
-  Dream.(redirect ~status:`Found req ("https://coq.github.io" ^ target req))
+  Dream.(redirect ~status:`Found req ("https://rocq-prover.github.io" ^ target req))
     
   
 let t =
