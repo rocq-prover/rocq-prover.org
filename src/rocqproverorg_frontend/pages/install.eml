@@ -51,7 +51,16 @@ Layout.render
           </button>
         </div>
       </div>
+      <div class="w-full flex md:hidden">
+% let render_multi_button ~title ~active_tab ~class_ =
+      <button x-on:click='editor = "<%s active_tab %>"' class="flex flex-auto justify-center py-4 text-sm border <%s class_ %>" :class='editor === "<%s active_tab %>" ? "bg-primary dark:bg-dark-primary text-white dark:text-dark-title border-primary dark:border-dark-primary" : "text-content dark:text-dark-separator_30 border-card_border dark:border-dark-separator_30"'><%s title %></button>
+% in
+        <% render_multi_button ~title:"VS Code" ~active_tab:"vscoq" ~class_:"rounded-l rounded-l-lg border-r-0"; %>
+        <% render_multi_button ~title:"Emacs" ~active_tab:"emacs" ~class_:"border-r-0"; %>
+        <% render_multi_button ~title:"Vim" ~active_tab:"vim" ~class_:"border-r-0"; %>
+        <% render_multi_button ~title:"RocqIDE" ~active_tab:"rocqide" ~class_:"rounded-r rounded-r-lg"; %>
 
+      </div>
     </div>
 
 
