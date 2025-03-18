@@ -116,8 +116,7 @@ Layout.render
           The Rocq Prover is also available as a <a href="https://hub.docker.com/r/coqorg/coq/">Docker image</a>.
         </p>
       </div>
-      <div class="prose dark:prose-invert">
-        <div x-show="(editor == 'vscode')">
+      <div class="prose dark:prose-invert" x-show="(editor == 'vscode')">
           <h2>
             Set Up VS Code / VS Codium for Rocq
           </h2>
@@ -165,45 +164,44 @@ hybrid Rocq/markdown document support.
           </p>
         </div>
 
-        <div x-show="(editor == 'emacs')">
-          <h2>
-            Set Up Emacs for Rocq
-          </h2>
-          <p>
-            After installing the Rocq Prover, you should set up Emacs
-            to write Rocq code and proofs.
-          </p>
-          <h3>
-            Proof General
-          </h3>
-          <p>
-            Emacs users usually use <a href="https://proofgeneral.github.io/">Proof General</a> to interact with the Rocq Prover.
-            It can be installed from the <a href="https://melpa.org/#/proof-general">MELPA repository</a>.
-            It is often complemented with <a href="https://github.com/cpitclaudel/company-coq">Company-Coq</a> minor mode, which can also be installed from the MELPA repository.
-          </p>
-        </div>
+      <div class="prose dark:prose-invert" x-show="(editor == 'emacs')">
+        <h2>
+          Set Up Emacs for Rocq
+        </h2>
+        <p>
+          After installing the Rocq Prover, you should set up Emacs
+          to write Rocq code and proofs.
+        </p>
+        <h3>
+          Proof General
+        </h3>
+        <p>
+          Emacs users usually use <a href="https://proofgeneral.github.io/">Proof General</a> to interact with the Rocq Prover.
+          It can be installed from the <a href="https://melpa.org/#/proof-general">MELPA repository</a>.
+          It is often complemented with <a href="https://github.com/cpitclaudel/company-coq">Company-Coq</a> minor mode, which can also be installed from the MELPA repository.
+        </p>
+      </div>
 
-        <div x-show="(editor == 'vim')">
-          <h2>
-            Set Up VS Vim / Neovim for Rocq
-          </h2>
-          <p>
-            After installing the Rocq Prover, you should set up Vim / Neovin to
-            write Rocq code and proofs.
-          </p>
-          <p>
-            Vim users usually use <a href="https://github.com/whonore/Coqtail">Coqtail</a> to interact with the Rocq Prover. Various installation methods are documented in the repository's README.
-          </p>
-        </div>
+      <div class="prose dark:prose-invert" x-show="(editor == 'vim')">
+        <h2>
+          Set Up VS Vim / Neovim for Rocq
+        </h2>
+        <p>
+          After installing the Rocq Prover, you should set up Vim / Neovin to
+          write Rocq code and proofs.
+        </p>
+        <p>
+          Vim users usually use <a href="https://github.com/whonore/Coqtail">Coqtail</a> to interact with the Rocq Prover. Various installation methods are documented in the repository's README.
+        </p>
+      </div>
 
-        <div x-show="(editor == 'rocqide')">
-          <h2>
-            Set Up Rocq IDE
-          </h2>
-          <p>
-            The Rocq Prover also has a standalone IDE called RocqIDE. It is distributed as part of the Rocq Platform and is available in many Linux distributions (sometimes as a separate package).
-          </p>
-        </div>
+      <div class="prose dark:prose-invert" x-show="(editor == 'rocqide')">
+        <h2>
+          Set Up Rocq IDE
+        </h2>
+        <p>
+          The Rocq Prover also has a standalone IDE called RocqIDE. It is distributed as part of the Rocq Platform and is available in many Linux distributions (sometimes as a separate package).
+        </p>
       </div>
     </div>
 
