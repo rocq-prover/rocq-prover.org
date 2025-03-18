@@ -59,7 +59,6 @@ Layout.render
         <% render_multi_button ~title:"Emacs" ~active_tab:"emacs" ~class_:"border-r-0"; %>
         <% render_multi_button ~title:"Vim" ~active_tab:"vim" ~class_:"border-r-0"; %>
         <% render_multi_button ~title:"RocqIDE" ~active_tab:"rocqide" ~class_:"rounded-r rounded-r-lg"; %>
-
       </div>
     </div>
 
@@ -205,7 +204,7 @@ hybrid Rocq/markdown document support.
           Set Up VS Vim / Neovim for Rocq
         </h2>
         <p>
-          After installing the Rocq Prover, you should set up Vim / Neovin to
+          After installing the Rocq Prover, you should set up Vim / Neovim to
           write Rocq code and proofs.
         </p>
         <p>
@@ -366,7 +365,8 @@ hybrid Rocq/markdown document support.
           Set Up Rocq IDE
         </h2>
         <p>
-          The Rocq Prover also has a standalone IDE called RocqIDE. It is distributed as part of the Rocq Platform and is available in many Linux distributions (sometimes as a separate package).
+          The Rocq Prover also has a standalone IDE called RocqIDE.
+          It is distributed as part of the Rocq Platform.
         </p>
       </div>
     </div>
@@ -491,7 +491,8 @@ hybrid Rocq/markdown document support.
           Set Up Rocq IDE
         </h2>
         <p>
-          The Rocq Prover also has a standalone IDE called RocqIDE. It is distributed as part of the Rocq Platform.
+          The Rocq Prover also has a standalone IDE called RocqIDE.
+          It is distributed as part of the Rocq Platform.
         </p>
       </div>
     </div>
