@@ -46,9 +46,9 @@ Layout.render
 
     </div>
 
-    <div
-      class="grid gap-6 xl:grid-cols-2 xl:gap-16"
-      x-show="(operating_system == 'linux')">
+
+
+    <div class="grid gap-6 xl:grid-cols-2 xl:gap-16" x-show="(operating_system == 'linux')">
       <div class="prose dark:prose-invert">
         <h2>
           Install the Rocq Prover on Linux
@@ -116,53 +116,54 @@ Layout.render
           The Rocq Prover is also available as a <a href="https://hub.docker.com/r/coqorg/coq/">Docker image</a>.
         </p>
       </div>
+
       <div class="prose dark:prose-invert" x-show="(editor == 'vscode')">
-          <h2>
-            Set Up VS Code / VS Codium for Rocq
-          </h2>
-          <p>
-            After installing the Rocq Prover, you should set up VS Code or
-            VS Codium to write Rocq code and proofs.
-          </p>
-          <h3>
-            VSRocq (Recommended)
-          </h3>
-          <p>
-          <a href="https://github.com/coq/vscoq">VsRocq</a> is the official Rocq extension for Visual Studio Code.
-          It is available in the <a href="https://marketplace.visualstudio.com/items?itemName=maximedenes.vsrocq">Visual Studio Code Marketplace</a>
-          and on <a href="https://open-vsx.org/extension/maximedenes/vsrocq">Open VSX</a>.
-          To use it, you need to install the corresponding language server. Using opam, you can install it with the following command:
-          </p>
+        <h2>
+          Set Up VS Code / VS Codium for Rocq
+        </h2>
+        <p>
+          After installing the Rocq Prover, you should set up VS Code or
+          VS Codium to write Rocq code and proofs.
+        </p>
+        <h3>
+          VSRocq (Recommended)
+        </h3>
+        <p>
+        <a href="https://github.com/coq/vscoq">VsRocq</a> is the official Rocq extension for Visual Studio Code.
+        It is available in the <a href="https://marketplace.visualstudio.com/items?itemName=maximedenes.vsrocq">Visual Studio Code Marketplace</a>
+        and on <a href="https://open-vsx.org/extension/maximedenes/vsrocq">Open VSX</a>.
+        To use it, you need to install the corresponding language server. Using opam, you can install it with the following command:
+        </p>
 
-          <%s! Copy_to_clipboard.small_code_snippet ~id:"install-vsrocq" "opam install vsrocq-language-server" %>
+        <%s! Copy_to_clipboard.small_code_snippet ~id:"install-vsrocq" "opam install vsrocq-language-server" %>
 
-          <p>
-          Starting from version 2025.01, the language server should already be installed if you installed the <a href="/platform">Rocq Platform</a>.
-          </p>
+        <p>
+        Starting from version 2025.01, the language server should already be installed if you installed the <a href="/platform">Rocq Platform</a>.
+        </p>
 
-          <p>
-          The language server is also available as a <a href="https://search.nixos.org/packages?show=coqPackages.vscoq-language-server">Nix package</a>.
-          </p>
+        <p>
+        The language server is also available as a <a href="https://search.nixos.org/packages?show=coqPackages.vscoq-language-server">Nix package</a>.
+        </p>
 
-          <p>
-          For now, <a href="https://repology.org/project/vscoq-language-server/versions">vsrocq-language-server</a> is not available in all Linux distributions that have the Rocq Prover. If you have used your Linux distribution's package manager to install the Rocq Prover and it does not include the language server, you can fall back to using VsCoq Legacy (see below).
-          </p>
+        <p>
+        For now, <a href="https://repology.org/project/vscoq-language-server/versions">vsrocq-language-server</a> is not available in all Linux distributions that have the Rocq Prover. If you have used your Linux distribution's package manager to install the Rocq Prover and it does not include the language server, you can fall back to using VsCoq Legacy (see below).
+        </p>
 
-          <h3>
-          Rocq LSP
-          </h3>
-          <p>
-          <a href="https://github.com/ejgallego/coq-lsp">Rocq LSP</a> is an alternative language server and VS Code extension for the Rocq Prover featuring
+        <h3>
+        Rocq LSP
+        </h3>
+        <p>
+        <a href="https://github.com/ejgallego/coq-lsp">Rocq LSP</a> is an alternative language server and VS Code extension for the Rocq Prover featuring
 hybrid Rocq/markdown document support.
-          </p>
+        </p>
 
-          <h3>
-          VsCoq Legacy
-          </h3>
-          <p>
-          <a href="https://github.com/coq-community/vscoq-legacy/">VsCoq Legacy</a> is a legacy Rocq extension for Visual Studio Code that only relies on the RocqIDE protocol and therefore does not require installing a language server. Linux distributions that have the Rocq Prover usually also install the RocqIDE server in their main package. You can install VsCoq Legacy from the <a href="https://marketplace.visualstudio.com/items?itemName=coq-community.vscoq1">Visual Studio Code Marketplace</a> or from <a href="https://open-vsx.org/extension/coq-community/vscoq1">Open VSX</a>.
-          </p>
-        </div>
+        <h3>
+        VsCoq Legacy
+        </h3>
+        <p>
+        <a href="https://github.com/coq-community/vscoq-legacy/">VsCoq Legacy</a> is a legacy Rocq extension for Visual Studio Code that only relies on the RocqIDE protocol and therefore does not require installing a language server. Linux distributions that have the Rocq Prover usually also install the RocqIDE server in their main package. You can install VsCoq Legacy from the <a href="https://marketplace.visualstudio.com/items?itemName=coq-community.vscoq1">Visual Studio Code Marketplace</a> or from <a href="https://open-vsx.org/extension/coq-community/vscoq1">Open VSX</a>.
+        </p>
+      </div>
 
       <div class="prose dark:prose-invert" x-show="(editor == 'emacs')">
         <h2>
@@ -205,9 +206,9 @@ hybrid Rocq/markdown document support.
       </div>
     </div>
 
-    <div
-      class="grid gap-6 xl:grid-cols-2 xl:gap-16"
-      x-show="(operating_system == 'mac')">
+
+
+    <div class="grid gap-6 xl:grid-cols-2 xl:gap-16" x-show="(operating_system == 'mac')">
       <div class="prose dark:prose-invert">
         <h2>
           Install the Rocq Prover on macOS
@@ -262,75 +263,100 @@ hybrid Rocq/markdown document support.
           The Rocq Prover is also available as a <a href="https://hub.docker.com/r/coqorg/coq/">Docker image</a>.
         </p>
       </div>
-      <div class="prose dark:prose-invert">
+
+
+      <div class="prose dark:prose-invert" x-show="(editor == 'vscode')">
         <h2>
-          Set Up your Editor for Rocq
+          Set Up VS Code / VS Codium for Rocq
         </h2>
         <p>
-          After installing the Rocq Prover, you should set up your editor to write Rocq code and proofs.
+          After installing the Rocq Prover, you should set up VS Code or
+          VS Codium to write Rocq code and proofs.
         </p>
         <h3>
-          VS Code / VS Codium (recommended)
+          VSRocq (Recommended)
         </h3>
-        <ul>
-          <li>
-            <p>
-            <a href="https://github.com/coq/vscoq">VsRocq</a> is the official Rocq extension for Visual Studio Code.
-            It is available in the <a href="https://marketplace.visualstudio.com/items?itemName=maximedenes.vsrocq">Visual Studio Code Marketplace</a>
-            and on <a href="https://open-vsx.org/extension/maximedenes/vsrocq">Open VSX</a>.
-            To use it, you need to install the corresponding language server. Using opam, you can install it with the following command:
-            </p>
+        <p>
+        <a href="https://github.com/coq/vscoq">VsRocq</a> is the official Rocq extension for Visual Studio Code.
+        It is available in the <a href="https://marketplace.visualstudio.com/items?itemName=maximedenes.vsrocq">Visual Studio Code Marketplace</a>
+        and on <a href="https://open-vsx.org/extension/maximedenes/vsrocq">Open VSX</a>.
+        To use it, you need to install the corresponding language server. Using opam, you can install it with the following command:
+        </p>
 
-            <%s! Copy_to_clipboard.small_code_snippet ~id:"install-vsrocq" "opam install vsrocq-language-server" %>
+        <%s! Copy_to_clipboard.small_code_snippet ~id:"install-vsrocq" "opam install vsrocq-language-server" %>
 
-            <p>
-            Starting from version 2025.01, the language server should already be installed if you installed the <a href="/platform">Rocq Platform</a>.
-            </p>
+        <p>
+        Starting from version 2025.01, the language server should already be installed if you installed the <a href="/platform">Rocq Platform</a>.
+        </p>
 
-            <p>
-            The language server is also available as a <a href="https://search.nixos.org/packages?show=coqPackages.vscoq-language-server">Nix package</a>.
-            </p>
+        <p>
+        The language server is also available as a <a href="https://search.nixos.org/packages?show=coqPackages.vscoq-language-server">Nix package</a>.
+        </p>
 
-            <p>
-            If you have used Homebrew to install the Rocq Prover, there is no language server available yet. You can fall back to using VsCoq Legacy (see below).
-            </p>
-          </li>
-          <li>
-            <p>
-            <a href="https://github.com/ejgallego/coq-lsp">Rocq LSP</a> is an alternative language server and VS Code extension for the Rocq Prover featuring
-hybrid Rocq/markdown document support.
-            </p>
-          </li>
-          <li>
-            <a href="https://github.com/coq-community/vscoq-legacy/">VsCoq Legacy</a> is a legacy Rocq extension for Visual Studio Code that only relies on the RocqIDE protocol and therefore does not require installing a language server. You can install VsCoq Legacy from the <a href="https://marketplace.visualstudio.com/items?itemName=coq-community.vscoq1">Visual Studio Code Marketplace</a> or from <a href="https://open-vsx.org/extension/coq-community/vscoq1">Open VSX</a>.
-          </li>
-        </ul>
+        <p>
+        If you have used Homebrew to install the Rocq Prover, there is no language server available yet. You can fall back to using VsCoq Legacy (see below).
+        </p>
+
         <h3>
-          Emacs
+        Rocq LSP
+        </h3>
+        <p>
+        <a href="https://github.com/ejgallego/coq-lsp">Rocq LSP</a> is an alternative language server and VS Code extension for the Rocq Prover featuring
+hybrid Rocq/markdown document support.
+        </p>
+
+        <h3>
+        VsCoq Legacy
+        </h3>
+        <p>
+          <a href="https://github.com/coq-community/vscoq-legacy/">VsCoq Legacy</a> is a legacy Rocq extension for Visual Studio Code that only relies on the RocqIDE protocol and therefore does not require installing a language server. You can install VsCoq Legacy from the <a href="https://marketplace.visualstudio.com/items?itemName=coq-community.vscoq1">Visual Studio Code Marketplace</a> or from <a href="https://open-vsx.org/extension/coq-community/vscoq1">Open VSX</a>.
+        </p>
+      </div>
+
+      <div class="prose dark:prose-invert" x-show="(editor == 'emacs')">
+        <h2>
+          Set Up Emacs for Rocq
+        </h2>
+        <p>
+          After installing the Rocq Prover, you should set up Emacs
+          to write Rocq code and proofs.
+        </p>
+        <h3>
+          Proof General
         </h3>
         <p>
           Emacs users usually use <a href="https://proofgeneral.github.io/">Proof General</a> to interact with the Rocq Prover.
           It can be installed from the <a href="https://melpa.org/#/proof-general">MELPA repository</a>.
           It is often complemented with <a href="https://github.com/cpitclaudel/company-coq">Company-Coq</a> minor mode, which can also be installed from the MELPA repository.
         </p>
-        <h3>
-          Vim / Neovim
-        </h3>
+      </div>
+
+      <div class="prose dark:prose-invert" x-show="(editor == 'vim')">
+        <h2>
+          Set Up VS Vim / Neovim for Rocq
+        </h2>
+        <p>
+          After installing the Rocq Prover, you should set up Vim / Neovin to
+          write Rocq code and proofs.
+        </p>
         <p>
           Vim users usually use <a href="https://github.com/whonore/Coqtail">Coqtail</a> to interact with the Rocq Prover. Various installation methods are documented in the repository's README.
         </p>
-        <h3>
-          Standalone IDE
-        </h3>
+      </div>
+
+      <div class="prose dark:prose-invert" x-show="(editor == 'rocqide')">
+        <h2>
+          Set Up Rocq IDE
+        </h2>
         <p>
-          The Rocq Prover also has a standalone IDE called RocqIDE. It is distributed as part of the Rocq Platform.
+          The Rocq Prover also has a standalone IDE called RocqIDE. It is distributed as part of the Rocq Platform and is available in many Linux distributions (sometimes as a separate package).
         </p>
       </div>
     </div>
 
-        <div
-      class="grid gap-6 xl:grid-cols-2 xl:gap-16"
-      x-show="(operating_system == 'windows')">
+
+
+    <div class="grid gap-6 xl:grid-cols-2 xl:gap-16" x-show="(operating_system == 'windows')">
       <div class="prose dark:prose-invert">
         <h2>
           Install the Rocq Prover on Windows
@@ -369,58 +395,93 @@ hybrid Rocq/markdown document support.
           All the installation methods for Linux are available on Windows Subsystem for Linux (WSL) or in a virtual machine running Linux.
         </p>
       </div>
-      <div class="prose dark:prose-invert">
+
+      <div class="prose dark:prose-invert" x-show="(editor == 'vscode')">
         <h2>
-          Set Up your Editor for Rocq
+          Set Up VS Code / VS Codium for Rocq
         </h2>
         <p>
-          After installing the Rocq Prover, you should set up your editor to write Rocq code and proofs.
+          After installing the Rocq Prover, you should set up VS Code or
+          VS Codium to write Rocq code and proofs.
         </p>
         <h3>
-          VS Code / VS Codium (recommended)
+          VSRocq (Recommended)
         </h3>
-        <ul>
-          <li>
-            <a href="https://github.com/coq/vscoq">VsRocq</a> is the official Rocq extension for Visual Studio Code.
-            It is available in the <a href="https://marketplace.visualstudio.com/items?itemName=maximedenes.vsrocq">Visual Studio Code Marketplace</a>
-            and on <a href="https://open-vsx.org/extension/maximedenes/vsrocq">Open VSX</a>.
-            To use it, you need the corresponding language server, which is distributed with the Rocq Platform starting from version 2025.01.
-          </li>
-          <li>
-            <p>
-            <a href="https://github.com/ejgallego/coq-lsp">Rocq LSP</a> is an alternative language server and VS Code extension for the Rocq Prover featuring
-hybrid Rocq/markdown document support.
-            </p>
-          </li>
-          <li>
-            <a href="https://github.com/coq-community/vscoq-legacy/">VsCoq Legacy</a> is a legacy Rocq extension for Visual Studio Code that only relies on the RocqIDE protocol. You can install it from the <a href="https://marketplace.visualstudio.com/items?itemName=coq-community.vscoq1">Visual Studio Code Marketplace</a> or from <a href="https://open-vsx.org/extension/coq-community/vscoq1">Open VSX</a>.
-          </li>
-          <li>
-            If you have used WSL to install the Rocq Prover, then you can use the <a href="https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-wsl">WSL</a> VS Code extension to use a language server running in WSL. In this case, follow the instructions for Linux on how to install the language server.
-          </li>
-        </ul>
+
+        <p>
+        <a href="https://github.com/coq/vscoq">VsRocq</a> is the official Rocq extension for Visual Studio Code.
+        It is available in the <a href="https://marketplace.visualstudio.com/items?itemName=maximedenes.vsrocq">Visual Studio Code Marketplace</a>
+        and on <a href="https://open-vsx.org/extension/maximedenes/vsrocq">Open VSX</a>.
+        To use it, you need the corresponding language server, which is distributed with the Rocq Platform starting from version 2025.01.
+        </p>
+
         <h3>
-          Emacs
+        Rocq LSP
         </h3>
         <p>
-          Emacs users usually use <a href="https://proofgeneral.github.io/">Proof General</a> to interact with the Rocq Prover.
-          It can be installed from the <a href="https://melpa.org/#/proof-general">MELPA repository</a>.
-          It is often complemented with <a href="https://github.com/cpitclaudel/company-coq">Company-Coq</a> minor mode, which can also be installed from the MELPA repository.
+        <a href="https://github.com/ejgallego/coq-lsp">Rocq LSP</a> is an alternative language server and VS Code extension for the Rocq Prover featuring
+hybrid Rocq/markdown document support.
+        </p>
+
+        <h3>
+        VsCoq Legacy
+        </h3>
+        <p>
+        <a href="https://github.com/coq-community/vscoq-legacy/">VsCoq Legacy</a> is a legacy Rocq extension for Visual Studio Code that only relies on the RocqIDE protocol. You can install it from the <a href="https://marketplace.visualstudio.com/items?itemName=coq-community.vscoq1">Visual Studio Code Marketplace</a> or from <a href="https://open-vsx.org/extension/coq-community/vscoq1">Open VSX</a>.
+        </p>
+
+        <h3>
+        WSL
+        </h3>
+        <p>
+        If you have used WSL to install the Rocq Prover, then you can use the <a href="https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-wsl">WSL</a> VS Code extension to use a language server running in WSL. In this case, follow the instructions for Linux on how to install the language server.
+        </p>
+      </div>
+
+      <div class="prose dark:prose-invert" x-show="(editor == 'emacs')">
+        <h2>
+          Set Up Emacs for Rocq
+        </h2>
+        <p>
+          After installing the Rocq Prover, you should set up Emacs
+          to write Rocq code and proofs.
         </p>
         <h3>
-          Vim / Neovim
+          Proof General
         </h3>
+        <p>
+        Emacs users usually use <a href="https://proofgeneral.github.io/">Proof General</a> to interact with the Rocq Prover.
+        It can be installed from the <a href="https://melpa.org/#/proof-general">MELPA repository</a>.
+        It is often complemented with <a href="https://github.com/cpitclaudel/company-coq">Company-Coq</a> minor mode, which can also be installed from the MELPA repository.
+        </p>
+      </div>
+
+      <div class="prose dark:prose-invert" x-show="(editor == 'vim')">
+        <h2>
+          Set Up VS Vim / Neovim for Rocq
+        </h2>
+        <p>
+          After installing the Rocq Prover, you should set up Vim / Neovin to
+          write Rocq code and proofs.
+        </p>
         <p>
           Vim users usually use <a href="https://github.com/whonore/Coqtail">Coqtail</a> to interact with the Rocq Prover. Various installation methods are documented in the repository's README.
         </p>
-        <h3>
-          Standalone IDE
-        </h3>
+      </div>
+
+      <div class="prose dark:prose-invert" x-show="(editor == 'rocqide')">
+        <h2>
+          Set Up Rocq IDE
+        </h2>
         <p>
           The Rocq Prover also has a standalone IDE called RocqIDE. It is distributed as part of the Rocq Platform.
         </p>
+      </div>
+    </div>
   </div>
 </div>
+
+
 <script>
 function detect_os() {
   const agent = navigator.userAgent;
