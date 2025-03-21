@@ -8,135 +8,140 @@ category: Opam
 
 ## What is opam?
 
-<p>Opam is the package manager for the OCaml programming language, the language
-in which Coq is implemented.
+Opam is the package manager for the OCaml programming language, the language
+in which Rocq is implemented.
 Opam 2.1 is the recommended version, and is assumed below.
 Instructions on
-<a href="https://opam.ocaml.org/doc/Install.html">how to install opam</a>
+[how to install opam](https://opam.ocaml.org/doc/Install.html)
 itself are available on the opam website.
-The following command displays the version of opam you have installed:</p>
+The following command displays the version of opam you have installed:
 
-<pre><code># Make sure opam version is 2.1.0 or above.
+```console
+# Make sure opam version is 2.1.0 or above.
 opam --version
-</code></pre>
+```
 
-<p>Follow the instructions below to install the last stable version of
-Coq and additional packages. The instructions target an opam
-newcomer.</p>
+Follow the instructions below to install the last stable version of
+Rocq and additional packages. The instructions target an opam
+newcomer.
 
-<p>Note that these instructions will also work for Opam 2.0 but this
+Note that these instructions will also work for Opam 2.0 but this
 may require you to manually install any external dependencies. In this
-case you will have to use <code>opam-depext</code> to see which
-external dependencies are missing.</p>
+case you will have to use `opam-depext` to see which
+external dependencies are missing.
 
-<p>For some operating systems, <code>opam</code>
-and <code>opam-depext</code> might still be unable to detect external
+For some operating systems, `opam`
+and `opam-depext` might still be unable to detect external
 dependencies, which will mean you have to check and install them
 yourself. To see more detailed information on external dependencies
 please consult
-the <a href="https://github.com/coq/coq/blob/master/INSTALL.md">INSTALL.md
-documentation in the GitHub repository</a>.</p>
+the [INSTALL.md documentation in the GitHub repository](https://github.com/coq/coq/blob/master/INSTALL.md).
 
-## The Coq Platform scripts
+## The Rocq Platform scripts
 
-<p>The <a href="https://github.com/coq/platform">Coq Platform</a>
-provides interactive scripts that allow installing Coq and a standard
-set of packages through opam without having to learn anything about
-opam.</p>
+The [Rocq Platform](https://github.com/coq/platform)
+provides interactive scripts that allow installing Rocq and a standard
+set of packages through `opam` without having to learn anything about
+`opam`.
 
-<p>If a standard setup works for you, then we recommend that you use
-these <a href="https://github.com/coq/platform/releases/latest">scripts</a>.
-If you do, you can skip directly to <a href="#coq-packages">Using opam to
-install Coq packages</a> to learn how to add additional packages to
-the initial package set provided by the Platform.</p>
+If a standard setup works for you, then we recommend that you use
+these [scripts](https://github.com/coq/platform/releases/latest).
+If you do, you can skip directly to [Using opam to install Rocq packages](#installing-rocq-packages) to learn how to add additional packages to
+the initial package set provided by the Platform.
 
-<p>Note that the Platform scripts are compatible with existing opam
-installations. They will create a
-fresh <a href="#switch">switch.</a></p>
+Note that the Platform scripts are compatible with existing `opam`
+installations. They will create a fresh [switch.](#switch)
 
-<p>If you prefer to do a fully manual installation, you can proceed to
-the next section.</p>
+If you prefer to do a fully manual installation, you can proceed to
+the next section.
 
 ## Initializing opam
 
-<p>Once opam is installed, it must be initialized before first
-usage:</p>
+Once opam is installed, it must be initialized before first
+usage:
 
-<pre><code>opam init
+```console
+opam init
 eval $(opam env)
-</code></pre>
+```
 
-<p><code>opam init</code> will prompt you to allow opam to set up
+`opam init` will prompt you to allow opam to set up
 initialization scripts, which is generally fine to accept. Otherwise,
 every time a new shell is opened you have to type in the
-<code>eval $(opam env)</code> command above to update environment variables.</p>
+`eval $(opam env)` command above to update environment variables.
 
-<p>By default, opam will use the global installation of OCaml. You can
+By default, opam will use the global installation of OCaml. You can
 initialize opam with an explicit compiler version, for example
-<#OCAMLV>, with the option
-<code>--compiler=ocaml-base-compiler.<#OCAMLV></code>.
-See also the section "Managing different versions of OCaml and Coq" below,
+4.14.1, with the option
+`--compiler=ocaml-base-compiler.4.41.1`.
+See also the section on [managing different versions of OCaml and Rocq](/docs/managing-versions),
 about switches and roots.
-</p>
 
-## Installing Coq
 
-<p>To install Coq, simply run the following command. Note that
-installing Coq using opam will build it from sources, which will take
-several minutes to complete:</p>
+## Installing Rocq
 
-<pre><code># Pin the coq package to version <#CURRENTVERSION> and install it.
-opam pin add coq <#CURRENTVERSION>
-</code></pre>
+To install Rocq, simply run the following command. Note that
+installing Rocq using opam will build it from sources, which will take
+several minutes to complete. The following command will pin the rocq-prover
+package to version 9.0.0 and install it.
 
-<p>Pinning prevents opam from upgrading Coq automatically, to avoid
-causing inadvertent breakage in your Coq projects. You can upgrade Coq
+
+```console
+opam pin add rocq-prover 9.0.0
+```
+
+Pinning prevents opam from upgrading Rocq automatically, to avoid
+causing inadvertent breakage in your Rocq projects. You can upgrade Rocq
 explicitly to
-<code>$NEW_VERSION</code> with essentially the same command:</p>
+`$NEW_VERSION` with essentially the same command:
 
-<pre><code>opam pin add coq $NEW_VERSION
-</code></pre>
+```console
+opam pin add rocq-prover $NEW_VERSION
+```
 
-<p>To ensure that installation was successful, check that <code>coqc
--v</code> prints the expected version of Coq.</p>
+To ensure that installation was successful, check that `rocqc -v` prints the expected version of Rocq.
 
-### Installing CoqIDE
+### Installing RocqIDE
 
-<p>You may also want to install CoqIDE. Note that this requires GTK+
-development files (<code>gtksourceview3</code>) to be available on the
+You may also want to install RocqIDE. Note that this requires GTK+
+development files (`gtksourceview3`) to be available on the
 system. Opam (>=2.1) will ensure that these packages are installed (on
-most operating systems). To install CoqIDE, simply run:</p>
+most operating systems). To install RocqIDE, simply run:
 
-<pre><code>opam install coqide
-</code></pre>
+```console
+opam install rocqide
+```
 
-<p>There exist many <a href="/user-interfaces.html">alternative user
-interfaces / editor extensions</a> for Coq.  See their respective
-websites for instructions on how to install them.</p>
+There exist many [alternative user interfaces / editor extensions](/install) for Rocq, follow
+the link for instructions on how to install them.
 
-## Installing Coq packages
+## Installing Rocq packages
 
-<p>Coq packages live in a repository separate from the standard OCaml
+Rocq packages live in a repository separate from the standard OCaml
 opam repository. The following command adds that repository to the
-current opam <a href="#switch">switch</a> (you can skip this step if
-you used the <a href="#platform">Platform scripts</a>):</p>
+current opam [switch](#switch) (you can skip this step if
+you used the [Platform scripts](#platform)):
 
-<pre><code>opam repo add coq-released https://coq.inria.fr/opam/released
-</code></pre>
+```console
+opam repo add rocq-released https://rocq-prover.org/opam/released
+```
 
-<p>The following command lists the names of all Coq packages along
-with short descriptions:</p>
+The following command lists the names of all Rocq (and Coq) packages along
+with short descriptions:
 
-<pre><code>opam search coq
-</code></pre>
+```console
+opam search --or rocq coq
+```
 
-<p>You can access a more detailed description of a package,
-say <code>coq-sudoku</code>, using the command:</p>
+You can access a more detailed description of a package,
+say `rocq-equations`, using the command:
 
-<pre><code>opam show coq-sudoku
-</code></pre>
+```console
+opam show rocq-equations
+```
 
-<p>You can then install the package using the command:</p>
+You can then install the package using the command:
 
-<pre><code>opam install coq-sudoku
-</code></pre>
+```console
+opam install rocq-equations
+```

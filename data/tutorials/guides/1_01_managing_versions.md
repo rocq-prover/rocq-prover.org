@@ -6,48 +6,63 @@ description: |
 category: Opam
 ---
 
-<p>By default, opam will use the global OCaml installation. Opam can
+By default, opam will use the global OCaml installation. Opam can
 handle different versions of OCaml and other packages (including Coq)
 via
-<em>switches</em> or <em>roots</em>.</p>
+*switches* or *roots*.
 
 ## Switches
 
-<p>Switches provide separate environments, with their own versions of
+Switches provide separate environments, with their own versions of
 OCaml and installed packages. More information about opam
-switches <a href="https://opam.ocaml.org/doc/Usage.html#opam-switch">can
-be found here</a>.</p>
+switches [can be found here](https://opam.ocaml.org/doc/Usage.html#opam-switch).
 
-<p>The following command creates a switch named <code>with-coq</code>
-with OCaml <#OCAMLV>:</p>
+The following command creates a switch named `with-coq`
+with OCaml `OCAMLV`:
 
-<pre><code># Run one of the following depending on your version of opam
-opam switch create with-coq <#OCAMLV>
-</code></pre>
+```console
+# Run one of the following depending on your version of opam
+opam switch create with-coq OCAMLV
+```
 
-<p>Change to an existing switch named <code>other-switch</code> with
-this command:</p>
-
-<pre><code>opam switch other-switch
+Change to an existing switch named `other-switch` with this command:
+```console
+opam switch other-switch
 eval $(opam env)
-</code></pre>
+```
+
+To link a directory and all its subdirectories to a particular switch, use:
+
+```console
+opam switch link some-switch
+```
+
+This creates a symbolic link `_opam` in the current working directory, pointing 
+to the switch to be used when calling `opam` under this working directory. It does 
+not require using `eval $(opam env)` anymore. You can remove the link by simply 
+removing the symbolic link:
+
+```console
+rm _opam
+```
 
 ## Roots
 
-<p>Opam stores all its configuration (including switches) in a
-directory called <em>root</em> (by default, <code>~/.opam</code>). The
-path to the root can be set using the <code>$OPAMROOT</code>
+Opam stores all its configuration (including switches) in a
+directory called *root* (by default, `~/.opam`). The
+path to the root can be set using the `$OPAMROOT`
 environment variable, providing an alternative way of creating fresh
 opam environments.
-</p>
 
-<p>The main benefit of roots is that they can be used simultaneously,
+
+The main benefit of roots is that they can be used simultaneously,
 but they require some external bookkeeping. In comparison. switches
 are entirely managed by opam, and they can share the global
 configuration of a single root.
-</p>
 
-<pre><code># Set a new root location export
+
+```console
+# Set a new root location export
 OPAMROOT=~/.opam-coq.<#CURRENTVERSION>
 
 # Initialize the root with an explicit OCaml version.
@@ -55,12 +70,13 @@ opam init -n --compiler=ocaml-base-compiler.<#OCAMLV>
 
 # Install Coq in this new root (same commands as above)
 opam pin add coq <#CURRENTVERSION>
-</code></pre>
+```
 
-<p>Every time a new shell is opened, or you want to use a different
+Every time a new shell is opened, or you want to use a different
 root, type in the following lines:
-</p>
 
-<pre><code>export OPAMROOT=~/.opam-coq.<#CURRENTVERSION>
+
+```console
+export OPAMROOT=~/.opam-coq.<#CURRENTVERSION>
 eval $(opam env)
-</code></pre>
+```
