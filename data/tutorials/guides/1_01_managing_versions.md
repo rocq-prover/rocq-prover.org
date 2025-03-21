@@ -1,15 +1,14 @@
 ---
 id: managing-versions
-title: Managing different versions of OCaml and Coq
+title: Managing different versions of OCaml and Rocq
 description: |
-  This page explains how to manage different versions of OCaml and Coq using opam.
+  This page explains how to manage different versions of OCaml and Rocq using opam.
 category: Opam
 ---
 
 By default, opam will use the global OCaml installation. Opam can
-handle different versions of OCaml and other packages (including Coq)
-via
-*switches* or *roots*.
+handle different versions of OCaml and other packages (including Rocq)
+via *switches* or *roots*.
 
 ## Switches
 
@@ -17,12 +16,12 @@ Switches provide separate environments, with their own versions of
 OCaml and installed packages. More information about opam
 switches [can be found here](https://opam.ocaml.org/doc/Usage.html#opam-switch).
 
-The following command creates a switch named `with-coq`
-with OCaml `OCAMLV`:
+The following command creates a switch named `with-rocq`
+with OCaml `4.14.2`:
 
 ```console
 # Run one of the following depending on your version of opam
-opam switch create with-coq OCAMLV
+opam switch create with-rocq 4.14.2
 ```
 
 Change to an existing switch named `other-switch` with this command:
@@ -34,7 +33,7 @@ eval $(opam env)
 To link a directory and all its subdirectories to a particular switch, use:
 
 ```console
-opam switch link some-switch
+opam switch link with-rocq
 ```
 
 This creates a symbolic link `_opam` in the current working directory, pointing 
@@ -63,13 +62,13 @@ configuration of a single root.
 
 ```console
 # Set a new root location export
-OPAMROOT=~/.opam-coq.<#CURRENTVERSION>
+OPAMROOT=~/.opam-rocq.9.0.0
 
 # Initialize the root with an explicit OCaml version.
-opam init -n --compiler=ocaml-base-compiler.<#OCAMLV>
+opam init -n --compiler=ocaml-base-compiler.4.14.2
 
-# Install Coq in this new root (same commands as above)
-opam pin add coq <#CURRENTVERSION>
+# Install Rocq in this new root (same commands as above)
+opam pin add rocq-prover 9.0.0
 ```
 
 Every time a new shell is opened, or you want to use a different
@@ -77,6 +76,6 @@ root, type in the following lines:
 
 
 ```console
-export OPAMROOT=~/.opam-coq.<#CURRENTVERSION>
+export OPAMROOT=~/.opam-rocq.9.0.0
 eval $(opam env)
 ```
