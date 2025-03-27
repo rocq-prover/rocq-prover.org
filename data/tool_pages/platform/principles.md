@@ -44,7 +44,7 @@ Here are the different categories of expected stakeholders for the Rocq Platform
 
 ## Package inclusion process
 
-- Packages are typically included on user request via a [GitHub issue](https://github.com/coq/platform/issues?q=is%3Aissue+label%3A%22kind%3A+package+inclusion%22).
+- Packages are typically included on user request via a [GitHub issue](https://github.com/rocq-prover/platform/issues?q=is%3Aissue+label%3A%22kind%3A+package+inclusion%22).
 
 - Requests should contain a justification. Good justifications are usage of the package in a regular course or a course with more than 25 attendees or usage of the package as prerequisite in at least three other packages or research developments by authors other than the author of the original package.
 
@@ -78,7 +78,7 @@ If you do see other questions that should be addressed in the Platform charter, 
 
 ## The Rocq Platform from a technical point of view
 
-Technically the Rocq Platform is a [GitHub repository](https://github.com/coq/platform) containing:
+Technically the Rocq Platform is a [GitHub repository](https://github.com/rocq-prover/platform) containing:
 
 - Information on packages included in the Platform and their versions, sources, build instructions. This information is either given as an opam repo, or there will be automated scripts to generate the opam repo from it.
 

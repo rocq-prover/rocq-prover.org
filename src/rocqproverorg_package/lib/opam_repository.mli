@@ -2,11 +2,11 @@ val exists : unit -> bool
 (** Returns true is the clone of opam repository exists, false otherwise. *)
 
 val clone : unit -> string Lwt.t
-(** Does a "git clone" on https://github.com/coq/opam. Returns the
+(** Does a "git clone" on https://github.com/rocq-prover/opam. Returns the
     latest commit id. *)
 
 val pull : unit -> string Lwt.t
-(** Does a "git pull" on https://github.com/coq/opam. Returns the
+(** Does a "git pull" on https://github.com/rocq-prover/opam. Returns the
     latest commit id. *)
 
 val last_commit : unit -> string Lwt.t

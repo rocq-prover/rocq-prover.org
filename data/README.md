@@ -6,7 +6,7 @@ To generate the `github_teams.json` file, run the following GraphQL query (for i
 
 ```graphql
 query {
-  organization(login: "coq") {
+  organization(login: "rocq-prover") {
     teams(first: 100) {
       totalCount
       nodes {
@@ -39,7 +39,7 @@ jq '{
 ## Platform Packages
 
 To generate the list of platform packages, get the list of packages on the last readme of the platform
-(e.g., https://github.com/coq/platform/blob/2025.01.0/doc/README~8.20~2025.01.md) and place it 
+(e.g., https://github.com/rocq-prover/platform/blob/2025.01.0/doc/README~8.20~2025.01.md) and place it
 in the following files (by level): 
 gen_tools_base.html gen_tools_ide.html gen_tools_full.html gen_tools_extended.html gen_tools_optional.html gen_tools_dependency.html
 

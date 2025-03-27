@@ -6,7 +6,7 @@
 
 # rocq-prover.org
 
-[![Actions Status](https://github.com/coq/rocq-prover.org/workflows/CI/badge.svg)](https://github.com/coq/rocq-prover.org/actions)
+[![Actions Status](https://github.com/rocq-prover/rocq-prover.org/workflows/CI/badge.svg)](https://github.com/rocq-prover/rocq-prover.org/actions)
 
 This repository contains the sources of the Rocq website. It is served at https://rocq-prover.org/.
 
@@ -20,7 +20,7 @@ website developers of the original website.
 ## Features
 
 - **Integrated documentation and package management:** The site combines the
-  package management (currently coq.inria.fr/opam) with a new central
+  package management (https://rocq-prover.org/packages) with a new central
   documentation source (codenamed 'docs.ocaml.org') for all 400+ opam packages
   directly within the rocq-prover.org site.
 
@@ -109,4 +109,4 @@ See our [`LICENSE`](./LICENSE) for the complete licenses.
 
 ## Code of Conduct
 
-This project follows the [Rocq Code of Conduct](https://github.com/coq/rocq-prover.org/blob/main/CODE_OF_CONDUCT.md).
+This project follows the [Rocq Code of Conduct](https://rocq-prover.org/policies/code-of-conduct).

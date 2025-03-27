@@ -74,7 +74,7 @@ key pillars:
 
 - **Community:** Meet us at the RocqPL, Rocq Workshops, and Rocq Users and Developers Workshop (RUDW)
   meetings! We will also continue fostering a strong and collaborative
-  community through initiatives like rocq/coq-community (all
+  community through initiatives like Rocq-community (all
   audiences).
 
 ## 2. Trustworthy

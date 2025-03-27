@@ -4,4 +4,4 @@ recurring:
     event_type: meetup
     country: "France"
     city: "online"
-    url: https://github.com/coq/coq/wiki/Coq-Calls
+    url: https://github.com/rocq-prover/rocq/wiki/Rocq-Calls

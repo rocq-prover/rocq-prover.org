@@ -98,7 +98,7 @@ Layout.render
           </li>
 
         </ol>
-        <a class="btn mt-6 gap-2" href="https://github.com/coq/platform/blob/<%s latest_platform_version %>/doc/README_Linux.md#installation-by-compiling-from-sources-using-scripts--opam">Run the Rocq Platform scripts<%s! Icons.arrow_small_right "h-6 w-6" %></a>
+        <a class="btn mt-6 gap-2" href="https://github.com/rocq-prover/platform/blob/<%s latest_platform_version %>/doc/README_Linux.md#installation-by-compiling-from-sources-using-scripts--opam">Run the Rocq Platform scripts<%s! Icons.arrow_small_right "h-6 w-6" %></a>
 
         <h3>
           Using Opam
@@ -119,7 +119,7 @@ Layout.render
           Using Docker
         </h3>
         <p>
-          The Rocq Prover is also available as a <a href="https://hub.docker.com/r/coqorg/coq/">Docker image</a>.
+          The Rocq Prover is also available as a <a href="https://hub.docker.com/r/rocq/rocq-prover/">Docker image</a>.
         </p>
       </div>
 
@@ -149,7 +149,7 @@ Layout.render
             VSRocq (Recommended)
           </h3>
           <p>
-          <a href="https://github.com/coq/vscoq">VsRocq</a> is the official Rocq extension for Visual Studio Code.
+          <a href="https://github.com/rocq-prover/vscoq">VsRocq</a> is the official Rocq extension for Visual Studio Code.
           It is available in the <a href="https://marketplace.visualstudio.com/items?itemName=maximedenes.vsrocq">Visual Studio Code Marketplace</a>
           and on <a href="https://open-vsx.org/extension/maximedenes/vsrocq">Open VSX</a>.
           To use it, you need to install the corresponding language server. Using opam, you can install it with the following command:
@@ -181,7 +181,7 @@ Layout.render
           VsCoq Legacy
           </h3>
           <p>
-          <a href="https://github.com/coq-community/vscoq-legacy/">VsCoq Legacy</a> is a legacy Rocq extension for Visual Studio Code that only relies on the RocqIDE protocol and therefore does not require installing a language server. Linux distributions that have the Rocq Prover usually also install the RocqIDE server in their main package. You can install VsCoq Legacy from the <a href="https://marketplace.visualstudio.com/items?itemName=coq-community.vscoq1">Visual Studio Code Marketplace</a> or from <a href="https://open-vsx.org/extension/coq-community/vscoq1">Open VSX</a>.
+          <a href="https://github.com/rocq-community/vscoq-legacy/">VsCoq Legacy</a> is a legacy Rocq extension for Visual Studio Code that only relies on the RocqIDE protocol and therefore does not require installing a language server. Linux distributions that have the Rocq Prover usually also install the RocqIDE server in their main package. You can install VsCoq Legacy from the <a href="https://marketplace.visualstudio.com/items?itemName=coq-community.vscoq1">Visual Studio Code Marketplace</a> or from <a href="https://open-vsx.org/extension/coq-community/vscoq1">Open VSX</a>.
           </p>
         </div>
 
@@ -253,7 +253,7 @@ Layout.render
           </li>
         </ol>
         <a class="btn mt-6 gap-2" href="<%s Url.release latest_platform_version %>#recommended-binary-installers">Download the Rocq Platform binary installer<%s! Icons.arrow_small_right "h-6 w-6" %></a>
-        <a class="btn mt-6 gap-2" href="https://github.com/coq/platform/blob/<%s latest_platform_version %>/doc/README_macOS.md#installation-by-compiling-from-sources-using-opam">Run the Rocq Platform scripts<%s! Icons.arrow_small_right "h-6 w-6" %></a>
+        <a class="btn mt-6 gap-2" href="https://github.com/rocq-prover/platform/blob/<%s latest_platform_version %>/doc/README_macOS.md#installation-by-compiling-from-sources-using-opam">Run the Rocq Platform scripts<%s! Icons.arrow_small_right "h-6 w-6" %></a>
         <h3>
           Using Homebrew
         </h3>
@@ -281,7 +281,7 @@ Layout.render
           Using Docker
         </h3>
         <p>
-          The Rocq Prover is also available as a <a href="https://hub.docker.com/r/coqorg/coq/">Docker image</a>.
+          The Rocq Prover is also available as a <a href="https://hub.docker.com/r/rocq/rocq-prover/">Docker image</a>.
         </p>
       </div>
 
@@ -310,7 +310,7 @@ Layout.render
             VSRocq (Recommended)
           </h3>
           <p>
-          <a href="https://github.com/coq/vscoq">VsRocq</a> is the official Rocq extension for Visual Studio Code.
+          <a href="https://github.com/rocq-prover/vscoq">VsRocq</a> is the official Rocq extension for Visual Studio Code.
           It is available in the <a href="https://marketplace.visualstudio.com/items?itemName=maximedenes.vsrocq">Visual Studio Code Marketplace</a>
           and on <a href="https://open-vsx.org/extension/maximedenes/vsrocq">Open VSX</a>.
           To use it, you need to install the corresponding language server. Using opam, you can install it with the following command:
@@ -342,7 +342,7 @@ Layout.render
           VsCoq Legacy
           </h3>
           <p>
-            <a href="https://github.com/coq-community/vscoq-legacy/">VsCoq Legacy</a> is a legacy Rocq extension for Visual Studio Code that only relies on the RocqIDE protocol and therefore does not require installing a language server. You can install VsCoq Legacy from the <a href="https://marketplace.visualstudio.com/items?itemName=coq-community.vscoq1">Visual Studio Code Marketplace</a> or from <a href="https://open-vsx.org/extension/coq-community/vscoq1">Open VSX</a>.
+            <a href="https://github.com/rocq-community/vscoq-legacy/">VsCoq Legacy</a> is a legacy Rocq extension for Visual Studio Code that only relies on the RocqIDE protocol and therefore does not require installing a language server. You can install VsCoq Legacy from the <a href="https://marketplace.visualstudio.com/items?itemName=coq-community.vscoq1">Visual Studio Code Marketplace</a> or from <a href="https://open-vsx.org/extension/coq-community/vscoq1">Open VSX</a>.
           </p>
         </div>
 
@@ -415,7 +415,7 @@ Layout.render
           </li>
         </ol>
         <a class="btn mt-6 gap-2" href="<%s Url.release latest_platform_version %>#recommended-binary-installers">Download the Rocq Platform binary installer<%s! Icons.arrow_small_right "h-6 w-6" %></a>
-        <a class="btn mt-6 gap-2" href="https://github.com/coq/platform/blob/<%s latest_platform_version %>/doc/README_Windows.md#installation-by-compiling-from-sources-using-scripts--opam">Run the Rocq Platform scripts<%s! Icons.arrow_small_right "h-6 w-6" %></a>
+        <a class="btn mt-6 gap-2" href="https://github.com/rocq-prover/platform/blob/<%s latest_platform_version %>/doc/README_Windows.md#installation-by-compiling-from-sources-using-scripts--opam">Run the Rocq Platform scripts<%s! Icons.arrow_small_right "h-6 w-6" %></a>
         <h3>
           Using Opam
         </h3>
@@ -458,7 +458,7 @@ Layout.render
           </h3>
 
           <p>
-          <a href="https://github.com/coq/vscoq">VsRocq</a> is the official Rocq extension for Visual Studio Code.
+          <a href="https://github.com/rocq-prover/vscoq">VsRocq</a> is the official Rocq extension for Visual Studio Code.
           It is available in the <a href="https://marketplace.visualstudio.com/items?itemName=maximedenes.vsrocq">Visual Studio Code Marketplace</a>
           and on <a href="https://open-vsx.org/extension/maximedenes/vsrocq">Open VSX</a>.
           To use it, you need the corresponding language server, which is distributed with the Rocq Platform starting from version 2025.01.
@@ -476,7 +476,7 @@ Layout.render
           VsCoq Legacy
           </h3>
           <p>
-          <a href="https://github.com/coq-community/vscoq-legacy/">VsCoq Legacy</a> is a legacy Rocq extension for Visual Studio Code that only relies on the RocqIDE protocol. You can install it from the <a href="https://marketplace.visualstudio.com/items?itemName=coq-community.vscoq1">Visual Studio Code Marketplace</a> or from <a href="https://open-vsx.org/extension/coq-community/vscoq1">Open VSX</a>.
+          <a href="https://github.com/rocq-community/vscoq-legacy/">VsCoq Legacy</a> is a legacy Rocq extension for Visual Studio Code that only relies on the RocqIDE protocol. You can install it from the <a href="https://marketplace.visualstudio.com/items?itemName=coq-community.vscoq1">Visual Studio Code Marketplace</a> or from <a href="https://open-vsx.org/extension/coq-community/vscoq1">Open VSX</a>.
           </p>
 
           <h3>

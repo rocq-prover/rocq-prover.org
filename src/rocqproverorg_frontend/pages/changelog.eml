@@ -93,7 +93,7 @@ News_layout.single_column_layout
       </div>
     </div>
     <div class="prose dark:prose-invert max-w-none mt-8">
-          If you want to contribute to a new release announcement, check out the <a href="https://github.com/coq/coq/blob/master/CONTRIBUTING.md" target="_blank">Contributing Guide</a> on GitHub.
+          If you want to contribute to a new release announcement, check out the <a href="https://github.com/rocq-prover/rocq/blob/master/CONTRIBUTING.md" target="_blank">Contributing Guide</a> on GitHub.
         </div>
   </div>
 </div>

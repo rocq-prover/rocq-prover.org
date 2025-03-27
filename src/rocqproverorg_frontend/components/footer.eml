@@ -174,8 +174,8 @@ let primary_footer () =
             <% let commit = try Sys.getenv "GIT_COMMIT" with Not_found -> failwith "Environment variable GIT_COMMIT is not set" in 
                let branch = try Sys.getenv "GIT_BRANCH" with Not_found -> failwith "Environment variable GIT_BRANCH is not set" in %>
             <div class="text-base leading-6 text-content dark:text-dark-title">
-              GitHub <a href="https://github.com/coq/rocq-prover.org/tree/<%s branch %>" class="text-base leading-6 text-content dark:text-dark-title hover:text-primary dark:hover:text-dark-primary">branch</a>
-                and <a href="https://github.com/coq/rocq-prover.org/commit/<%s commit %>">commit</a>.
+              GitHub <a href="https://github.com/rocq-prover/rocq-prover.org/tree/<%s branch %>" class="text-base leading-6 text-content dark:text-dark-title hover:text-primary dark:hover:text-dark-primary">branch</a>
+                and <a href="https://github.com/rocq-prover/rocq-prover.org/commit/<%s commit %>">commit</a>.
             </div>
             <% ; %>
           </div>

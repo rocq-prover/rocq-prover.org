@@ -120,7 +120,7 @@ let logos = "/logo"
 
 let github_opam_file package_name package_version =
   Printf.sprintf
-    "https://github.com/coq/opam/blob/master/released/packages/%s/%s.%s/opam"
+    "https://github.com/rocq-prover/opam/blob/master/released/packages/%s/%s.%s/opam"
     package_name package_name package_version
 
-let wiki = "https://github.com/coq/coq/wiki"
+let wiki = "https://github.com/rocq-prover/rocq/wiki"

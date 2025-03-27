@@ -50,7 +50,7 @@ install: all ## Install the packages on the system
 .PHONY: local-doc
 local-doc:
 	if [ -d rocq-doc ]; then cd rocq-doc && git pull; \
-	else git clone --depth 1 https://github.com/coq/doc.git rocq-doc; fi
+	else git clone --depth 1 https://github.com/rocq-prover/doc.git rocq-doc; fi
 
 .PHONY: update-local-doc
 update-local-doc:

@@ -28,7 +28,7 @@ COPY --chown=opam:opam . .
 RUN opam exec -- dune build @install --profile=release
 
 # Fetch the opam repository
-RUN git clone https://github.com/coq/opam.git rocq-opam-repository
+RUN git clone https://github.com/rocq-prover/opam.git rocq-opam-repository
 RUN cd rocq-opam-repository && git checkout master && git pull origin master
 
 # Launch project in order to generate the package state cache

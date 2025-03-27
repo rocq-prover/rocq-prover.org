@@ -27,21 +27,21 @@
       TypeScript code generation for ATD APIs
     lifecycle: dependency
   - name: base-bigarray.base
-    source: /coq/platform/blob/2025.01.0/doc
+    source: /rocq-prover/platform/blob/2025.01.0/doc
     license: Unknown
     synopsis: No synopsis available
     description: >
       Bigarray library distributed with the OCaml compiler
     lifecycle: dependency
   - name: base-threads.base
-    source: /coq/platform/blob/2025.01.0/doc
+    source: /rocq-prover/platform/blob/2025.01.0/doc
     license: Unknown
     synopsis: No synopsis available
     description: >
       Threads library distributed with the OCaml compiler
     lifecycle: dependency
   - name: base-unix.base
-    source: /coq/platform/blob/2025.01.0/doc
+    source: /rocq-prover/platform/blob/2025.01.0/doc
     license: Unknown
     synopsis: No synopsis available
     description: >
@@ -216,7 +216,7 @@
       This package can only install if a Python-3 interpreter is availableon the system.If a minor version needs to be specified for your operating system, thenpython-3.9 will be used.
     lifecycle: dependency
   - name: coq-core.8.20.1
-    source: https://coq.inria.fr/" rel="nofollow
+    source: https://rocq-prover.org" rel="nofollow
     license: https://spdx.org/licenses/LGPL-2.1-only.html
     synopsis:  The Coq Proof Assistant -- Core Binaries and Tools
     description: >
@@ -314,7 +314,7 @@
       MetaCoq is a meta-programming framework for Coq.
     lifecycle: dependency
   - name: coq-stdlib.8.20.1
-    source: https://coq.inria.fr/" rel="nofollow
+    source: https://rocq-prover.org/" rel="nofollow
     license: https://spdx.org/licenses/LGPL-2.1-only.html
     synopsis:  The Coq Proof Assistant -- Standard Library
     description: >
@@ -328,11 +328,11 @@
       
     lifecycle: dependency
   - name: coqide-server.8.20.1
-    source: https://coq.inria.fr/" rel="nofollow
+    source: https://rocq-prover.org/" rel="nofollow
     license: https://spdx.org/licenses/LGPL-2.1-only.html
     synopsis:  The Coq Proof Assistant, XML protocol server
     description: >
-      Coq is a formal proof management system. It providesa formal language to write mathematical definitions, executablealgorithms and theorems together with an environment forsemi-interactive development of machine-checked proofs.This package provides the `coqidetop` language server, animplementation of Coq'apos;s [XML protocol](https://github.com/coq/coq/blob/master/dev/doc/xml-protocol.md)which allows clients, such as CoqIDE, to interact with Coq in astructured way.
+      Coq is a formal proof management system. It provides a formal language to write mathematical definitions, executable algorithms and theorems together with an environment for semi-interactive development of machine-checked proofs. This package provides the `coqidetop` language server, an implementation of Coq's [XML protocol](https://github.com/rocq-prover/rocq/blob/master/dev/doc/xml-protocol.md) which allows clients, such as CoqIDE, to interact with Coq in a structured way.
     lifecycle: dependency
   - name: cppo.1.8.0
     source: https://github.com/ocaml-community/cppo
@@ -664,7 +664,7 @@
       This library is the result of our experience in using threads and the Lwt async monad to tame the problem of writing a server which has to listen and react to multiple sources of events. The library itself is just sugar atop Unix.select. You can read more about the library on https://github.com/gares/sel
     lifecycle: dependency
   - name: seq.base
-    source: /coq/platform/blob/2025.01.0/doc
+    source: /rocq-prover/platform/blob/2025.01.0/doc
     license: Unknown
     synopsis:  Compatibility package for OCaml'apos;s standard iterator type starting from 4.07.
     description: >

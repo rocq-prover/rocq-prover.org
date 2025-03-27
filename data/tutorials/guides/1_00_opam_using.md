@@ -34,17 +34,17 @@ and `opam-depext` might still be unable to detect external
 dependencies, which will mean you have to check and install them
 yourself. To see more detailed information on external dependencies
 please consult
-the [INSTALL.md documentation in the GitHub repository](https://github.com/coq/coq/blob/master/INSTALL.md).
+the [INSTALL.md documentation in the GitHub repository](https://github.com/rocq-prover/rocq/blob/master/INSTALL.md).
 
 ## The Rocq Platform scripts
 
-The [Rocq Platform](https://github.com/coq/platform)
+The [Rocq Platform](https://github.com/rocq-prover/platform)
 provides interactive scripts that allow installing Rocq and a standard
 set of packages through `opam` without having to learn anything about
 `opam`.
 
 If a standard setup works for you, then we recommend that you use
-these [scripts](https://github.com/coq/platform/releases/latest).
+these [scripts](https://github.com/rocq-prover/platform/releases/latest).
 If you do, you can skip directly to [Using opam to install Rocq packages](#installing-rocq-packages) to learn how to add additional packages to
 the initial package set provided by the Platform.
 

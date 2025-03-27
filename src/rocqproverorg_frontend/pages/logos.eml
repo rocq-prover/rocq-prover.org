@@ -21,16 +21,16 @@ Layout.render
         <div class="space-y-7">
           <h2 id="guidelines">Brand Guidelines</h2>
           <p>Websites related to the Rocq language or that use it are encouraged to incorporate the Rocq logo somewhere in their page to indicate their support for Rocq development.</p>
-          <p>The <a href="https://github.com/coq/rocq-prover.org/tree/main/rocq-id" target="_blank">ROCQ Identity Guidelines</a> focus on maintaining consistency in the use of logos, typography, and color palettes. These standards are essential for creating a cohesive visual identity that represents the ROCQ community across all platforms and applications.</p>
+          <p>The <a href="https://github.com/rocq-prover/rocq-prover.org/tree/main/rocq-id" target="_blank">ROCQ Identity Guidelines</a> focus on maintaining consistency in the use of logos, typography, and color palettes. These standards are essential for creating a cohesive visual identity that represents the ROCQ community across all platforms and applications.</p>
           <h2 id="assets">Assets</h2>
-          <p>The logo should be linked to the Rocq website, <a href='https://rocq-prover.org/'>rocq-prover.org</a>. The logo is available in <a href="https://github.com/coq/rocq-prover.org/tree/main/rocq-id" target="_blank">several formats</a>. The Repository also contains badges and avatars for your specific uses.</p>
+          <p>The logo should be linked to the Rocq website, <a href='https://rocq-prover.org/'>rocq-prover.org</a>. The logo is available in <a href="https://github.com/rocq-prover/rocq-prover.org/tree/main/rocq-id" target="_blank">several formats</a>. The Repository also contains badges and avatars for your specific uses.</p>
           <div class="my-12">
             <img class="h-24 max-width-100 dark:hidden" src="<%s Rocqproverorg_static.Asset.url "logos/logo-rocq-blue_orange.svg" %>" alt="logo-with-name">
             <img class="h-24 max-width-100 hidden dark:inline" src="<%s Rocqproverorg_static.Asset.url "logos/logo-rocq-white.svg" %>" alt="OCaml">
           </div>
-          <p class="text-black"><a href="https://github.com/coq/rocq-prover.org/tree/main/rocq-id/logos/SVG/logo-rocq-blue_orange.svg">svg</a> | <a href="https://github.com/coq/rocq-prover.org/tree/main/rocq-id/logos/PNG/logo-rocq-blue_orange.png">png</a> | <a href="https://github.com/coq/rocq-prover.org/tree/main/rocq-id/logos/JPG/logo-rocq-blue_orange.jpg">jpg</a> | <a href="https://github.com/coq/rocq-prover.org/tree/main/rocq-id/logos/">more</a></p>
+          <p class="text-black"><a href="https://github.com/rocq-prover/rocq-prover.org/tree/main/rocq-id/logos/SVG/logo-rocq-blue_orange.svg">svg</a> | <a href="https://github.com/rocq-prover/rocq-prover.org/tree/main/rocq-id/logos/PNG/logo-rocq-blue_orange.png">png</a> | <a href="https://github.com/rocq-prover/rocq-prover.org/tree/main/rocq-id/logos/JPG/logo-rocq-blue_orange.jpg">jpg</a> | <a href="https://github.com/rocq-prover/rocq-prover.org/tree/main/rocq-id/logos/">more</a></p>
           <h2 id="license">License</h2>
-          <p>The Rocq logo is released under the <a href='https://github.com/coq/rocq-prover.org/tree/main/rocq-id/#license'>UNLICENSE</a>.</p>
+          <p>The Rocq logo is released under the <a href='https://github.com/rocq-prover/rocq-prover.org/tree/main/rocq-id/#license'>UNLICENSE</a>.</p>
         </div>
       </div>
     </div>

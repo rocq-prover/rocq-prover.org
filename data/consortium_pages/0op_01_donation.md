@@ -14,4 +14,4 @@ The Rocq Consortium comprises the following levels of Membership, depending on a
 This contribution supports the development of Rocq, on priorities defined by the Consortium assembly. 
 Gold members get one vote for each ballot at the assembly, Platinum members get three votes.
 
-If you wish to join the Coq Consortium as a member, please [contact us](mailto:coq-consortium-contact@inria.fr).
+If you wish to join the Rocq Consortium as a member, please [contact us](mailto:coq-consortium-contact@inria.fr).

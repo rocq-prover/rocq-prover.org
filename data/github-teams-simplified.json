@@ -1143,7 +1143,7 @@
     {
       "id": "platform-maintainers",
       "name": "platform-maintainers",
-      "description": "Maintainers of the coq/platform project",
+      "description": "Maintainers of the rocq-prover/platform project",
       "contacts": [],
       "members": [
         {

@@ -62,7 +62,7 @@ Layout.render
         <div class="md:max-w-[80%]">
           <h2 class="font-bold text-2xl text-white dark:text-dark-title mb-2">Topic working groups</h2>
           <p class="text-white dark:text-dark-title mb-12 leading-7">Topic working groups are community initiatives that gather around certain topics or a shared purpose.
-            See the list of topic working groups on <a href="https://github.com/coq/coq/wiki/Topic-Working-Groups">the Rocq wiki</a>.
+            See the list of topic working groups on <a href="https://github.com/rocq-prover/rocq/wiki/Topic-Working-Groups">the Rocq wiki</a>.
             Participation is welcome and encouraged.</p>
         </div>
         <div>

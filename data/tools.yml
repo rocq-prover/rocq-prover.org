@@ -1,6 +1,6 @@
 tools:
   - name: coq.8.20.1
-    source: https://coq.inria.fr/" rel="nofollow
+    source: https://rocq-prover.org/" rel="nofollow
     license: https://spdx.org/licenses/LGPL-2.1-only.html
     synopsis:  The Coq Proof Assistant
     description: >
@@ -21,35 +21,35 @@ tools:
       Dune is a build system that was designed to simplify the release ofJane Street packages. It reads metadata from \dune\ files following avery simple s-expression syntax.Dune is fast, has very low-overhead, and supports parallel builds onall platforms. It has no system dependencies; all you need to builddune or packages using dune is OCaml. You don'apos;t need make or bashas long as the packages themselves don'apos;t use bash explicitly.Dune is composable; supporting multi-package development by simplydropping multiple repositories into the same directory.Dune also supports multi-context builds, such as building againstseveral opam roots/switches simultaneously. This helps maintainingpackages across several versions of OCaml and gives cross-compilationfor free.
     lifecycle: base
   - name: coqide.8.20.1
-    source: https://coq.inria.fr/" rel="nofollow
+    source: https://rocq-prover.org/" rel="nofollow
     license: https://spdx.org/licenses/LGPL-2.1-only.html
     synopsis:  The Coq Proof Assistant --- GTK3 IDE
     description: >
       Coq is a formal proof management system. It providesa formal language to write mathematical definitions, executablealgorithms and theorems together with an environment forsemi-interactive development of machine-checked proofs.This package provides the CoqIDE, a graphical user interface for thedevelopment of interactive proofs.
     lifecycle: ide
   - name: vscoq-language-server.2.2.3
-    source: https://github.com/coq-community/vscoq
+    source: https://github.com/rocq-prover/vscoq
     license: https://spdx.org/licenses/MIT.html
     synopsis:  VSCoq language server
     description: >
       LSP based language server for Coq and its VSCoq user interface
     lifecycle: ide
   - name: coq-aac-tactics.8.20.0
-    source: https://github.com/coq-community/aac-tactics
+    source: https://github.com/rocq-community/aac-tactics
     license: https://spdx.org/licenses/LGPL-3.0-or-later.html
     synopsis:  Coq tactics for rewriting universally quantified equations, modulo associative (and possibly commutative and idempotent) operators
     description: >
       This Coq plugin provides tactics for rewriting and proving universallyquantified equations modulo associativity and commutativity of some operator,with idempotent commutative operators enabling additional simplifications.The tactics can be applied for custom operators by registering the operators andtheir properties as type class instances. Instances for many commonly used operators,such as for binary integer arithmetic and booleans, are provided with the plugin.
     lifecycle: full
   - name: coq-bignums.9.0.0+coq8.20
-    source: https://github.com/coq-community/bignums
+    source: https://github.com/rocq-community/bignums
     license: https://spdx.org/licenses/LGPL-2.1-only.html
     synopsis:  Bignums, the Coq library of arbitrarily large numbers
     description: >
       This Coq library provides BigN, BigZ, and BigQ that used tobe part of the standard library.
     lifecycle: full
   - name: coq-coqeal.2.0.3
-    source: https://github.com/coq-community/coqeal
+    source: https://github.com/rocq-community/coqeal
     license: https://spdx.org/licenses/MIT.html
     synopsis:  CoqEAL - The Coq Effective Algebra Library
     description: >
@@ -77,14 +77,14 @@ tools:
       
     lifecycle: full
   - name: coq-corn.8.20.0
-    source: https://github.com/coq-community/corn
+    source: https://github.com/rocq-community/corn
     license: https://spdx.org/licenses/GPL-2.0.html
     synopsis:  The Coq Constructive Repository at Nijmegen
     description: >
       CoRN includes the following parts:- Algebraic Hierarchy  An axiomatic formalization of the most common algebraic  structures, including setoids, monoids, groups, rings,  fields, ordered fields, rings of polynomials, real and  complex numbers- Model of the Real Numbers  Construction of a concrete real number structure  satisfying the previously defined axioms- Fundamental Theorem of Algebra  A proof that every non-constant polynomial on the complex  plane has at least one root- Real Calculus  A collection of elementary results on real analysis,  including continuity, differentiability, integration,  Taylor'apos;s theorem and the Fundamental Theorem of Calculus- Exact Real Computation  Fast verified computation inside Coq. This includes: real numbers, functions,  integrals, graphs of functions, differential equations.
     lifecycle: full
   - name: coq-dpdgraph.1.0+8.20
-    source: https://github.com/coq-community/coq-dpdgraph
+    source: https://github.com/rocq-community/coq-dpdgraph
     license: https://spdx.org/licenses/LGPL-2.1-only.html
     synopsis:  Compute dependencies between Coq objects (definitions, theorems) and produce graphs
     description: >
@@ -105,7 +105,7 @@ tools:
       Equations is a function definition plugin for Coq, that allows thedefinition of functions by dependent pattern-matching and well-founded,mutual or nested structural recursion and compiles them into coreterms. It automatically derives the clauses equations, the graph of thefunction and its associated elimination principle.
     lifecycle: full
   - name: coq-ext-lib.0.13.0
-    source: https://github.com/coq-community/coq-ext-lib
+    source: https://github.com/rocq-community/coq-ext-lib
     license: https://spdx.org/licenses/BSD-2-Clause.html
     synopsis:  A library of Coq definitions, theorems, and tactics
     description: >
@@ -189,7 +189,7 @@ tools:
       This library defines a set of tactics to manipulate hypothesisindividually or by group. In particular it allows applying a tactic oneach hypothesis of a goal, or only on *new* hypothesis after sometactic. Examples of manipulations: automatic renaming, subst, revert,or any tactic expecting a hypothesis name as argument.It DOES NOT provide ANYMORE the especialize tactic to ease forwardreasoning by instantianting one, several or all premisses of ahypothesis. Ths is due to coq'apos;s specialize being less permissive aboutevars. This may be fixed in the future.
     lifecycle: full
   - name: coq-math-classes.8.19.0
-    source: https://github.com/coq-community/math-classes
+    source: https://github.com/rocq-community/math-classes
     license: https://spdx.org/licenses/MIT.html
     synopsis:  A library of abstract interfaces for mathematical structures in Coq
     description: >
@@ -315,7 +315,7 @@ tools:
       Ott takes as input a definition of a language syntax and semantics, in a conciseand readable ASCII notation that is close to what one would write in informalmathematics. It can then generate a Coq version of the definition, which requiresthis library.
     lifecycle: full
   - name: coq-paramcoq.1.1.3+coq8.20
-    source: https://github.com/coq-community/paramcoq
+    source: https://github.com/rocq-community/paramcoq
     license: https://spdx.org/licenses/MIT.html
     synopsis:  Plugin for generating parametricity statements to perform refinement proofs
     description: >
@@ -329,7 +329,7 @@ tools:
       A library for property-based testing in Coq.  - Combinators for testable properties and random generators.  - QuickChick plugin for running tests in a Coq session.  - Includes a mutation testing tool.
     lifecycle: full
   - name: coq-reglang.1.2.1
-    source: https://github.com/coq-community/reglang
+    source: https://github.com/rocq-community/reglang
     license: https://spdx.org/licenses/CECILL-B.html
     synopsis:  Representations of regular languages (i.e., regexps, various types of automata, and WS1S) with equivalence proofs, in Coq and MathComp
     description: >
@@ -483,7 +483,7 @@ tools:
       While Coq provides projections for each field of a record, it has noconvenient way to update a single field of a record. This library provides ageneric way to update a field by name, where the user only has to implement asimple typeclass that lists out the record fields.
     lifecycle: extended
   - name: coq-reduction-effects.0.1.5
-    source: https://github.com/coq-community/reduction-effects
+    source: https://github.com/rocq-community/reduction-effects
     license: https://spdx.org/licenses/MPL-2.0.html
     synopsis:  A Coq plugin to add reduction side effects to some Coq reduction strategies
     description: >
@@ -511,7 +511,7 @@ tools:
       
     lifecycle: extended
   - name: coq-serapi.8.20.0+0.20.0
-    source: https://github.com/ejgallego/coq-serapi
+    source: https://github.com/rocq-archive/coq-serapi
     license: https://spdx.org/licenses/LGPL-2.1-or-later.html
     synopsis:  Serialization library and protocol for machine interaction with the Coq proof assistant
     description: >
@@ -546,21 +546,21 @@ tools:
       TypeScript code generation for ATD APIs
     lifecycle: dependency
   - name: base-bigarray.base
-    source: /coq/platform/blob/2025.01.0/doc
+    source: /rocq-prover/platform/blob/2025.01.0/doc
     license: Unknown
     synopsis: No synopsis available
     description: >
       Bigarray library distributed with the OCaml compiler
     lifecycle: dependency
   - name: base-threads.base
-    source: /coq/platform/blob/2025.01.0/doc
+    source: /rocq-prover/platform/blob/2025.01.0/doc
     license: Unknown
     synopsis: No synopsis available
     description: >
       Threads library distributed with the OCaml compiler
     lifecycle: dependency
   - name: base-unix.base
-    source: /coq/platform/blob/2025.01.0/doc
+    source: /rocq-prover/platform/blob/2025.01.0/doc
     license: Unknown
     synopsis: No synopsis available
     description: >
@@ -735,7 +735,7 @@ tools:
       This package can only install if a Python-3 interpreter is availableon the system.If a minor version needs to be specified for your operating system, thenpython-3.9 will be used.
     lifecycle: dependency
   - name: coq-core.8.20.1
-    source: https://coq.inria.fr/" rel="nofollow
+    source: https://rocq-prover.org/" rel="nofollow
     license: https://spdx.org/licenses/LGPL-2.1-only.html
     synopsis:  The Coq Proof Assistant -- Core Binaries and Tools
     description: >
@@ -847,11 +847,11 @@ tools:
       
     lifecycle: dependency
   - name: coqide-server.8.20.1
-    source: https://coq.inria.fr/" rel="nofollow
+    source: https://rocq-prover.org/" rel="nofollow
     license: https://spdx.org/licenses/LGPL-2.1-only.html
     synopsis:  The Coq Proof Assistant, XML protocol server
     description: >
-      Coq is a formal proof management system. It providesa formal language to write mathematical definitions, executablealgorithms and theorems together with an environment forsemi-interactive development of machine-checked proofs.This package provides the `coqidetop` language server, animplementation of Coq'apos;s [XML protocol](https://github.com/coq/coq/blob/master/dev/doc/xml-protocol.md)which allows clients, such as CoqIDE, to interact with Coq in astructured way.
+      Coq is a formal proof management system. It provides a formal language to write mathematical definitions, executable algorithms and theorems together with an environment for semi-interactive development of machine-checked proofs. This package provides the `coqidetop` language server, an implementation of Coq's [XML protocol](https://github.com/rocq-prover/rocq/blob/master/dev/doc/xml-protocol.md) which allows clients, such as CoqIDE, to interact with Coq in a structured way.
     lifecycle: dependency
   - name: cppo.1.8.0
     source: https://github.com/ocaml-community/cppo
@@ -1183,7 +1183,7 @@ tools:
       This library is the result of our experience in using threads and the Lwt async monad to tame the problem of writing a server which has to listen and react to multiple sources of events. The library itself is just sugar atop Unix.select. You can read more about the library on https://github.com/gares/sel
     lifecycle: dependency
   - name: seq.base
-    source: /coq/platform/blob/2025.01.0/doc
+    source: /rocq-prover/platform/blob/2025.01.0/doc
     license: Unknown
     synopsis:  Compatibility package for OCaml'apos;s standard iterator type starting from 4.07.
     description: >

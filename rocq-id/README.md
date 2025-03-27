@@ -8,9 +8,9 @@
 
 Welcome to the ROCQ Identity Guidelines and Logos sub repository. This repository provides comprehensive guidance on the visual and branding standards for ROCQ. 
 
-> **Download Logos**: [Logos Zip](https://github.com/coq/rocq-prover.org/raw/refs/heads/main/rocq-id/rocq-logos.zip)
+> **Download Logos**: [Logos Zip](https://github.com/rocq-prover/rocq-prover.org/raw/refs/heads/main/rocq-id/rocq-logos.zip)
 
-> **Identity Guidelines**: [Rocq Id PDF](https://github.com/coq/rocq-prover.org/raw/refs/heads/main/rocq-id/ROCQ_ID-guidelines.pdf)
+> **Identity Guidelines**: [Rocq Id PDF](https://github.com/rocq-prover/rocq-prover.org/raw/refs/heads/main/rocq-id/ROCQ_ID-guidelines.pdf)
 
 
 ---
@@ -64,13 +64,13 @@ For a full list of prohibited practices, refer to the Logo Usage section.
 
 ## Key Resources
 - **Official Website**: [rocq-prover.org](https://rocq-prover.org)
-- **Repository for Assets**: [Logos Directory](https://github.com/coq/rocq-prover.org/tree/main/rocq-id)
+- **Repository for Assets**: [Logos Directory](https://github.com/rocq-prover/rocq-prover.org/tree/main/rocq-id)
 
 ## License
 
 - The Rocq logo is released under UNLICENSE.
 
-See our [`LICENSE`](https://github.com/coq/rocq-prover.org/tree/main/LICENSE) for the complete licenses.
+See our [`LICENSE`](https://github.com/rocq-prover/rocq-prover.org/tree/main/LICENSE) for the complete licenses.
 
 ---
 

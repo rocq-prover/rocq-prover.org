@@ -9,9 +9,9 @@ teams:
   dev_meeting:
     date: Every Tuesday
     time: 4:00 PM CET (see wiki) Open to all
-    #calendar: https://github.com/coq/coq/wiki/Rocq-Calls
+    #calendar: https://github.com/rocq-prover/rocq/wiki/Rocq-Calls
     link: https://rendez-vous.renater.fr/rocq-call
-    notes: https://github.com/coq/coq/wiki/Rocq-Calls
+    notes: https://github.com/rocq-prover/rocq/wiki/Rocq-Calls
   members:
   - name: Matthieu Sozeau
     github: mattam82
@@ -80,7 +80,7 @@ teams:
   description: The Rocq Runtime team is responsible for the development and maintenance of the Rocq kernel and elaboration (rocq-runtime and rocq-equations).
   contacts:
   - name: GitHub
-    link: https://github.com/coq/coq
+    link: https://github.com/rocq-prover/rocq
     kind: github
   subteams:
   - id: kernel
@@ -157,7 +157,7 @@ teams:
     description: The Visual Studio Code Rocq plugin team.
     contacts:
     - name: GitHub
-      link: https://github.com/coq/vscoq
+      link: https://github.com/rocq-prover/vscoq
       kind: github
   - id: coqide-maintainers
     name: RocqIDE
@@ -224,14 +224,14 @@ teams:
     description: The Rocq Platform is the official distribution of the Rocq Prover and curated packages.
     contacts:
     - name: GitHub
-      link: https://github.com/coq/platform
+      link: https://github.com/rocq-prover/platform
       kind: github
   - id: opam-maintainer
     name: opam
     description: The opam team maintains the Rocq opam packages and repository for user-contributed packages.
     contacts:
     - name: GitHub
-      link: https://github.com/coq/opam
+      link: https://github.com/rocq-prover/opam
       kind: github
     members:
     - name: Enrico Tassi
@@ -262,7 +262,7 @@ teams:
     description: A collection of short, action-oriented tutorials and how-to guides for the Rocq Prover and its Platform.
     contacts:
     - name: GitHub
-      link: https://github.com/coq/platform-docs
+      link: https://github.com/rocq-prover/platform-docs
       kind: github
     members:
     - name: Thomas Lamiaux
@@ -273,7 +273,7 @@ teams:
     description: The Website team is responsible for the development and maintenance of the rocq-prover.org website.
     contacts:
     - name: GitHub
-      link: https://github.com/coq/rocq-prover.org
+      link: https://github.com/rocq-prover/rocq-prover.org
       kind: github
   - id: plugin-tutorial-maintainers
     name: Plugin Tutorial

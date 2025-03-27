@@ -62,8 +62,8 @@ in
       <path d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5ZM9.5 4a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3ZM12 15H8a1 1 0 0 1 0-2h1v-3H8a1 1 0 0 1 0-2h2a1 1 0 0 1 1 1v4h1a1 1 0 0 1 0 2Z"/>
     </svg>
     <div class="ms-3 text-sm font-medium">
-        You are viewing the <a class="font-semibold underline hover:no-underline" href="https://github.com/coq/rocq-prover.org/tree/<%s git_branch %>"><%s git_branch %> branch</a> of the website @
-        <a class="font-semibold underline hover:no-underline" href="https://github.com/coq/rocq-prover.org/commit/<%s git_commit %>"><%s git_short_commit %></a>,
+        You are viewing the <a class="font-semibold underline hover:no-underline" href="https://github.com/rocq-prover/rocq-prover.org/tree/<%s git_branch %>"><%s git_branch %> branch</a> of the website @
+        <a class="font-semibold underline hover:no-underline" href="https://github.com/rocq-prover/rocq-prover.org/commit/<%s git_commit %>"><%s git_short_commit %></a>,
         not the <a class="font-semibold underline hover:no-underline" href="https://rocq-prover.org">live version</a>.
     </div>
     <button type="button" class="ms-3 -mx-1.5 -my-1.5 bg-red-50 text-red-500 rounded-lg focus:ring-2 focus:ring-red-400 p-1.5 hover:bg-red-200 inline-flex items-center justify-center h-8 w-8 dark:bg-gray-800 dark:text-red-400 dark:hover:bg-gray-700"  data-dismiss-target="#alert-border-2" aria-label="Close">
@@ -166,7 +166,7 @@ in
           <a aria-label="Rocq's Discourse" href="https://discourse.rocq-prover.org" class="opacity-60 hover:opacity-100 text-content dark:text-dark-title hover:text-primary dark:hover:text-dark-primary">
             <%s! Icons.discourse "w-6 h-6" %>
           </a>
-          <a aria-label="The Rocq Prover on GitHub" href="https://github.com/coq/coq" class="opacity-60 hover:opacity-100 text-content dark:text-dark-title hover:text-primary dark:hover:text-dark-primary">
+          <a aria-label="The Rocq Prover on GitHub" href="https://github.com/rocq-prover/rocq" class="opacity-60 hover:opacity-100 text-content dark:text-dark-title hover:text-primary dark:hover:text-dark-primary">
             <%s! Icons.github "w-6 h-6" %>
           </a>
           <a aria-label="The Rocq Prover on Mastodon" rel="me" href="https://mastodon.acm.org/@RocqProver" class="opacity-60 hover:opacity-100 text-content dark:text-dark-title hover:text-primary dark:hover:text-dark-primary">
