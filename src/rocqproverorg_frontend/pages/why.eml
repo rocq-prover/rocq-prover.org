@@ -145,7 +145,7 @@ Layout.render
             <li>
               <strong>Certified Type Theory:</strong>
               The Rocq Prover is based on the formal verification of its type theory implementation and extraction system,
-              developed in the <a href="https://metacoq.github.io">MetaRocq</a> project. It provides<%s! Citations.footcite cite "correct-and-complete-type-checking-and-certified-erasure-for-coq-in-coq" %> 
+              developed in the <a href="https://metarocq.github.io">MetaRocq</a> project. It provides<%s! Citations.footcite cite "correct-and-complete-type-checking-and-certified-erasure-for-coq-in-coq" %> 
               alternative certified proof checkers and erasure procedures that minimize the trusted code base and increases user confidence in its results.
             </li>
             <li>
@@ -159,7 +159,7 @@ Layout.render
                 As part of the Rocq Platform, two additional metaprogramming languages are available:
                 <ul>
                   <li>
-                    A low level of abstraction is provided by the <a href="https://metacoq.github.io">MetaRocq</a> project which uses Rocq itself 
+                    A low level of abstraction is provided by the <a href="https://metarocq.github.io">MetaRocq</a> project which uses Rocq itself 
                     as the metaprogramming language. It allows directly working with the core term syntax 
                     and prove meta-theorems on the typing judgments of Rocq inside Rocq.
                   </li>

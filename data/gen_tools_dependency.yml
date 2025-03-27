@@ -237,77 +237,77 @@
       This package contains a library for real numbers forthe Coq proof-assistant and using the Mathematical Components library.
     lifecycle: dependency
   - name: coq-metacoq-common.1.3.2+8.20
-    source: https://metacoq.github.io/metacoq" rel="nofollow
+    source: https://metarocq.github.io" rel="nofollow
     license: https://spdx.org/licenses/MIT.html
     synopsis:  The common library of Template Coq and PCUIC
     description: >
       MetaCoq is a meta-programming framework for Coq.
     lifecycle: dependency
   - name: coq-metacoq-erasure-plugin.1.3.2+8.20
-    source: https://metacoq.github.io/metacoq" rel="nofollow
+    source: https://metarocq.github.io" rel="nofollow
     license: https://spdx.org/licenses/MIT.html
     synopsis:  Implementation and verification of an erasure procedure for Coq
     description: >
       MetaCoq is a meta-programming framework for Coq.The Erasure module provides a complete specification of Coq'apos;s so-called\extraction\ procedure, starting from the PCUIC calculus and targetinguntyped call-by-value lambda-calculus.The `erasure` function translates types and proofs in well-typed termsinto a dummy `tBox` constructor, following closely P. Letouzey'apos;s PhDthesis.
     lifecycle: dependency
   - name: coq-metacoq-erasure.1.3.2+8.20
-    source: https://metacoq.github.io/metacoq" rel="nofollow
+    source: https://metarocq.github.io" rel="nofollow
     license: https://spdx.org/licenses/MIT.html
     synopsis:  Implementation and verification of an erasure procedure for Coq
     description: >
       MetaCoq is a meta-programming framework for Coq.The Erasure module provides a complete specification of Coq'apos;s so-called\extraction\ procedure, starting from the PCUIC calculus and targetinguntyped call-by-value lambda-calculus.The `erasure` function translates types and proofs in well-typed termsinto a dummy `tBox` constructor, following closely P. Letouzey'apos;s PhDthesis.
     lifecycle: dependency
   - name: coq-metacoq-pcuic.1.3.2+8.20
-    source: https://metacoq.github.io/metacoq" rel="nofollow
+    source: https://metarocq.github.io" rel="nofollow
     license: https://spdx.org/licenses/MIT.html
     synopsis:  A type system equivalent to Coq'apos;s and its metatheory
     description: >
       MetaCoq is a meta-programming framework for Coq.The PCUIC module provides a cleaned-up specification of Coq'apos;s typing algorithm alongwith a certified typechecker for it. This module includes the standard metatheory ofPCUIC: Weakening, Substitution, Confluence and Subject Reduction are proven here.
     lifecycle: dependency
   - name: coq-metacoq-quotation.1.3.2+8.20
-    source: https://metacoq.github.io/metacoq" rel="nofollow
+    source: https://metarocq.github.io" rel="nofollow
     license: https://spdx.org/licenses/MIT.html
     synopsis:  Gallina quotation functions for Template Coq
     description: >
       MetaCoq is a meta-programming framework for Coq.The Quotation module is geared at providing functions `□T → □□T` for`□T := Ast.term` (currently implemented) and for `□T := { t : Ast.term&amp; Σ ;;; [] |- t : T }` (still in the works).  Currently `Ast.term →Ast.term` and `(Σ ;;; [] |- t : T) → Ast.term` functions are providedfor Template and PCUIC terms, in `MetaCoq.Quotation.ToTemplate.All`and `MetaCoq.Quotation.ToPCUIC.All`.  Proving well-typedness is stilla work in progress.Ultimately the goal of this development is to prove that `□` is a lax monoidalsemicomonad (a functor with `cojoin : □T → □□T` that codistributes over `unit`and `×`), which is sufficient for proving Löb'apos;s theorem.
     lifecycle: dependency
   - name: coq-metacoq-safechecker-plugin.1.3.2+8.20
-    source: https://metacoq.github.io/metacoq" rel="nofollow
+    source: https://metarocq.github.io" rel="nofollow
     license: https://spdx.org/licenses/MIT.html
     synopsis:  Implementation and verification of an erasure procedure for Coq
     description: >
       MetaCoq is a meta-programming framework for Coq.The Erasure module provides a complete specification of Coq'apos;s so-called\extraction\ procedure, starting from the PCUIC calculus and targetinguntyped call-by-value lambda-calculus.The `erasure` function translates types and proofs in well-typed termsinto a dummy `tBox` constructor, following closely P. Letouzey'apos;s PhDthesis.
     lifecycle: dependency
   - name: coq-metacoq-safechecker.1.3.2+8.20
-    source: https://metacoq.github.io/metacoq" rel="nofollow
+    source: https://metarocq.github.io" rel="nofollow
     license: https://spdx.org/licenses/MIT.html
     synopsis:  Implementation and verification of safe conversion and typechecking algorithms for Coq
     description: >
       MetaCoq is a meta-programming framework for Coq.The SafeChecker modules provides a correct implementation ofweak-head reduction, conversion and typechecking of Coq definitions and global environments.
     lifecycle: dependency
   - name: coq-metacoq-template-pcuic.1.3.2+8.20
-    source: https://metacoq.github.io/metacoq" rel="nofollow
+    source: https://metarocq.github.io" rel="nofollow
     license: https://spdx.org/licenses/MIT.html
     synopsis:  Translations between Template Coq and PCUIC and proofs of correctness
     description: >
       
     lifecycle: dependency
   - name: coq-metacoq-template.1.3.2+8.20
-    source: https://metacoq.github.io/metacoq" rel="nofollow
+    source: https://metarocq.github.io" rel="nofollow
     license: https://spdx.org/licenses/MIT.html
     synopsis:  A quoting and unquoting library for Coq in Coq
     description: >
       MetaCoq is a meta-programming framework for Coq.Template Coq is a quoting library for Coq. It takes Coq terms andconstructs a representation of their syntax tree as a Coq inductive datatype. The representation is based on the kernel'apos;s term representation.In addition to a complete reification and denotation of CIC terms,Template Coq includes:- Reification of the environment structures, for constant and inductive declarations.- Denotation of terms and global declarations- A monad for manipulating global declarations, calling the type  checker, and inserting them in the global environment, in the style of  MetaCoq/MTac.
     lifecycle: dependency
   - name: coq-metacoq-translations.1.3.2+8.20
-    source: https://metacoq.github.io/metacoq" rel="nofollow
+    source: https://metarocq.github.io" rel="nofollow
     license: https://spdx.org/licenses/MIT.html
     synopsis:  Translations built on top of MetaCoq
     description: >
       MetaCoq is a meta-programming framework for Coq.The Translations modules provides implementation of standard translationsfrom type theory to type theory, e.g. parametricity and the `cross-bool`translation that invalidates functional extensionality.
     lifecycle: dependency
   - name: coq-metacoq-utils.1.3.2+8.20
-    source: https://metacoq.github.io/metacoq" rel="nofollow
+    source: https://metarocq.github.io" rel="nofollow
     license: https://spdx.org/licenses/MIT.html
     synopsis:  The utility library of Template Coq and PCUIC
     description: >
