@@ -43,7 +43,7 @@ let language_manual_version next_handler request =
     | u -> u
   in
   if init_path = path then next_handler request
-  else Dream.redirect request (String.concat "/" path)
+  else Dream.redirect ~status:`Found request (String.concat "/" path)
 
 let head handler request =
   match Dream.method_ request with
