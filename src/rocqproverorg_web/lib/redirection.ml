@@ -60,8 +60,26 @@ let opam_packaging req =
   
 let platform_docs req =
   Dream.(redirect ~status:`Found req ("https://rocq-prover.github.io" ^ target req))
-    
-  
+
+let cocorico req =
+  let target = Dream.target req in
+  let path = String.split_on_char '/' target in
+  match path with
+  | "" :: "cocorico" :: tail ->
+    Dream.(redirect ~status:`Moved_Permanently req ("https://github.com/rocq-prover/rocq/wiki/" ^ String.concat "/" tail))
+  | _ -> Dream.html ~code:404 (Rocqproverorg_frontend.not_found ())
+
+let bugs req =
+  let target = Dream.target req in
+  let path = String.split_on_char '/' target in
+  match path with
+  | "" :: ("bugs" | "bug") :: tail ->
+    if List.length tail = 1 && String.starts_with ~prefix:"show_bug.cgi?id=" (List.hd tail) then
+      Dream.redirect ~status:`Moved_Permanently req ("https://github.com/rocq-prover/rocq/issues/" ^ (String.sub (List.hd tail) 16 (String.length (List.hd tail) - 16)))
+    else
+      Dream.(redirect ~status:`Moved_Permanently req ("https://github.com/rocq-prover/rocq/issues/" ^ String.concat "/" tail))
+  | _ -> Dream.html ~code:404 (Rocqproverorg_frontend.not_found ())
+
 let t =
   Dream.scope "" []
     ([
@@ -80,9 +98,17 @@ let t =
        Dream.get "/sites/**" old_sites_modules;
        Dream.get "/modules/**" old_sites_modules;
        Dream.get "/documentation" documentation;
+       Dream.get "/doc" documentation;
        Dream.get "/opam-packaging.html" opam_packaging;
        Dream.get "/opam-packaging" opam_packaging;
        Dream.get "/platform-docs/**" platform_docs;
+       Dream.get "/cocorico" cocorico;
+       Dream.get "/cocorico.html" cocorico;
+       Dream.get "/cocorico/**" cocorico;
+       Dream.get "/bugs" bugs;
+       Dream.get "/bugs/**" bugs;
+       Dream.get "/bug" bugs;
+       Dream.get "/bug/**" bugs;
        make ~permanent:true [ "/platform-docs", "/docs/platform-docs" ] ;
        make ~permanent:true [ "/docs/installing-rocq", "/docs/using-opam" ] ;
        make ~permanent:true [ "/opam-using.html", "/docs/using-opam" ] ;
@@ -97,4 +123,7 @@ let t =
        make ~permanent:true [ "/related-tools.html", "https://github.com/rocq-community/awesome-coq?tab=readme-ov-file#tools" ];
        make ~permanent:true [ "/faq", "https://github.com/rocq-prover/rocq/wiki/The-Rocq-FAQ" ];
        make ~permanent:true [ "/faq.html", "https://github.com/rocq-prover/rocq/wiki/The-Rocq-FAQ" ];
+       make ~permanent:true [ "/a-short-introduction-to-coq", "/docs/tour-of-rocq" ] ;
+       make ~permanent:false [ "/nix/math-comp", "https://github.com/math-comp/math-comp-nix/archive/v2.tar.gz" ] ;
+       make ~permanent:false [ "/nix/toolbox", "https://github.com/rocq-community/coq-nix-toolbox/archive/master.tar.gz" ] ;
      ])
