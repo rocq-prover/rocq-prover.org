@@ -98,6 +98,7 @@ let t =
        Dream.get "/sites/**" old_sites_modules;
        Dream.get "/modules/**" old_sites_modules;
        Dream.get "/documentation" documentation;
+       Dream.get "/doc" documentation;
        Dream.get "/opam-packaging.html" opam_packaging;
        Dream.get "/opam-packaging" opam_packaging;
        Dream.get "/platform-docs/**" platform_docs;
