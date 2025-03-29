@@ -79,15 +79,17 @@ Layout.render
             This provides the flexibility to install additional packages with opam later on.
             It also supports installing multiple versions of the Rocq Platform and switching between them.
           </li>
-
+          <a class="btn mt-1 gap-2" href="https://github.com/rocq-prover/platform/blob/<%s latest_platform_version %>/doc/README_Linux.md#installation-by-compiling-from-sources-using-scripts--opam">Run the Rocq Platform scripts<%s! Icons.arrow_small_right "h-6 w-6" %></a>
         </ol>
-        <a class="btn mt-6 gap-2" href="https://github.com/rocq-prover/platform/blob/<%s latest_platform_version %>/doc/README_Linux.md#installation-by-compiling-from-sources-using-scripts--opam">Run the Rocq Platform scripts<%s! Icons.arrow_small_right "h-6 w-6" %></a>
 
         <h3>
           Using Opam
         </h3>
         <p>
           If you want some finer-grained control over the installation process, you can install the Rocq Prover by running opam commands directly.
+        </p>
+        <a class="btn mt-1 gap-2" href="<%s Url.tutorial "using-opam" %>" >Install Rocq using Opam <%s! Icons.arrow_small_right "h-6 w-6" %></a>
+
         <h3>
           Using Nix
         </h3>
@@ -96,9 +98,8 @@ Layout.render
           See the <a href="https://nixos.org/download/">Nix installation instructions</a>
           and the <a href="https://nixos.org/manual/nixpkgs/unstable/#sec-language-coq">Nixpkgs manual section on Rocq</a> for more information.
         </p>
-                </p>
-        <a class="btn mt-6 gap-2" href="<%s Url.tutorial "using-opam" %>" >Install Rocq using Opam <%s! Icons.arrow_small_right "h-6 w-6" %></a>
-                <h3>
+
+        <h3>
           Using your system's package manager
         </h3>
         <p>
@@ -154,7 +155,8 @@ Layout.render
           It is available in the <a href="https://marketplace.visualstudio.com/items?itemName=maximedenes.vsrocq">Visual Studio Code Marketplace</a>
           and on <a href="https://open-vsx.org/extension/maximedenes/vsrocq">Open VSX</a>.
           To use it, you need to install the corresponding language server.
-          <br>
+          </p>
+          <p>
           Be careful, that there is a version of the extension per version of the language server.
           Both version needs to be the same for the extension to work.
           </p>
@@ -165,7 +167,6 @@ Layout.render
           <p>
           Starting from version 2025.01, the language server should already be installed
           if you have installed the <a href="/platform">Rocq Platform</a>.
-          Be carefult to install the corresponding version of the extension.
           </p>
 
           <p>
@@ -290,7 +291,7 @@ Layout.render
         <p>
           If you want some finer-grained control over the installation process, you can install the Rocq Prover by running opam commands directly.
         </p>
-        <a class="btn mt-6 gap-2" href="<%s Url.tutorial "using-opam" %>" >Install Rocq using Opam <%s! Icons.arrow_small_right "h-6 w-6" %></a>
+        <a class="btn mt-1 gap-2" href="<%s Url.tutorial "using-opam" %>" >Install Rocq using Opam <%s! Icons.arrow_small_right "h-6 w-6" %></a>
         <h3>
           Using Nix
         </h3>
@@ -344,7 +345,8 @@ Layout.render
           It is available in the <a href="https://marketplace.visualstudio.com/items?itemName=maximedenes.vsrocq">Visual Studio Code Marketplace</a>
           and on <a href="https://open-vsx.org/extension/maximedenes/vsrocq">Open VSX</a>.
           To use it, you need to install the corresponding language server.
-          <br>
+          </p>
+          <p>
           Be careful, that there is a version of the extension per version of the language server.
           Both version needs to be the same for the extension to work.
           </p>
@@ -355,7 +357,6 @@ Layout.render
           <p>
           Starting from version 2025.01, the language server should already be installed
           if you have installed the <a href="/platform">Rocq Platform</a>.
-          Be carefult to install the corresponding version of the extension.
           </p>
 
           <p>
@@ -521,7 +522,8 @@ Layout.render
           It is available in the <a href="https://marketplace.visualstudio.com/items?itemName=maximedenes.vsrocq">Visual Studio Code Marketplace</a>
           and on <a href="https://open-vsx.org/extension/maximedenes/vsrocq">Open VSX</a>.
           To use it, you need to install the corresponding language server.
-          <br>
+          </p>
+          <p>
           Be careful, that there is a version of the extension per version of the language server.
           Both version needs to be the same for the extension to work.
           </p>
@@ -532,7 +534,6 @@ Layout.render
           <p>
           Starting from version 2025.01, the language server should already be installed
           if you have installed the <a href="/platform">Rocq Platform</a>.
-          Be carefult to install the corresponding version of the extension.
           </p>
           <p>
           If you have used WSL to install the Rocq Prover, then you can use the
