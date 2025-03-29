@@ -15,7 +15,7 @@ Layout.render
           class="btn">
           Go Back Home
         </a>
-        <a href="https://github.com/ocaml/ocaml.org/issues"
+        <a href="https://github.com/rocq-prover/rocq-prover.org/issues"
           class="btn btn-ghost">
           Open an Issue
         </a>
