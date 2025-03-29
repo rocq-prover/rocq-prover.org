@@ -60,24 +60,7 @@ Layout.render
           Install the Rocq Prover on Linux
         </h2>
         <h3>
-          Using your system's package manager
-        </h3>
-        <p>
-          The Rocq Prover is available through many package managers, including most Linux distribution package managers.
-          While this is currently the easiest way to install the Rocq Prover, it has the following limitations:
-        </p>
-        <ul>
-          <li>
-            Depending on the distribution, the available version may not be the latest version.
-            See <a href="https://repology.org/project/coq/versions">Repology</a> to know which version is available in your distribution.
-          </li>
-          <li>
-            The available packages may not include all the external packages available for the Rocq Prover.
-            Installing additional packages may require manual compilation and installation.
-          </li>
-        </ul>
-        <h3>
-          Using the Rocq Platform (recommended)
+          Using the Rocq Platform (Recommended)
         </h3>
         <p>
           The Rocq Prover has a rich ecosystem of external packages (libraries and plugins) that extend it and make it more powerful.
@@ -105,8 +88,6 @@ Layout.render
         </h3>
         <p>
           If you want some finer-grained control over the installation process, you can install the Rocq Prover by running opam commands directly.
-        </p>
-        <a class="btn mt-6 gap-2" href="<%s Url.tutorial "using-opam" %>" >Install Rocq using Opam <%s! Icons.arrow_small_right "h-6 w-6" %></a>
         <h3>
           Using Nix
         </h3>
@@ -115,6 +96,25 @@ Layout.render
           See the <a href="https://nixos.org/download/">Nix installation instructions</a>
           and the <a href="https://nixos.org/manual/nixpkgs/unstable/#sec-language-coq">Nixpkgs manual section on Rocq</a> for more information.
         </p>
+                </p>
+        <a class="btn mt-6 gap-2" href="<%s Url.tutorial "using-opam" %>" >Install Rocq using Opam <%s! Icons.arrow_small_right "h-6 w-6" %></a>
+                <h3>
+          Using your system's package manager
+        </h3>
+        <p>
+          The Rocq Prover is available through many package managers, including most Linux distribution package managers.
+          While this is currently the easiest way to install the Rocq Prover, it has the following limitations:
+        </p>
+        <ul>
+          <li>
+            Depending on the distribution, the available version may not be the latest version.
+            See <a href="https://repology.org/project/coq/versions">Repology</a> to know which version is available in your distribution.
+          </li>
+          <li>
+            The available packages may not include all the external packages available for the Rocq Prover.
+            Installing additional packages may require manual compilation and installation.
+          </li>
+        </ul>
         <h3>
           Using Docker
         </h3>
@@ -145,6 +145,7 @@ Layout.render
             After installing the Rocq Prover, you should set up VS Code or
             VS Codium to write Rocq code and proofs.
           </p>
+
           <h3>
             VSRocq (Recommended)
           </h3>
@@ -152,14 +153,26 @@ Layout.render
           <a href="https://github.com/rocq-prover/vscoq">VsRocq</a> is the official Rocq extension for Visual Studio Code.
           It is available in the <a href="https://marketplace.visualstudio.com/items?itemName=maximedenes.vsrocq">Visual Studio Code Marketplace</a>
           and on <a href="https://open-vsx.org/extension/maximedenes/vsrocq">Open VSX</a>.
-          To use it, you need to install the corresponding language server. Using opam, you can install it with the following command:
+          To use it, you need to install the corresponding language server.
+          <br>
+          Be careful, that there is a version of the extension per version of the language server.
+          Both version needs to be the same for the extension to work.
+          </p>
+
+          <h4>
+            Install VSRocq
+          </h4>
+          <p>
+          Starting from version 2025.01, the language server should already be installed
+          if you have installed the <a href="/platform">Rocq Platform</a>.
+          Be carefult to install the corresponding version of the extension.
+          </p>
+
+          <p>
+          If you are using opam, you can install the language server with the following command:
           </p>
 
           <%s! Copy_to_clipboard.small_code_snippet ~id:"install-vsrocq" "opam install vsrocq-language-server" %>
-
-          <p>
-          Starting from version 2025.01, the language server should already be installed if you installed the <a href="/platform">Rocq Platform</a>.
-          </p>
 
           <p>
           The language server is also available as a <a href="https://search.nixos.org/packages?show=coqPackages.vscoq-language-server">Nix package</a>.
@@ -167,6 +180,22 @@ Layout.render
 
           <p>
           For now, <a href="https://repology.org/project/vscoq-language-server/versions">vsrocq-language-server</a> is not available in all Linux distributions that have the Rocq Prover. If you have used your Linux distribution's package manager to install the Rocq Prover and it does not include the language server, you can fall back to using VsCoq Legacy (see below).
+          </p>
+
+          <h4>
+          Troubleshooting
+          </h4>
+          <p>
+          In case of installation troubles, or a bug with the extension please report
+          on the dedicated <a href="https://rocq-prover.zulipchat.com/#narrow/channel/237662-VsCoq-devs-.26-users"> Zulip stream</a>.
+          In which case, please mention:
+          <ul>
+            <li> your operating system (Linus, macOs, Windows), </li>
+            <li> the version of Rocq and of the language server you have installed, </li>
+            <li> the installation method used to install Rocq, and the language server </li>
+          </ul>
+          You can access setup information, and if needed logs, by clicking on the Rocq button.
+          It is is displayed up right when viewing a .v file, provided the extension is installed.
           </p>
 
           <h3>
@@ -235,7 +264,7 @@ Layout.render
           Install the Rocq Prover on macOS
         </h2>
         <h3>
-          Using the Rocq Platform (recommended)
+          Using the Rocq Platform (Recommended)
         </h3>
         <p>
           The Rocq Prover has a rich ecosystem of external packages (libraries and plugins) that extend it and make it more powerful.
@@ -245,23 +274,16 @@ Layout.render
           <li>
             Beginners and users who want to get started quickly should use the Rocq Platform binary installer for macOS.
           </li>
+          <a class="btn mt-1 gap-2" href="<%s Url.release latest_platform_version %>#recommended-binary-installers">Download the Rocq Platform binary installer<%s! Icons.arrow_small_right "h-6 w-6" %></a>
           <li>
             The Rocq Platform scripts install the Rocq Prover and its packages from sources,
             while abstracting over the details of running opam.
             This provides the flexibility to install additional packages with opam later on.
             It also supports installing multiple versions of the Rocq Platform and switching between them.
           </li>
+          <a class="btn mt-1 gap-2" href="https://github.com/rocq-prover/platform/blob/<%s latest_platform_version %>/doc/README_macOS.md#installation-by-compiling-from-sources-using-opam">Run the Rocq Platform scripts<%s! Icons.arrow_small_right "h-6 w-6" %></a>
         </ol>
-        <a class="btn mt-6 gap-2" href="<%s Url.release latest_platform_version %>#recommended-binary-installers">Download the Rocq Platform binary installer<%s! Icons.arrow_small_right "h-6 w-6" %></a>
-        <a class="btn mt-6 gap-2" href="https://github.com/rocq-prover/platform/blob/<%s latest_platform_version %>/doc/README_macOS.md#installation-by-compiling-from-sources-using-opam">Run the Rocq Platform scripts<%s! Icons.arrow_small_right "h-6 w-6" %></a>
-        <h3>
-          Using Homebrew
-        </h3>
-        <p>
-          The Rocq Prover is also available through Homebrew, a package manager for macOS.
-          Similar to the Linux package managers, this presents the limitations of not having all the external packages available for Rocq.
-        </p>
-        <%s! Copy_to_clipboard.small_code_snippet ~id:"brew" "brew install coq" %>
+
         <h3>
           Using Opam
         </h3>
@@ -277,6 +299,14 @@ Layout.render
           See the <a href="https://nixos.org/download/">Nix installation instructions</a>
           and the <a href="https://nixos.org/manual/nixpkgs/unstable/#sec-language-coq">Nixpkgs manual section on Rocq</a> for more information.
         </p>
+        <h3>
+          Using Homebrew
+        </h3>
+        <p>
+          The Rocq Prover is also available through Homebrew, a package manager for macOS.
+          Similar to the Linux package managers, this presents the limitations of not having all the external packages available for Rocq.
+        </p>
+        <%s! Copy_to_clipboard.small_code_snippet ~id:"brew" "brew install coq" %>
         <h3>
           Using Docker
         </h3>
@@ -313,21 +343,50 @@ Layout.render
           <a href="https://github.com/rocq-prover/vscoq">VsRocq</a> is the official Rocq extension for Visual Studio Code.
           It is available in the <a href="https://marketplace.visualstudio.com/items?itemName=maximedenes.vsrocq">Visual Studio Code Marketplace</a>
           and on <a href="https://open-vsx.org/extension/maximedenes/vsrocq">Open VSX</a>.
-          To use it, you need to install the corresponding language server. Using opam, you can install it with the following command:
+          To use it, you need to install the corresponding language server.
+          <br>
+          Be careful, that there is a version of the extension per version of the language server.
+          Both version needs to be the same for the extension to work.
+          </p>
+
+          <h4>
+            Install VSRocq
+          </h4>
+          <p>
+          Starting from version 2025.01, the language server should already be installed
+          if you have installed the <a href="/platform">Rocq Platform</a>.
+          Be carefult to install the corresponding version of the extension.
+          </p>
+
+          <p>
+          If you are using opam, you can install the language server with the following command:
           </p>
 
           <%s! Copy_to_clipboard.small_code_snippet ~id:"install-vsrocq" "opam install vsrocq-language-server" %>
-
-          <p>
-          Starting from version 2025.01, the language server should already be installed if you installed the <a href="/platform">Rocq Platform</a>.
-          </p>
 
           <p>
           The language server is also available as a <a href="https://search.nixos.org/packages?show=coqPackages.vscoq-language-server">Nix package</a>.
           </p>
 
           <p>
-          If you have used Homebrew to install the Rocq Prover, there is no language server available yet. You can fall back to using VsCoq Legacy (see below).
+          If you have used Homebrew to install the Rocq Prover, there is no language server available yet.
+          You can fall back to using VsCoq Legacy (see below).
+          </p>
+
+          <h4>
+          Troubleshooting
+          </h4>
+          <p>
+          In case of installation troubles, or a bug with the extension please report
+          on the dedicated <a href="https://rocq-prover.zulipchat.com/#narrow/channel/237662-VsCoq-devs-.26-users"> Zulip stream</a>.
+          In which case, please mention:
+          <ul>
+            <li> your operating system (Linus, macOs, Windows), </li>
+            <li> the version of Rocq and of the language server you have installed, </li>
+            <li> the installation method used to install Rocq, and the language server </li>
+          </ul>
+          You can access setup information, and if needed logs, by clicking on the Rocq button.
+          It is is displayed up right when viewing a .v file, provided the extension is installed.
           </p>
 
           <h3>
@@ -397,7 +456,7 @@ Layout.render
           Install the Rocq Prover on Windows
         </h2>
         <h3>
-          Using the Rocq Platform (recommended)
+          Using the Rocq Platform (Recommended)
         </h3>
         <p>
           The Rocq Prover has a rich ecosystem of external packages (libraries and plugins) that extend it and make it more powerful.
@@ -407,15 +466,16 @@ Layout.render
           <li>
             Beginners and users who want to get started quickly should use the Rocq Platform binary installer for Windows.
           </li>
+          <a class="btn mt-1 gap-2" href="<%s Url.release latest_platform_version %>#recommended-binary-installers">Download the Rocq Platform binary installer<%s! Icons.arrow_small_right "h-6 w-6" %></a>
+
           <li>
             The Rocq Platform scripts install the Rocq Prover and its packages from sources,
             while abstracting over the details of running opam.
             This provides the flexibility to install additional packages with opam later on.
             It also supports installing multiple versions of the Rocq Platform and switching between them.
           </li>
+          <a class="btn mt-1 gap-2" href="https://github.com/rocq-prover/platform/blob/<%s latest_platform_version %>/doc/README_Windows.md#installation-by-compiling-from-sources-using-scripts--opam">Run the Rocq Platform scripts<%s! Icons.arrow_small_right "h-6 w-6" %></a>
         </ol>
-        <a class="btn mt-6 gap-2" href="<%s Url.release latest_platform_version %>#recommended-binary-installers">Download the Rocq Platform binary installer<%s! Icons.arrow_small_right "h-6 w-6" %></a>
-        <a class="btn mt-6 gap-2" href="https://github.com/rocq-prover/platform/blob/<%s latest_platform_version %>/doc/README_Windows.md#installation-by-compiling-from-sources-using-scripts--opam">Run the Rocq Platform scripts<%s! Icons.arrow_small_right "h-6 w-6" %></a>
         <h3>
           Using Opam
         </h3>
@@ -456,12 +516,45 @@ Layout.render
           <h3>
             VSRocq (Recommended)
           </h3>
-
           <p>
           <a href="https://github.com/rocq-prover/vscoq">VsRocq</a> is the official Rocq extension for Visual Studio Code.
           It is available in the <a href="https://marketplace.visualstudio.com/items?itemName=maximedenes.vsrocq">Visual Studio Code Marketplace</a>
           and on <a href="https://open-vsx.org/extension/maximedenes/vsrocq">Open VSX</a>.
-          To use it, you need the corresponding language server, which is distributed with the Rocq Platform starting from version 2025.01.
+          To use it, you need to install the corresponding language server.
+          <br>
+          Be careful, that there is a version of the extension per version of the language server.
+          Both version needs to be the same for the extension to work.
+          </p>
+
+          <h4>
+            Install VSRocq
+          </h4>
+          <p>
+          Starting from version 2025.01, the language server should already be installed
+          if you have installed the <a href="/platform">Rocq Platform</a>.
+          Be carefult to install the corresponding version of the extension.
+          </p>
+          <p>
+          If you have used WSL to install the Rocq Prover, then you can use the
+          <a href="https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-wsl">WSL</a>
+          VS Code extension to use a language server running in WSL.
+          In this case, follow the instructions for Linux on how to install the language server.
+          </p>
+
+          <h4>
+          Troubleshooting
+          </h4>
+          <p>
+          In case of installation troubles, or a bug with the extension please report
+          on the dedicated <a href="https://rocq-prover.zulipchat.com/#narrow/channel/237662-VsCoq-devs-.26-users"> Zulip stream</a>.
+          In which case, please mention:
+          <ul>
+            <li> your operating system (Linus, macOs, Windows), </li>
+            <li> the version of Rocq and of the language server you have installed, </li>
+            <li> the installation method used to install Rocq, and the language server </li>
+          </ul>
+          You can access setup information, and if needed logs, by clicking on the Rocq button.
+          It is is displayed up right when viewing a .v file, provided the extension is installed.
           </p>
 
           <h3>
@@ -477,13 +570,6 @@ Layout.render
           </h3>
           <p>
           <a href="https://github.com/rocq-community/vscoq-legacy/">VsCoq Legacy</a> is a legacy Rocq extension for Visual Studio Code that only relies on the RocqIDE protocol. You can install it from the <a href="https://marketplace.visualstudio.com/items?itemName=coq-community.vscoq1">Visual Studio Code Marketplace</a> or from <a href="https://open-vsx.org/extension/coq-community/vscoq1">Open VSX</a>.
-          </p>
-
-          <h3>
-          WSL
-          </h3>
-          <p>
-          If you have used WSL to install the Rocq Prover, then you can use the <a href="https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-wsl">WSL</a> VS Code extension to use a language server running in WSL. In this case, follow the instructions for Linux on how to install the language server.
           </p>
         </div>
 
