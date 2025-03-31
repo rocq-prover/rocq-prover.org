@@ -148,7 +148,7 @@ Layout.render
           </p>
 
           <h3>
-            VSRocq (Recommended)
+            VsRocq (Recommended)
           </h3>
           <p>
           <a href="https://github.com/rocq-prover/vscoq">VsRocq</a> is the official Rocq extension for Visual Studio Code.
@@ -158,15 +158,15 @@ Layout.render
           </p>
           <p>
           Be careful, that there is a version of the extension per version of the language server.
-          Both version needs to be the same for the extension to work.
+          Both version need to be the same for the extension to work.
           </p>
 
           <h4>
-            Install VSRocq
+            Install VsRocq
           </h4>
           <p>
           Starting from version 2025.01, the language server should already be installed
-          if you have installed the <a href="/platform">Rocq Platform</a>.
+          if you have installed the <a href="/platform">Rocq Platform</a>, so you should not try to install it again.
           </p>
 
           <p>
@@ -191,12 +191,12 @@ Layout.render
           on the dedicated <a href="https://rocq-prover.zulipchat.com/#narrow/channel/237662-VsCoq-devs-.26-users"> Zulip stream</a>.
           In which case, please mention:
           <ul>
-            <li> your operating system (Linus, macOs, Windows), </li>
+            <li> your operating system (Linus), </li>
             <li> the version of Rocq and of the language server you have installed, </li>
             <li> the installation method used to install Rocq, and the language server </li>
           </ul>
           You can access setup information, and if needed logs, by clicking on the Rocq button.
-          It is is displayed up right when viewing a .v file, provided the extension is installed.
+          It is is displayed in the top-right corner when viewing a .v file, provided the extension is installed.
           </p>
 
           <h3>
@@ -338,7 +338,7 @@ Layout.render
             VS Codium to write Rocq code and proofs.
           </p>
           <h3>
-            VSRocq (Recommended)
+            VsRocq (Recommended)
           </h3>
           <p>
           <a href="https://github.com/rocq-prover/vscoq">VsRocq</a> is the official Rocq extension for Visual Studio Code.
@@ -348,15 +348,15 @@ Layout.render
           </p>
           <p>
           Be careful, that there is a version of the extension per version of the language server.
-          Both version needs to be the same for the extension to work.
+          Both version need to be the same for the extension to work.
           </p>
 
           <h4>
-            Install VSRocq
+            Install VsRocq
           </h4>
           <p>
           Starting from version 2025.01, the language server should already be installed
-          if you have installed the <a href="/platform">Rocq Platform</a>.
+          if you have installed the <a href="/platform">Rocq Platform</a>, so you should not try to install it again.
           </p>
 
           <p>
@@ -382,12 +382,12 @@ Layout.render
           on the dedicated <a href="https://rocq-prover.zulipchat.com/#narrow/channel/237662-VsCoq-devs-.26-users"> Zulip stream</a>.
           In which case, please mention:
           <ul>
-            <li> your operating system (Linus, macOs, Windows), </li>
+            <li> your operating system (macOs), </li>
             <li> the version of Rocq and of the language server you have installed, </li>
             <li> the installation method used to install Rocq, and the language server </li>
           </ul>
           You can access setup information, and if needed logs, by clicking on the Rocq button.
-          It is is displayed up right when viewing a .v file, provided the extension is installed.
+          It is is displayed in the top-right corner when viewing a .v file, provided the extension is installed.
           </p>
 
           <h3>
@@ -515,7 +515,7 @@ Layout.render
             VS Codium to write Rocq code and proofs.
           </p>
           <h3>
-            VSRocq (Recommended)
+            VsRocq (Recommended)
           </h3>
           <p>
           <a href="https://github.com/rocq-prover/vscoq">VsRocq</a> is the official Rocq extension for Visual Studio Code.
@@ -525,15 +525,15 @@ Layout.render
           </p>
           <p>
           Be careful, that there is a version of the extension per version of the language server.
-          Both version needs to be the same for the extension to work.
+          Both version need to be the same for the extension to work.
           </p>
 
           <h4>
-            Install VSRocq
+            Install VsRocq
           </h4>
           <p>
           Starting from version 2025.01, the language server should already be installed
-          if you have installed the <a href="/platform">Rocq Platform</a>.
+          if you have installed the <a href="/platform">Rocq Platform</a>, so you should not try to install it again.
           </p>
           <p>
           If you have used WSL to install the Rocq Prover, then you can use the
@@ -550,12 +550,12 @@ Layout.render
           on the dedicated <a href="https://rocq-prover.zulipchat.com/#narrow/channel/237662-VsCoq-devs-.26-users"> Zulip stream</a>.
           In which case, please mention:
           <ul>
-            <li> your operating system (Linus, macOs, Windows), </li>
+            <li> your operating system (Windows), </li>
             <li> the version of Rocq and of the language server you have installed, </li>
             <li> the installation method used to install Rocq, and the language server </li>
           </ul>
           You can access setup information, and if needed logs, by clicking on the Rocq button.
-          It is is displayed up right when viewing a .v file, provided the extension is installed.
+          It is is displayed in the top-right corner when viewing a .v file, provided the extension is installed.
           </p>
 
           <h3>
