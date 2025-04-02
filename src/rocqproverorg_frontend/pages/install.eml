@@ -6,7 +6,7 @@ Layout.render
 ~canonical:"" @@
 <div class="lg:py-8 py-6">
   <div class="container-fluid" x-data='{ operating_system: persist_os_link(), editor: persist_editor_link() }'>
-    <div class="hidden lg:grid gap-6 xl:grid-cols-2 xl:gap-16">
+    <div class="hidden xl:grid gap-6 xl:grid-cols-2 xl:gap-16">
       <div class="prose dark:prose-invert mb-6">
         <h1 class="sr-only ">
           Install the Rocq Prover
@@ -45,7 +45,7 @@ Layout.render
       </div>
     </div>
 
-    <div class="prose dark:prose-invert mb-6 w-full flex md:hidden">
+    <div class="prose dark:prose-invert mb-6 w-full flex xl:hidden">
 % let render_multi_button ~title ~active_tab ~class_ =
       <button x-on:click='operating_system = "<%s active_tab %>"; updateHash("os","<%s active_tab %>")' class="flex flex-auto justify-center py-4 text-sm border <%s class_ %>" :class='operating_system === "<%s active_tab %>" ? "bg-primary dark:bg-dark-primary text-white dark:text-dark-title border-primary dark:border-dark-primary" : "text-content dark:text-dark-separator_30 border-card_border dark:border-dark-separator_30"' ><%s title %></button>
 % in
@@ -127,7 +127,7 @@ Layout.render
       <div>
 
         <div class="prose dark:prose-invert">
-          <div class="w-full flex mb-6 md:hidden">
+          <div class="w-full flex mb-6 xl:hidden">
 % let render_multi_button ~title ~active_tab ~class_ =
       <button x-on:click='editor = "<%s active_tab %>"; updateHash("editor","<%s active_tab %>")' class="flex flex-auto justify-center py-4 text-sm border <%s class_ %>" :class='editor === "<%s active_tab %>" ? "bg-primary dark:bg-dark-primary text-white dark:text-dark-title border-primary dark:border-dark-primary" : "text-content dark:text-dark-separator_30 border-card_border dark:border-dark-separator_30"'><%s title %></button>
 % in
@@ -318,7 +318,7 @@ Layout.render
 
       <div>
         <div class="prose dark:prose-invert">
-          <div class="w-full mb-6 flex md:hidden">
+          <div class="w-full mb-6 flex xl:hidden">
 % let render_multi_button ~title ~active_tab ~class_ =
       <button x-on:click='editor = "<%s active_tab %>"; updateHash("editor","<%s active_tab %>")' class="flex flex-auto justify-center py-4 text-sm border <%s class_ %>" :class='editor === "<%s active_tab %>" ? "bg-primary dark:bg-dark-primary text-white dark:text-dark-title border-primary dark:border-dark-primary" : "text-content dark:text-dark-separator_30 border-card_border dark:border-dark-separator_30"'><%s title %></button>
 % in
@@ -495,7 +495,7 @@ Layout.render
       <div>
 
         <div class="prose dark:prose-invert">
-          <div class="w-full mb-6 flex md:hidden">
+          <div class="w-full mb-6 flex xl:hidden">
 % let render_multi_button ~title ~active_tab ~class_ =
       <button x-on:click='editor = "<%s active_tab %>"; updateHash("editor","<%s active_tab %>")' class="flex flex-auto justify-center py-4 text-sm border <%s class_ %>" :class='editor === "<%s active_tab %>" ? "bg-primary dark:bg-dark-primary text-white dark:text-dark-title border-primary dark:border-dark-primary" : "text-content dark:text-dark-separator_30 border-card_border dark:border-dark-separator_30"'><%s title %></button>
 % in
