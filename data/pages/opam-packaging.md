@@ -31,7 +31,7 @@ Click here to see a minimal example `Makefile`.
         rocq makefile -f _RocqProject -o $@
 
 See also the Reference Manual on [building a Rocq project with
-`rocq_makefile`](/refman/practical-tools/utilities.html#building-a-rocq-project-with-rocq-makefile-details).
+`rocq makefile`](/refman/practical-tools/utilities.html#building-a-rocq-project-with-rocq-makefile-details).
 
 The project must be available to download as an archive. For example, if
 your repository is hosted on GitHub, tag the commit corresponding to the
@@ -128,7 +128,8 @@ is a template for `released/packages/rocq-foo/rocq-foo.1.0.0/opam`:
     license: "MIT" # Make sure this is reflected by a LICENSE file in your sources
 
     depends: [
-      "rocq" {>= "9.0" & < "9.1~"}
+      "rocq-core" {>= "9.0" & < "9.1~"}
+      "rocq-stdlib" {>= "9.0" & < "9.1~"} # If necessary
     ]
 
     build: [
