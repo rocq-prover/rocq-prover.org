@@ -1,3 +1,10 @@
+---
+title: Opam Packaging
+description: "Opam Packaging Howto."
+meta_title: Opam Packaging
+meta_description: How-to create Rocq Opam packages.
+---
+
 ## Creating and Submitting a Package
 
 This page contains instructions to submit a simple example Rocq package
