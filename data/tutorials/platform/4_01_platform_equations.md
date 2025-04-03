@@ -1,12 +1,12 @@
 ---
-id: "equations-docs"
+id: "platform-equations"
 title: "Documentation of Equations"
 description: |
   Documentation of Equations
-category: "Documentation"
+category: "Platform"
 ---
 
-## What is Equations? 
+## What is Equations?
 
 Equations is a function definition plugin for Coq, that allows the
 definition of functions by dependent pattern-matching and well-founded,

@@ -1,12 +1,10 @@
 ---
 id: "platform-docs"
-title: "The Rocq Platform Docs"
+title: "About"
 description: |
-  Documentation and Tutorials for the Rocq Platform
-category: "Documentation"
+  Description of Rocq Platform Docs
+category: "Rocq Platform Docs"
 ---
-
-## About
 
 The [Rocq Platform Docs](https://rocq-prover.org/platform-docs/) aims to collaboratively create an action-oriented and interactive documentation for the Rocq Prover and its Platform.
 Each core functionality and plugin of the Rocq Prover and the Rocq Platform will have one or several interactive tutorials and/or how-to guides explaining how to use them in practice.
