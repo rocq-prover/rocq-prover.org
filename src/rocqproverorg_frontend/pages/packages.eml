@@ -40,7 +40,7 @@ in
                 </div>
             </div>
             <div class="flex flex-col gap-4 md:gap-6 md:w-80 pt-8 md:pt-0">
-                <%s! Hero_section.hero_button ~left_icon:(Icons.pencil_note "w-5 h-5") ~right_icon:(Icons.link "w-5 h-5") ~text:("Publish a Package") ~href:("https://opam.ocaml.org/doc/Packaging.html") "" %>
+                <%s! Hero_section.hero_button ~left_icon:(Icons.pencil_note "w-5 h-5") ~right_icon:(Icons.link "w-5 h-5") ~text:("Publish a Package") ~href:("/opam-packaging") "" %>
                 <div class="text-sm text-content dark:text-dark-content">
                     Learn how to publish your first opam package today and make it available to the rest of the community
                 </div>
