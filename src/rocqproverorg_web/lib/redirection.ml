@@ -73,6 +73,7 @@ let t =
        Dream.get "/opam/www" opam_www;
        Dream.get "/opam/www/**" opam_www;
        Dream.get "/coq-package-index" opam_www;
+       make ~permanent:true [ ("/packages.html", "/packages") ];
        Dream.get "/opam/**" opam;
        Dream.get "/distrib/**" distrib;
        Dream.get "/library" distrib;
