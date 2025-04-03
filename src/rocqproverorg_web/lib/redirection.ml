@@ -54,10 +54,7 @@ let old_sites_modules req =
 
 let documentation req =
   Dream.(redirect ~status:`Moved_Permanently req "/docs")
-  
-let opam_packaging req =
-  Dream.(redirect ~status:`Found req ("https://rocq-prover.github.io" ^ target req))
-  
+
 let platform_docs req =
   Dream.(redirect ~status:`Found req ("https://rocq-prover.github.io" ^ target req))
 
@@ -100,8 +97,8 @@ let t =
        Dream.get "/modules/**" old_sites_modules;
        Dream.get "/documentation" documentation;
        Dream.get "/doc" documentation;
-       Dream.get "/opam-packaging.html" opam_packaging;
-       Dream.get "/opam-packaging" opam_packaging;
+       make ~permanent:true [ ("/opam-packaging.html", "/opam-packaging") ];
+       make ~permanent:true [ ("/opam-layout.html", "/opam-layout") ];
        Dream.get "/platform-docs/**" platform_docs;
        Dream.get "/cocorico" cocorico;
        Dream.get "/cocorico.html" cocorico;

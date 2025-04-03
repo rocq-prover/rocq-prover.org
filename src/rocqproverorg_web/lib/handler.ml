@@ -1354,3 +1354,6 @@ let sitemap _request =
       Dream.flush stream)
 
 let logos _req = Dream.html (Rocqproverorg_frontend.logos ())
+
+let opam_packaging = page Url.opam_packaging
+let opam_layout = page Url.opam_layout
