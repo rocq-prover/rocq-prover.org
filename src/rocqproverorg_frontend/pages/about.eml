@@ -44,6 +44,15 @@ Layout.render
             <div class="font-semibold text-lg text-content dark:text-dark-content">Awards</div>
           </a>
         </div>
+        <div>
+          <a
+            class="hover:text-primary dark:hover:text-dark-primary hover:bg-primary_25 dark:hover:bg-dark-primary_20 h-28 w-28 rounded-lg inline-block transition-colors"
+            href="/roadmap"
+          >
+            <%s! Icons.star "h-10 w-10 mb-4 m-auto mt-6" %>
+            <div class="font-semibold text-lg text-content dark:text-dark-content">Future</div>
+          </a>
+        </div>
       </div>
     </div>
   </div>
