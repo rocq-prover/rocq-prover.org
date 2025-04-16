@@ -6,3 +6,10 @@ jobs:
     publication_date: 2024-11-08
     company: Inria
     company_logo: logos/icon-rocq-orange.svg
+  - title: Staff Software Engineer, Security/Privacy, Formal Verification
+    link: https://www.google.com/about/careers/applications/jobs/results/83710639330992838-staff-software-engineer-securityprivacy-formal-verification
+    locations:
+      - Seattle, negotiable. Team has presence in Cambridge MA, Munich, Zurich.
+    publication_date: 2025-04-16
+    company: Google
+    company_logo: logos/lightmode/google.svg
