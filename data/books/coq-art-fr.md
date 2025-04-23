@@ -17,7 +17,7 @@ links:
   - description: Lire en ligne
     uri: https://www.labri.fr/perso/casteran/CoqArt/coqartF.pdf
   - description: Exemples et exercices
-    uri: https://coq-community.org/coq-art
+    uri: https://coq-community.org/coq-art - [1 Client error: Timeout was reached]
 difficulty: beginner
 pricing: free
 ---

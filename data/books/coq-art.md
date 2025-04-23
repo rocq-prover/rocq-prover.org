@@ -17,7 +17,7 @@ links:
   - description: Publisher's Book Website
     uri: https://doi.org/10.1007/978-3-662-07964-5
   - description: Examples and Exercises
-    uri: https://coq-community.org/coq-art
+    uri: https://coq-community.org/coq-art - [1 Client error: Timeout was reached]
 difficulty: beginner
 pricing: paid
 ---
