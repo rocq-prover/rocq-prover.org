@@ -11,6 +11,6 @@ location:
 courses:
     - name: Software Foundations
       acronym: CS 494
-      url: https://www2.cs.uic.edu/~mansky/teaching/cs494sf/sp19/
+      url: https://www2.cs.uic.edu/~mansky/teaching/cs494sf/sp19/ - [1 Client error: Timeout was reached]
       year: 2019
 ---

@@ -11,7 +11,7 @@ location:
 courses:
     - name: Programming Proofs
       acronym: CMSC 22400/32400
-      url: https://rand.cs.uchicago.edu/cmsc224/winter22/
+      url: https://rand.cs.uchicago.edu/cmsc224/winter22/ - [1 Client error: SSL peer certificate or SSH remote key was not OK]
       year: 2022
       lecture_notes: true
       exercises: true
