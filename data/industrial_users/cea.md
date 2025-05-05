@@ -2,7 +2,7 @@
 name: CEA
 description: > 
   CEA is a French state company, member of the OCaml Consortium.
-url: "https://cea.fr/"
+url: "https://cea.fr/ - [1 Client error: SSL peer certificate or SSH remote key was not OK]"
 logo: users/cea.png
 locations: 
   - France

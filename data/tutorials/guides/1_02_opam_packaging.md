@@ -159,7 +159,7 @@ The last two fields are of particular interest:
     archive prefixed by `sha512=`.
 -   The `tags` field contains Rocq-specific metadata. See also the [RFC
     on Opam
-    metadata](https://github.com/rocq-prover/rfcs/blob/master/text/003-opam-metadata.md).
+    metadata](https://github.com/rocq-prover/rfcs/blob/master/text/003-opam-metadata.md - [429 Too Many Requests]).
 
 For a description of the other fields, see the [relevant section of the
 Opam
@@ -217,7 +217,7 @@ pull request* button, or simply click the link printed in the console when pushi
 3.  The `tags` field in the `opam` file can contain additional metadata
     (like a categorization or the Rocq logical path the package
     populates) as described in
-    [RFC3](https://github.com/rocq-prover/rfcs/blob/master/text/003-opam-metadata.md)
+    [RFC3](https://github.com/rocq-prover/rfcs/blob/master/text/003-opam-metadata.md - [429 Too Many Requests])
 
 ### Rules of thumb
 

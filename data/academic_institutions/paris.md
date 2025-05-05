@@ -11,7 +11,7 @@ alternate_logo: UniversiteParisCite.png
 courses:
     - name: Proof assistants
       acronym: MPRI
-      url: https://wikimpri.dptinfo.ens-cachan.fr/doku.php?id=cours:c-2-7-2
+      url: https://wikimpri.dptinfo.ens-cachan.fr/doku.php?id=cours:c-2-7-2 - [1 Client error: SSL peer certificate or SSH remote key was not OK]
       year: 2024
       lecture_notes: true
       exercises: true

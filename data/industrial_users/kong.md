@@ -2,7 +2,7 @@
 name: Kong
 description: > 
   Kong makes it easy to distribute, monetize, manage and consume cloud APIs.
-url: "https://www.konghq.com"
+url: "https://www.konghq.com - [1 Client error: Number of redirects hit maximum amount]"
 logo: users/mashape.png
 locations: 
   - United States
