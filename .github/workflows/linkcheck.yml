@@ -33,7 +33,7 @@ jobs:
           ocaml-compiler: ${{ matrix.ocaml-compiler }}
           dune-cache: ${{ matrix.os != 'macos-latest' }}
           opam-repositories: |
-            pin: git+https://github.com/ocaml/opam-repository#c45f5bab71d3589f41f9603daca5acad14df0ab0
+            pin: git+https://github.com/ocaml/opam-repository#dbc9ec7b83bac3673185542221a571372b6abb35
           opam-disable-sandboxing: true
 
       - name: Install olinkcheck
