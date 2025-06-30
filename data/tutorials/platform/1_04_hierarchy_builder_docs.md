@@ -15,4 +15,4 @@ while ensuring that a few good properties hold.
 
 ## Documentation of Hierarchy Builder
 
--   Hierarchy Builder [source code](https://rocq-prover.org/platform-docs/Tutorial_hierarchy_builder.v) (no functional interactive version yet).
+-   Hierarchy Builder [source code](https://rocq-prover.org/platform-docs/hierarchy_builder/tutorial_basics.v) (no functional interactive version yet).

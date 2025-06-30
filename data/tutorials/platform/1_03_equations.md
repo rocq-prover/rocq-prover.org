@@ -17,18 +17,18 @@ function and its associated elimination principle.
 ## Documentation of Equations
 
 -   The Basics of Equations [interactive
-    version](https://rocq-prover.org/platform-docs/Tutorial_Equations_basics.html)
+    version](https://rocq-prover.org/platform-docs/equations/tutorial_basics.html)
     and [source
-    code](https://rocq-prover.org/platform-docs/Tutorial_Equations_basics.v)
+    code](https://rocq-prover.org/platform-docs/equations/tutorial_basics.v)
 -   Equations and Obligations [interactive
-    version](https://rocq-prover.org/platform-docs/Tutorial_Equations_Obligations.html)
+    version](https://rocq-prover.org/platform-docs/equations/tutorial_obligations.html)
     and [source
-    code](https://rocq-prover.org/platform-docs/Tutorial_Equations_Obligations.v)
+    code](https://rocq-prover.org/platform-docs/equations/tutorial_obligations.v)
 -   Equations and Well-founded Recursion [interactive
-    version](https://rocq-prover.org/platform-docs/Tutorial_Equations_wf.html)
+    version](https://rocq-prover.org/platform-docs/equations/tutorial_wf_recursion.html)
     and [source
-    code](https://rocq-prover.org/platform-docs/Tutorial_Equations_wf.v)
+    code](https://rocq-prover.org/platform-docs/equations/tutorial_wf_recursion.v)
 -   Equations and Indexed inductive types, and tactics [interactive
-    version](https://rocq-prover.org/platform-docs/Tutorial_Equations_indexed.html)
+    version](https://rocq-prover.org/platform-docs/equations/tutorial_indexed.html)
     and [source
-    code](https://rocq-prover.org/platform-docs/Tutorial_Equations_indexed.v)
+    code](https://rocq-prover.org/platform-docs/equations/tutorial_indexed.v)
