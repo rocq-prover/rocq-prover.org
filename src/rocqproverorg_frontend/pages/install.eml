@@ -161,7 +161,7 @@ Layout.render
           </p>
           <p>
           Be careful, that there is a version of the extension per version of the language server.
-          Both version need to be the same for the extension to work.
+          <b>Both version need to be the same</b> for the extension to work.
           </p>
 
           <h4>
@@ -355,7 +355,7 @@ Layout.render
           </p>
           <p>
           Be careful, that there is a version of the extension per version of the language server.
-          Both version need to be the same for the extension to work.
+          <b>Both version need to be the same</b> for the extension to work.
           </p>
 
           <h4>
@@ -536,7 +536,7 @@ Layout.render
           </p>
           <p>
           Be careful, that there is a version of the extension per version of the language server.
-          Both version need to be the same for the extension to work.
+          <b>Both version need to be the same</b> for the extension to work.
           </p>
 
           <h4>
