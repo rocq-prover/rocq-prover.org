@@ -9,7 +9,7 @@ jobs:
 
     steps:
       - name: Checkout code
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
       - name: Create zip file rocq-logos.zip
         run: |
           if [ -d "rocq-id/avatar" ] && [ -d "rocq-id/badges" ] && [ -d "rocq-id/logos" ] && [ -f "rocq-id/ROCQ_ID-guidelines.pdf" ]; then
