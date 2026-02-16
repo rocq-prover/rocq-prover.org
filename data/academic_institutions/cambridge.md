@@ -11,7 +11,7 @@ location:
 courses:
     - name: Proof Assistants
       acronym: L81
-      url: https://www.cl.cam.ac.uk/teaching/2425/L81/
+      url: https://www.cl.cam.ac.uk/teaching/2425/L81/ - [1 Client error: Timeout was reached]
       year: 2024
       exercises: true
 ---

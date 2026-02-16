@@ -10,7 +10,7 @@ location:
     long: 5.4697
 courses:
     - name: Proving with Computer Assistance
-      url: http://www.cs.ru.nl/H.Geuvers/onderwijs/provingwithCA/
+      url: http://www.cs.ru.nl/H.Geuvers/onderwijs/provingwithCA/ - [1 Client error: Timeout was reached]
       teacher: Herman Geuvers
       year: 2024
       lecture_notes: true
