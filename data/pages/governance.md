@@ -5,10 +5,6 @@ meta_title: Governance of the Rocq Projects
 meta_description: Read about the structure of the Rocq Projects, the roles involved and the responsibilities.
 ---
 
-<img src="/img/global/warning-icon.svg" class="w-40"/>
-  Warning: this Rocq Governance "constitution" is a draft and has not yet been 
-  reviewed or approved by the Rocq Core team
-
 ## I. Introduction
 
 ### A. Overview and Scope
@@ -18,28 +14,26 @@ collective endeavors aimed at supporting, extending, and enriching the language
 and its user base. This document provides governance details for the *official*
 Rocq Projects, that is:
 
-- The Rocq Prover runtime (rocq-prover/rocq)
+- The Rocq Prover runtime and Corelib (rocq-prover/rocq)
 - The official distribution methods:
   - The [Rocq Platform](/platform) (rocq-prover/platform)
   - The [Rocq opam repository](/packages) (rocq-prover/opam)
   - The Docker-Rocq images (rocq-prover/docker-rocq)
 - The official extensions, user interfaces and tools:
-  - The Rocq Stdlib
-  - The Equations plugin
-  - The VsRocq package for VS Code (rocq-prover/vsrocq)
-  - The Docker Opam Action (rocq-prover/docker-opam-action)
-  - The ROCQbot development tool (rocq-prover/bot)
+  - The [Stdlib](https://github.com/rocq-prover/stdlib) library (rocq-prover/stdlib)
+  - The [Equations](https://github.com/rocq-prover/equations) plugin (rocq-prover/equations)
+  - The [VsRocq](https://github.com/rocq-prover/vsrocq) package for VS Code (rocq-prover/vsrocq)
+  - The [Docker Opam Action](https://github.com/rocq-prover/docker-opam-action) (rocq-prover/docker-opam-action)
+  - The [ROCQbot](https://github.com/rocq-prover/bot) development tool (rocq-prover/bot)
 - The official documentation and communication channels:
-  - The rocq-prover.org website (rocq-prover/rocq-prover.org)
-  - The Rocq Platform Docs (rocq-prover/platform-docs)
-  - The Rocq workshops
-  - The Discourse forum
-  - The Zulip chat
-  - The mailing lists (currently Coq-Club and Coqdev)
-  - The social media accounts (currently CoqLang on X/Twitter)
+  - The [rocq-prover.org](https://github.com/rocq-prover/rocq-prover.org) website (rocq-prover/rocq-prover.org)
+  - The [Rocq Platform Docs](/platform-docs) (rocq-prover/platform-docs)
+  - The [Rocq workshops](https://coq-workshop.gitlab.io/) 
+  - The [Zulip chat](https://rocq-prover.zulipchat.com/)
+  - The [Discourse forum](https://discourse.rocq-prover.org/)
+  - The social media accounts ([@RocqProver](https://mastodon.acm.org/@RocqProver) on Mastodon)
 
-Community projects, such as the Rocq-community organization, are not covered by
-this governance document.
+Community projects, such as the [Rocq-community](https://rocq-community.org/) organization, are not covered by this governance document.
 
 The document outlines the reporting structure, details the roles involved, and
 delineates the responsibilities of each project that falls under this
@@ -60,7 +54,7 @@ things are.
 ### C. Guiding Principles
 
 The Rocq governance is guided by key principles such as openness, community focus, 
-and compatibility. Each project that falls under the Rocq governance should align with these
+and attention to compatibility. Each project that falls under the Rocq governance should align with these
 principles, fostering a community that is open, collaborative, and dedicated to
 the continued development and advancement of the Rocq Prover and its
 applications.
@@ -69,7 +63,7 @@ applications.
 
 ### A. Core Team and Project Leader
 
-The [Rocq Core](/rocq-team/core) team is composed of a set of voluntary, co-opted
+The [Rocq Core team](/rocq-team/core) is composed of a set of voluntary, co-opted
 Maintainers that govern the development of the Rocq Prover and official Rocq Projects.
 It is the role of the Core team to resolve disputes that may arise in relation to
 the official Rocq Projects, specifically to ensure that
@@ -77,13 +71,13 @@ these projects are able to progress in a coordinated way.
 
 The Rocq Core team has a formal [voting process](#a1-voting-process)
 that can be used to resolve conflicts in case consensus cannot be reached.
+The Core team uses the [rocq-core Zulip channel](https://rocq-prover.zulipchat.com/#narrow/channel/293606-rocq-core) as its main means of communication between Rocq Core members.
 
 The Core Team elects a Project Leader among them, who is in charge of representing the 
-Core Team and maintaing the long term roadmap of the Rocq Prover and official Rocq Projects. 
+Core Team and maintaining the long term roadmap of the Rocq Prover and official Rocq Projects. 
 The current Project Leader is Matthieu Sozeau. The Project Leader's mandate is for one year, 
 renewable each year. The Project Leader is elected each calendar year on the anniversary date 
-of the Rocq 9.0 release, or the date of the previous Project Leader's resignation. If there is 
-a single candidate among the Core Team members, he or she is automatically elected. Otherwise
+of the Rocq 9.0 release (March 12th), or the date of the previous Project Leader's resignation. If there is no other declared candidate than the Project Lead among the Core Team members by that date, he or she is automatically re-elected. Otherwise
 the Core Team must proceed with a Condorcet vote on [Belenios](https://vote.belenios.org), 
 with a two weeks notice and 72hr voting window.
 
@@ -101,16 +95,17 @@ To resolve certain conflicting situations, the Core Team can proceed to vote on 
 as an ultimate recourse in case consensus cannot be reached. The result binds the core team only 
 and it is its responsibility to enforce the decision.
 
-Each Core Team member has a vote (including the project leader).
+Each Core Team member has a vote (including the Project Leader).
 
 - Abstention and delegation of a vote are allowed.
-- Majority of >= 2/3 of casted votes (in Q)
+- Majority of >= 2/3 of casted votes (in ℚ, the rationals).
 - Votes take place online, anonymously, within a 72hr voting window, using the [Belenios](https://vote.belenios.org) system.
-- The vote must be announced with precise options 2 weeks in advance by the project leader.
-- Decision to take a vote is taken by the project leader, taking input from the core team members.
-- In case a majority of >= 2/3 cannot be reached, the project leader can decide to launch a second 
+- The vote must be announced on the rocq-core Zulip channel with precise options 2 weeks in advance by the Project Leader.
+- The Project Leader is in charge of gathering the email adresses of the core team members used to cast votes.
+- Decision to take a vote is taken by the Project Leader, taking input from the core team members.
+- In case a majority of >= 2/3 cannot be reached, the Project Leader can decide to launch a second 
   vote with the same announcement conditions and same rules except it is to be decided by > 50% majority. 
-  The project leader's vote is decisive in case of a tie in this second round.
+  The Project Leader's vote is decisive in case of a tie in this second round.
 
 ### B. Delegates
 
@@ -177,9 +172,9 @@ Maintainers and Contributors are typically also Users.
 ### A. Decision Making and Communication
 
 The preferred approach for most discussions is through
-[rough consensus and running code](http://en.wikipedia.org/wiki/Rough_consensus).
+[rough consensus and running code](https://datatracker.ietf.org/doc/html/rfc7282).
 Discussions should be public and take place on official Project communication channels,
-typically the Rocq Zulip chat or the relevant issue trackers. Users and
+typically the [Rocq Zulip chat](https://rocq-prover.zulipchat.com/) or the relevant issue trackers. Users and
 Contributors are encouraged to take part and voice their opinions. Typically,
 the Maintainers of a Project will make the final decision, having accounted for
 wider views.
@@ -196,8 +191,8 @@ the process for submitting patches. Contributions from the community are
 encouraged and can take many forms including, bug fixes, new features, content,
 or documentation.
 
-All Projects under the Rocq governance are expected to be open source, and the
-licensing arrangements should reflect this.
+All Projects under the Rocq governance are expected to be free and open source 
+software, and the licensing arrangements should reflect this.
 
 ### C. Dispute Resolution
 
@@ -218,7 +213,7 @@ During the above, it is expected that all people will be reasonable and
 respectful of each other's efforts and viewpoints. In general, we expect to
 generate consensus among the community to resolve conflicts.
 
-The [Code of Conduct](/code-of-conduct) should be followed at all times.
+The [Code of Conduct](/policies/code-of-conduct) should be followed at all times.
 Maintainers that do not follow the Code of Conduct may be removed from their
 role by the [Code of Conduct enforcement team](/rocq-team/community#Code%20of%20Conduct%20Enforcement)
 (acting on behalf of the Project Leader).
@@ -229,6 +224,10 @@ role by the [Code of Conduct enforcement team](/rocq-team/community#Code%20of%20
 The version number should be changed for *any* edits that are made to this
 document, even typos. Otherwise disambiguating between versions is awkward.
 -->
+
+**Version 0.4 - May 22nd 2026**
+
+- More precise Project Leader renewal process, fix typos, organization projects and update communication channels.
 
 **Version 0.3 - March 6th 2025**
 
