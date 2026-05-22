@@ -1,5 +1,5 @@
 ---
-title: Rocq Governance ⋅ 🚧 Draft 🚧
+title: Rocq Governance
 description: The structure of the Rocq Projects, the roles involved and the responsibilities.
 meta_title: Governance of the Rocq Projects
 meta_description: Read about the structure of the Rocq Projects, the roles involved and the responsibilities.
