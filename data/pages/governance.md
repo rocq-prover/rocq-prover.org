@@ -224,6 +224,9 @@ role by the [Code of Conduct enforcement team](/rocq-team/community#Code%20of%20
 The version number should be changed for *any* edits that are made to this
 document, even typos. Otherwise disambiguating between versions is awkward.
 -->
+**Version 1.0 - June 15th 2026**
+
+- Reviewed or approved by the Rocq Core team.
 
 **Version 0.4 - May 22nd 2026**
 
