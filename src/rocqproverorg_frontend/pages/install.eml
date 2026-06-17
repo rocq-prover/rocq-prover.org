@@ -176,8 +176,8 @@ Layout.render
           To use it, you need to install the corresponding language server.
           </p>
           <p>
-          Be careful, that there is a version of the extension per version of the language server.
-          <strong>Both version need to be the same</strong> for the extension to work.
+          Be careful that there is a version of the extension per version of the language server.
+          <strong>Both versions need to be the same</strong> for the extension to work.
           </p>
 
           <h4>
@@ -216,7 +216,7 @@ Layout.render
             <li> the installation method used to install Rocq, and the language server </li>
           </ul>
           You can access setup information, and if needed logs, by clicking on the Rocq button.
-          It is is displayed in the top-right corner when viewing a .v file, provided the extension is installed.
+          It is displayed in the top-right corner when viewing a .v file, provided the extension is installed.
           </p>
 
           <h3>
@@ -367,8 +367,8 @@ Layout.render
           To use it, you need to install the corresponding language server.
           </p>
           <p>
-          Be careful, that there is a version of the extension per version of the language server.
-          <strong>Both version need to be the same</strong> for the extension to work.
+          Be careful that there is a version of the extension per version of the language server.
+          <strong>Both versions need to be the same</strong> for the extension to work.
           </p>
 
           <h4>
@@ -408,7 +408,7 @@ Layout.render
             <li> the installation method used to install Rocq, and the language server </li>
           </ul>
           You can access setup information, and if needed logs, by clicking on the Rocq button.
-          It is is displayed in the top-right corner when viewing a .v file, provided the extension is installed.
+          It is displayed in the top-right corner when viewing a .v file, provided the extension is installed.
           </p>
 
           <h3>
@@ -450,7 +450,7 @@ Layout.render
             Set Up Vim / Neovim for Rocq
           </h2>
           <p>
-            After installing the Rocq Prover, you should set up Vim / Neovin to
+            After installing the Rocq Prover, you should set up Vim / Neovim to
             write Rocq code and proofs.
           </p>
           <p>
@@ -546,8 +546,8 @@ Layout.render
           To use it, you need to install the corresponding language server.
           </p>
           <p>
-          Be careful, that there is a version of the extension per version of the language server.
-          <strong>Both version need to be the same</strong> for the extension to work.
+          Be careful that there is a version of the extension per version of the language server.
+          <strong>Both versions need to be the same</strong> for the extension to work.
           </p>
 
           <h4>
@@ -577,7 +577,7 @@ Layout.render
             <li> the installation method used to install Rocq, and the language server </li>
           </ul>
           You can access setup information, and if needed logs, by clicking on the Rocq button.
-          It is is displayed in the top-right corner when viewing a .v file, provided the extension is installed.
+          It is displayed in the top-right corner when viewing a .v file, provided the extension is installed.
           </p>
 
           <h3>
@@ -619,7 +619,7 @@ Layout.render
             Set Up Vim / Neovim for Rocq
           </h2>
           <p>
-            After installing the Rocq Prover, you should set up Vim / Neovin to
+            After installing the Rocq Prover, you should set up Vim / Neovim to
             write Rocq code and proofs.
           </p>
           <p>
