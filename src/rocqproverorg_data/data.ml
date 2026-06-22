@@ -193,8 +193,9 @@ module Tutorial = struct
         |> Str.regexp_case_fold
       in
       let search_in_field field weight =
-        Float.log (float_of_int (List.length (Str.split regexp field)))
-        *. weight
+        match Str.split regexp field with
+        | [] -> 0.0
+        | matches -> Float.log (float_of_int (List.length matches)) *. weight
       in
       search_in_field doc.title 1.2
       +. search_in_field
