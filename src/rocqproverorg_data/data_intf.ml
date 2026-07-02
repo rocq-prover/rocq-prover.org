@@ -255,11 +255,21 @@ end
 
 module Governance = struct
   module Member = struct
-    type t = { name : string; github : string; role : string option }
-    [@@deriving of_yaml, show]
+  let key ?github name =
+    match github with
+    | Some github -> github
+    | None -> "name:" ^ String.lowercase_ascii name
 
-    let compare a b = String.compare a.github b.github
-  end
+type t = {
+  name : string;
+  github : string option; [@default None]
+  role : string option;
+  emeritus : bool; [@default false]
+}
+[@@deriving of_yaml, show]
+
+let compare a b = String.compare (key ?github:a.github a.name) (key ?github:b.github b.name)
+end
 
   type contact_kind = GitHub | Email | Discord | Chat [@@deriving show]
 

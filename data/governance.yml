@@ -255,7 +255,8 @@ teams:
       github: Justme0606
     - name: Erik Martin-Dorel
       github: erikmd
-      role: (emeritus)
+      role: Initial author
+      emeritus: true
 - id: documentation
   name: Documentation
   description: The Documentation team is responsible for the development and maintenance of the Rocq documentation.
