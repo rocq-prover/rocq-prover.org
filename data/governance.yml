@@ -16,6 +16,54 @@ teams:
   - name: Matthieu Sozeau
     github: mattam82
     role: Project Leader
+  - name: Yves Bertot
+    github: ybertot
+    emeritus: true
+  - name: Emilio Jesús Gallego Arias
+    github: ejgallego
+    emeritus: true
+  - name: Maxime Dénès
+    github: maximedenes
+    emeritus: true
+  - name: Pierre Letouzey
+    github: letouzey
+    emeritus: true
+  - name: Vincent Laporte
+    github: vbgl
+    emeritus: true
+  - name: Arnaud Spiwack
+    github: aspiwack
+    emeritus: true
+  - name: Bruno Barras
+    github: barras
+    emeritus: true
+  - name: Jean-Christophe Filliâtre
+    github: backtracking
+    emeritus: true
+  - name: David Delahaye
+    github: delahayd
+    emeritus: true
+  - name: Benjamin Monate
+    github: monate
+    emeritus: true
+  - name: Chetan R. Murthy
+    github: chetmurthy
+    emeritus: true
+  - name: Thierry Coquand
+    emeritus: true
+    role: Creator (1984), V1-V5
+  - name: Gérard Huet
+    emeritus: true
+    role: Creator and Head of the Project (1984-1995), V1-V5
+  - name: Christine Paulin-Mohring
+    emeritus: true
+    role: V4.4-V8, Head of the Project (1995-2006)
+  - name: Gilles Dowek
+    emeritus: true
+  - name: Eduardo Giménez
+    emeritus: true
+  - name: Benjamin Werner
+    emeritus: true
 - id: community
   name: Community
   description: The Community team is responsible for managing forums, social media, and community events.
