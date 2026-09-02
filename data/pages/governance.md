@@ -167,6 +167,17 @@ Project will likely go on to become Contributors.
 It should be noted that these Roles are not mutually exclusive, for example
 Maintainers and Contributors are typically also Users.
 
+### F. Rocq Consortium
+
+The objective of the [Rocq Consortium](https://rocq-prover.org/consortium)
+is to empower this community of users, whose
+research and development critically rely on the Rocq system. For these users,
+making sure that the system's maintenance is well funded is essential.
+They can do so by providing resources either as donations, Consortium membership
+or support service subscriptions. Furthermore, Consortium members and support
+service subscribers get a voice in the evolution of Rocq, by determining where
+some engineering resources are allocated. 
+
 ## III. Processes
 
 ### A. Decision Making and Communication
@@ -193,6 +204,9 @@ or documentation.
 
 All Projects under the Rocq governance are expected to be free and open source 
 software, and the licensing arrangements should reflect this.
+
+The [detailed contributing guidelines](https://github.com/rocq-prover/rocq/blob/master/CONTRIBUTING.md)
+are kept in the repository of the Rocq Prover.
 
 ### C. Dispute Resolution
 
