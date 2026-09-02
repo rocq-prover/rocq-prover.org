@@ -9,6 +9,7 @@ type metadata = {
 [@@deriving of_yaml]
 
 let merge_teams (reference : team list) (additions : team list) =
+  let member_key (m : Member.t) = Member.key ?github:m.github m.name in
   (* The team ids are used to determine if a team is already present
    * in the reference list, including as a subteam.
    * If that's the case, we merge the members of the two teams.
@@ -30,7 +31,7 @@ let merge_teams (reference : team list) (additions : team list) =
                      (fun m ->
                        not
                          (List.exists
-                            (fun m' -> m'.github = m.github)
+                            (fun m' -> member_key m' = member_key m)
                             r.members))
                      team.members);
             }

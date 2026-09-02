@@ -1,7 +1,17 @@
 module MemberSet = Set.Make (Data.Governance.Member)
 
+let active_members members =
+  List.filter (fun (member : Data.Governance.Member.t) -> not member.emeritus) members
+
 let count_members (team : Data.Governance.team) =
-   MemberSet.cardinal (MemberSet.of_list (team.members @ List.concat (List.map (fun (team : Data.Governance.team) -> team.members) team.subteams)))
+   MemberSet.cardinal
+     (MemberSet.of_list
+        (active_members
+           (team.members
+           @ List.concat
+               (List.map
+                  (fun (team : Data.Governance.team) -> team.members)
+                  team.subteams))))
 
 let render_working_group (team : Data.Governance.team) member_label btn_class =
   <div class="flex-col">
