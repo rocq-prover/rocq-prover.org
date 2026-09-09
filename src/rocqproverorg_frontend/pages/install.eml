@@ -327,7 +327,7 @@ Layout.render
           The Rocq Prover is also available through Homebrew, a package manager for macOS.
           Similar to the Linux package managers, this presents the limitations of not having all the external packages available for Rocq.
         </p>
-        <%s! Copy_to_clipboard.small_code_snippet ~id:"brew" "brew install coq" %>
+        <%s! Copy_to_clipboard.small_code_snippet ~id:"brew" "brew install rocq" %>
         <h3>
           Using Docker
         </h3>
