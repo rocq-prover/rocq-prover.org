@@ -33,7 +33,9 @@ jobs:
         uses: ocaml/setup-ocaml@v3
         with:
           ocaml-compiler: ${{ matrix.ocaml-compiler }}
-          dune-cache: ${{ matrix.os != 'macos-latest' }}
+          cache-prefix: v3-ssl07-openssl4
+          # Avoid the deprecated post-job Dune cache hook (it repeats opam release discovery).
+          dune-cache: false
           opam-repositories: |
             pin: git+https://github.com/ocaml/opam-repository#dbc9ec7b83bac3673185542221a571372b6abb35
           opam-disable-sandboxing: true
@@ -43,8 +45,11 @@ jobs:
         if: runner.os == 'Linux'
 
       - name: Install system dependencies (macOS)
-        run: brew update && brew reinstall libev openssl@3 # Openssl is a workaround for https://github.com/ocaml/opam-repository/issues/19676
+        run: brew update && brew install libev openssl
         if: runner.os == 'macOS'
+
+      - name: Use SSL 0.7.0 with the OpenSSL 4 compatibility fix
+        run: opam repository add ssl-fixes "file://$GITHUB_WORKSPACE/ci/opam" --this-switch --rank=1 --yes
 
       - name: Install opam dependencies
         run: opam install --deps-only --with-test .
