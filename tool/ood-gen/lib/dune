@@ -18,7 +18,7 @@
   lambdasoup
   fpath
   ppx_stable
-  hilite
+  hilite.markdown
   timedesc
   re
   xmlm)

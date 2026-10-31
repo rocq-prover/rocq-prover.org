@@ -41,10 +41,10 @@ let decode (fpath, (head, body)) : (t, [> `Msg of string ]) result =
     split_statement_solution body |> Result.map_error (Utils.where fpath)
   in
   let statement =
-    Cmarkit_html.of_doc ~safe:false (Hilite.Md.transform statement_doc)
+    Cmarkit_html.of_doc ~safe:false (Hilite_markdown.transform statement_doc)
   in
   let solution =
-    Cmarkit_html.of_doc ~safe:false (Hilite.Md.transform solution_doc)
+    Cmarkit_html.of_doc ~safe:false (Hilite_markdown.transform solution_doc)
   in
   Ok (metadata |> of_metadata ~statement ~solution)
 

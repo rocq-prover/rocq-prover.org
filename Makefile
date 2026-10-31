@@ -26,7 +26,7 @@ deps: create_switch ## Install development dependencies
 
 .PHONY: create_switch
 create_switch: ## Create switch and pinned opam repo
-	opam switch create . 5.2.0 --no-install --repos ssl-fixes=file://$(CURDIR)/ci/opam,pin=git+https://github.com/ocaml/opam-repository#dbc9ec7b83bac3673185542221a571372b6abb35
+	opam switch create . 5.2.0 --no-install --repos ssl-fixes=file://$(CURDIR)/ci/opam,pin=git+https://github.com/ocaml/opam-repository#8cdfa3296d9bc7d93273f46eb2438757e4fd5cf0
 
 .PHONY: switch
 switch: deps ## Create an opam switch and install development dependencies
@@ -95,5 +95,5 @@ docker: ## Generate docker container
 	docker build --build-arg GIT_COMMIT=${GIT_COMMIT} --build-arg GIT_BRANCH=${GIT_BRANCH} -f Dockerfile . -t rocqproverorg:latest
 
 .PHONY: linkcheck
-linkcheck:
-	opam exec -- dune exec --root . olinkcheck md data
+linkcheck: ## Check links in data/ (needs: opam pin add olinkcheck git+https://github.com/tarides/olinkcheck)
+	opam exec -- olinkcheck md data

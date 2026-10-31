@@ -18,11 +18,11 @@ jobs:
         os:
           - ubuntu-latest
         ocaml-compiler:
-          - "4.14"
+          - "5.2.0"
 
     steps:
       - name: Checkout code
-        uses: actions/checkout@v6
+        uses: actions/checkout@v7
 
       - name: Use OCaml ${{ matrix.ocaml-compiler }}
         uses: ocaml/setup-ocaml@v3
@@ -30,7 +30,7 @@ jobs:
           ocaml-compiler: ${{ matrix.ocaml-compiler }}
           dune-cache: ${{ matrix.os != 'macos-latest' }}
           opam-repositories: |
-            pin: git+https://github.com/ocaml/opam-repository#dbc9ec7b83bac3673185542221a571372b6abb35
+            pin: git+https://github.com/ocaml/opam-repository#8cdfa3296d9bc7d93273f46eb2438757e4fd5cf0
           opam-disable-sandboxing: true
 
       - name: Install system dependencies

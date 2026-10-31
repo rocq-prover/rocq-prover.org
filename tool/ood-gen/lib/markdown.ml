@@ -70,6 +70,6 @@ module Content = struct
 
   let render ?(syntax_highlighting = false) doc =
     if syntax_highlighting then
-      Hilite.Md.transform doc |> Cmarkit_html.of_doc ~safe:false
+      Hilite_markdown.transform doc |> Cmarkit_html.of_doc ~safe:false
     else doc |> Cmarkit_html.of_doc ~safe:false
 end

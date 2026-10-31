@@ -42,7 +42,8 @@
   cohttp-lwt-unix
   bos
   crunch
-  mirage-kv-mem
+  (dream
+   (>= 1.0.0~alpha8))
   dream-accept
   dream-encoding
   (graphql
@@ -58,17 +59,15 @@
   yojson
   lwt
   (hilite
-   (>= 0.4.0))
+   (>= 0.5.0))
   (river
-   (>= 0.3))
+   (>= 0.6))
   syndic
-  ounit
   (alcotest :with-test)
   (mdx
    (and
     :with-test
     (>= 1.10.0)))
-  olinkcheck
   ; tools/ood-gen
   (ppx_deriving_yaml
     (>= 0.4.0))
@@ -80,17 +79,6 @@
    (>= 1.1.0))
   xmlm
   uri))
-
-(pin
- (url
-  "git+https://github.com/aantron/river#476dc945a908a69548bddd267f143a3e5d9c8a1a")
- (package
-  (name river)))
-
-(pin
- (url "git+https://github.com/tarides/olinkcheck")
- (package
-  (name olinkcheck)))
 
 (dialect
  (name eml)

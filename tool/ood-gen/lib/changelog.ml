@@ -49,7 +49,7 @@ let decode (fname, (head, body)) =
   in
   let body_html =
     Cmarkit_html.of_doc ~safe:false
-      (Hilite.Md.transform
+      (Hilite_markdown.transform
          (Cmarkit.Doc.of_string ~strict:true (String.trim body)))
   in
 
@@ -61,7 +61,7 @@ let decode (fname, (head, body)) =
         | Some changelog ->
             Some
               (Cmarkit.Doc.of_string ~strict:true (String.trim changelog)
-              |> Hilite.Md.transform
+              |> Hilite_markdown.transform
               |> Cmarkit_html.of_doc ~safe:false)
       in
       let date =
