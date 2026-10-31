@@ -85,10 +85,14 @@ watch: update-local-doc ## Watch for the filesystem and rebuild on every change
 utop: ## Run a REPL and link with the project's libraries
 	opam exec -- dune utop --root . . -- -implicit-bindings
 
+SCRAPE ?= opam exec -- dune exec --root . tool/data-scrape/bin/scrape.exe --
+
 .PHONY: scrape
-scrape: ## Generate the po files
-	opam exec -- dune exec --root . tool/ood-gen/bin/scrape.exe planet
-	opam exec -- dune exec --root . tool/ood-gen/bin/scrape.exe video
+scrape: ## Scrape the Rocq Planet blog posts and videos into data/
+	$(SCRAPE) planet $(if $(COMMIT_FILE),--commit-file $(COMMIT_FILE)) \
+	                 $(if $(REPORT_FILE),--report-file $(REPORT_FILE))
+	$(SCRAPE) video $(if $(COMMIT_FILE),--commit-file $(COMMIT_FILE)) \
+	                $(if $(REPORT_FILE),--report-file $(REPORT_FILE))
 
 .PHONY: docker
 docker: ## Generate docker container

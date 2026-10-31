@@ -49,7 +49,6 @@ depends: [
   "ppx_deriving_yaml" {>= "0.4.0"}
   "ppx_stable"
   "ezjsonm"
-  "lambdasoup"
   "ptime"
   "cmdliner" {>= "1.1.0"}
   "xmlm"

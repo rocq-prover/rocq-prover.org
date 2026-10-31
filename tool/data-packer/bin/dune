@@ -1,0 +1,11 @@
+(executable
+ (name pack)
+ (package rocqproverorg)
+ (public_name data-pack)
+ (libraries data_packer cmdliner))
+
+(executable
+ (name gen_feed)
+ (package rocqproverorg)
+ (public_name data-feed)
+ (libraries data_packer cmdliner))

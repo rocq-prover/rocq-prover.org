@@ -1,0 +1,28 @@
+(library
+ (name data_scrape)
+ (libraries
+  ; For parsing existing data (to know what to update)
+  data_packer
+  rocqproverorg.data_intf
+  ; HTTP and networking
+  cohttp
+  cohttp-lwt-unix
+  lwt
+  lwt.unix
+  logs.lwt
+  ; RSS/Atom parsing for blog scraper
+  river
+  syndic
+  ; JSON for watch scraper
+  ezjsonm
+  ; XML for youtube scraper
+  xmlm
+  ; Common utilities
+  unix
+  uri
+  yaml
+  str
+  ptime
+  fmt)
+ (preprocess
+  (pps ppx_deriving_yaml ppx_stable)))

@@ -68,12 +68,11 @@
    (and
     :with-test
     (>= 1.10.0)))
-  ; tools/ood-gen
+  ; tool/data-packer and tool/data-scrape
   (ppx_deriving_yaml
     (>= 0.4.0))
   ppx_stable
   ezjsonm
-  lambdasoup
   ptime
   (cmdliner
    (>= 1.1.0))
