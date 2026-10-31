@@ -18,7 +18,7 @@ opam pin add rocq-core --current
 ```
 Here we call the new switch `rocq-master`, you can of course pick any name you want.
 
-**Note: macOS 26 with Command Line Tools shipping the macOS 27 SDK:** 
+**Note: macOS 26 with Command Line Tools shipping the macOS 27 SDK:**
 If you happen to use macOS 26 and experience a `dune` segmentation fault during install, just
 create the switch with
 `ac_cv_func_pipe2=no ac_cv_func_dup3=no opam switch create rocq-master 4.14.4+options`
