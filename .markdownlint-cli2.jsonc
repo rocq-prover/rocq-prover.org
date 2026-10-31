@@ -1,0 +1,38 @@
+{
+    "config": {
+        // Enable all rules by default
+        "default": true,
+        // Line length: increase default from 80
+        "MD013": {
+            "heading_line_length":80,
+            "line_length": 999,
+            "code_block_line_length":55,
+            "code_blocks": false,
+            "tables": false
+        },
+        // Allow duplicate headers in different nested sections
+        "MD024": {
+            "allow_different_nesting": true,
+            "siblings_only": true
+        },
+        // Don't require code blocks to be surrounded by blank space
+        "MD031": false,
+        // Don't require lists to be surrounded by blank space
+        "MD032": false,
+        // Allow inline HTML
+        "MD033": false,
+        // First line in a file doesn't need to be a top-level header
+        "MD041": false,
+        // Disable fragment validation — cross-page anchors (e.g. exercise links) are valid on the rendered site
+        "MD051": false,
+        // Allow any table column style (compact, padded, etc.)
+        "MD060": false
+    },
+    // Externally-authored or machine-managed content: planet posts are
+    // scraped and changelog entries are pasted from announcements. Don't
+    // nitpick their style (matches the CI workflow skips).
+    "ignores": [
+        "data/planet/**/*.md",
+        "data/changelog/**/*.md"
+    ]
+}
