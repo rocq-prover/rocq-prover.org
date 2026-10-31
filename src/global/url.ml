@@ -127,4 +127,4 @@ let github_opam_file package_name package_version =
     package_name package_name package_version
 
 let wiki = "https://github.com/rocq-prover/rocq/wiki"
-let rocq_platform_starter = "https://github.com/rocq-prover/rocq-platform-starter/releases/tag/v1.1.0"
+let rocq_platform_starter = "https://github.com/rocq-prover/rocq-platform-starter/releases/tag/v1.2.0"
