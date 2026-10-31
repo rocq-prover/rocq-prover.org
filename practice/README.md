@@ -8,7 +8,7 @@ Run `dune test --root . answer`, it should pass, showing that there is a
 solution to this exercise.
 
 Hack your solution in the file `work/impl.ml`. Check it compiles by running
-`dune build --root . `, check if it behaves as expected by running `dune test
+`dune build --root .`, check if it behaves as expected by running `dune test
 --root . work`.
 
 You are allowed to look at file `ex.ml`, it contains the test cases. That may help.
@@ -20,7 +20,7 @@ Don't look at the file `answer/impl.ml` it contains the solution.
 One XXX folder per exercise. Each is a standalone Dune project.
 
 Each folder has this structure
-```
+```text
 XXX
 ├── answer
 │   ├── impl.ml
@@ -47,8 +47,3 @@ File `work/impl.ml` contains a dummy definition, meant to be replaced
 by the learner's solultion.
 
 Files `test` folders should (hopefully) always be the sames
-
-
-
-
-

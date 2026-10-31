@@ -18,4 +18,4 @@ Do you want to learn more about the implementation of Rocq? Do you need help bui
 
 Join us June 29th - July 3rd on the shores of Lake Geneva at EPFL, Switzerland, for a week hacking on the implementation of your favorite proof assistant and its ecosystem!
 
-More info and registration at https://proofs.swiss/rocq-n-share/2026
+More info and registration at <https://proofs.swiss/rocq-n-share/2026>

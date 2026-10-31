@@ -5,7 +5,7 @@ The package metadata and checksummed upstream source are unchanged, except
 for applying `openssl4.patch`.
 
 The patch backports the SSLv23 minimum-protocol change from
-https://github.com/savonet/ocaml-ssl/pull/189 to SSL 0.7.0. A minimum of 0
+<https://github.com/savonet/ocaml-ssl/pull/189> to SSL 0.7.0. A minimum of 0
 lets OpenSSL select its supported minimum instead of rejecting SSL3_VERSION.
 The TLS 1.3 maximum and the explicit SSLv3 case are unchanged.
 

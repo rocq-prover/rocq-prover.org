@@ -98,6 +98,10 @@ scrape: ## Scrape the Rocq Planet blog posts and videos into data/
 docker: ## Generate docker container
 	docker build --build-arg GIT_COMMIT=${GIT_COMMIT} --build-arg GIT_BRANCH=${GIT_BRANCH} -f Dockerfile . -t rocqproverorg:latest
 
+.PHONY: lint-md
+lint-md: ## Lint Markdown files with the CI configuration (FIX=1 to apply fixes)
+	npx --yes markdownlint-cli2@0.23.3 $(if $(FIX),--fix) "**/*.md" "#_build" "#_opam" "#**/node_modules"
+
 .PHONY: linkcheck
 linkcheck: ## Check links in data/ (needs: opam pin add olinkcheck git+https://github.com/tarides/olinkcheck)
 	opam exec -- olinkcheck md data

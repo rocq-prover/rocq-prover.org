@@ -6,7 +6,7 @@ category: "Rocq Platform"
 ---
 
 
-# Summary
+## Summary
 
 We aim at a release process for the Rocq Prover and the Rocq Platform which makes it
 easier for users to provide feedback and for developers to deliver fixes.
@@ -16,7 +16,7 @@ Rocq Prover devs tag an almost final version on top of which the Rocq Platform c
 built. Rocq Prover point releases are then used to quickly deliver fixes
 to the Platform.
 
-# Motivation
+## Motivation
 
 The beta testing period does not provide enough feedback to sensibly improve
 Rocq between the `VX+beta1` and `VX.0` tags. The reasons are, most important
@@ -36,7 +36,7 @@ branch to the release branch, this only happens very early in the release
 cycle (for example only 2 such changes were backported in the beta period
 for 8.12, 0 for 8.13).
 
-## New actor: Rocq Platform
+### New actor: Rocq Platform
 
 The Rocq Platform is a selection of Rocq packages which work well
 for a given Rocq version. One of its objective is to disentangle the release
@@ -48,10 +48,10 @@ to quickly get a working environment.
 **The Platform is the final product users will get** in this new model;
 the Rocq Prover is a core component of it.
 
-# Detailed design
+## Detailed design
 
 The new process' timeline:
-```
+```text
                      DO+           O                         O      O     O
 rocq prover -+---(1)---+------(2)----+----------(3)------------+------+-----+-----
  vX branch/          |             |                         |
@@ -70,7 +70,7 @@ Artifacts:
 - I = binary installers for Rocq Platform
 ```
 
-## Rocq Prover
+### Rocq Prover
 
 On time based schedule the RM branches vX.
 
@@ -85,7 +85,7 @@ On time based schedule the RM branches vX.
      `core-dev`.
    - Subsequently, the RM ensures a **Docker image** is available, so that project maintainers can use it
      in CI during (4).
-   
+
    **No breaking change is allowed from now on, unless a severe problem is found.**
 2. The documentation is updated (eg. the Changes file) and eventual fixes
    required by the Platform are done. Ideally no other change is done.
@@ -98,10 +98,11 @@ On time based schedule the RM branches vX.
     as the fix is available and merged.
    - The RM ensures an **OPAM package** is uploaded to the main OPAM repository.
 
-## Rocq Platform
+### Rocq Platform
 
 When Rocq Prover VX+rc1 is tagged, the PRM branches YYYY.MM off
 
+<!-- markdownlint-disable MD029 -->
 4. Starting with the pins made by RM on Rocq's CI all packages part of the
    Platform (or its core) are pinned (in accordance with upstreams, which are
    notified about the ongoing process). Most, if not all, packages are in Rocq's
@@ -112,9 +113,9 @@ When Rocq Prover VX+rc1 is tagged, the PRM branches YYYY.MM off
 5. As users pick up the Platform and find severe bugs in Rocq, the Platform picks
    up point releases of Rocq containing hotfixes and eventually extends packages
    beyond the core set.
+<!-- markdownlint-enable MD029 -->
 
-
-## Synchronization points
+### Synchronization points
 
 - The end of (1) starts the release cycle of the Platform.
 - The end of (2) and (4) don't need to be done at the same time, but if they
@@ -124,14 +125,14 @@ When Rocq Prover VX+rc1 is tagged, the PRM branches YYYY.MM off
 - Rocq's VX.0 tag can be made as soon as the doc is clear. This will stress the
   fact that upstreams can pin with no worries as soon as the rc is tagged.
 
-## Announces
+### Announces
 
 - Rocq Prover tags are only announced to devs
 - Rocq Platform pins are communicated to upstream devs, which may tag/release.
 - Rocq Platform tags and packages **are announced to the community** (this is
   when we party)
 
-## Rocq Prover's CI
+### Rocq Prover's CI
 
 For each project P included in the Platform:
 
@@ -156,7 +157,7 @@ Moreover, Rocq Prover's CI must test:
 Rocq's CI can test anything else of course, including non standard
 configurations and projects that are not in the Platform.
 
-## Platform CI
+### Platform CI
 
 - on branch **YYYY.MM** it must test **all packages** and
   build **installers** as artifacts.
@@ -167,7 +168,8 @@ configurations and projects that are not in the Platform.
   (for the subset of projects part of the Platform) and eventually report the
   failures upstream. Currently this activity is logged in dedicated issues.
 
-### Terminology
+#### Terminology
+
 - "severe bug" is a bug which *blocks* many users with no decent workaround,
   or a soundness bug.
 - "hotfix" is a minimal patch that repairs a problem, not necessarily the nice
@@ -181,8 +183,7 @@ configurations and projects that are not in the Platform.
   well as a set of configure options or env variables for Rocq (eg enabling or
   disabling native_compute, tuning OCaml's GC, tweaking the stack size)
 
-
-### Notes about Platform versioning
+#### Notes about Platform versioning
 
 It's essentially the Ubuntu scheme:
 - YYYY.MM plays the role of a major version, as in Rocq's 8.13
@@ -190,7 +191,7 @@ It's essentially the Ubuntu scheme:
 
 Hence, it is not YYYY.MM.DD but rather YYYY.MM.XX.
 
-# Drawbacks
+## Drawbacks
 
 This new process identifies 3 groups of developers which need to talk to each
 other: Rocq dev, Platform devs, and Docker devs. This is a risk, but also an

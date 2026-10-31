@@ -17,6 +17,6 @@ highlights: |
   Changed the requirement prefix of the standard library from Coq to Stdlib and made it mandatory.
 ---
 
-## Changes 
+## Changes
 
 See the full [changelog](https://rocq-prover.org/doc/V9.0.0/refman-stdlib/changes.html) in the Standard Library reference manual.

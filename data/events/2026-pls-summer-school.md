@@ -13,7 +13,7 @@ The summer school offers intensive courses by leading researchers covering found
 
 Dates: August 10–14, 2026
 Venue: Aarhus University (INCUBA Katrinebjerg), Aarhus, Denmark
-Webpage: https://conferences.au.dk/pls
+Webpage: <https://conferences.au.dk/pls>
 
 Courses and Speakers:
 
@@ -25,6 +25,6 @@ Anders Møller: Program Analysis
 
 Limited financial support may be available. The full program and registration details will be announced in the near future.
 
-For questions, please contact: timany@cs.au.dk
+For questions, please contact: <timany@cs.au.dk>
 
 We look forward to welcoming everyone to Aarhus!

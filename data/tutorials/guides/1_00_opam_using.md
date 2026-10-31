@@ -76,8 +76,8 @@ initialize opam with an explicit compiler version, for example
 See also the section on [managing different versions of OCaml and Rocq](/docs/managing-versions),
 about switches and roots.
 
-Beware, using an OCaml 5 + ocamlfind system installations is [known](https://github.com/ocaml/ocamlfind/issues/107) 
-to break installation of the Rocq Prover. One must use a specific independent switch in that case. 
+Beware, using an OCaml 5 + ocamlfind system installations is [known](https://github.com/ocaml/ocamlfind/issues/107)
+to break installation of the Rocq Prover. One must use a specific independent switch in that case.
 
 Rocq packages live in a repository separate from the standard OCaml
 opam repository. The following command adds that repository to the
@@ -87,7 +87,7 @@ current opam [switch](managing-versions#switches):
 opam repo add rocq-released https://rocq-prover.org/opam/released
 ```
 
-You can browse the package database [here](https://rocq-prover.org/packages),
+You can browse the [package database](https://rocq-prover.org/packages),
 
 To refresh the package definitions and get their latest versions use:
 ```console
@@ -143,7 +143,7 @@ the link for instructions on how to install them.
 
 ## Installing Rocq packages
 
-If you didn't do it already, ensure that the current switch has access to the Rocq 
+If you didn't do it already, ensure that the current switch has access to the Rocq
 packages repository. The following command adds that repository to the
 current opam [switch](managing-versions#switches) (you can skip this step if
 you used the [Platform scripts](#platform)):
