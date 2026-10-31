@@ -25,10 +25,7 @@ let planet_cmd =
 
 let video_cmd =
   let run commit_file report_file =
-    let entries =
-      Youtube_scraper.scrape "data/video-youtube.yml"
-      @ Watch_scraper.scrape "data/video-watch.yml"
-    in
+    let entries = Youtube_scraper.scrape "data/video-youtube.yml" in
     Option.iter
       (fun p -> Scrape_report.append_commit_message p entries)
       commit_file;

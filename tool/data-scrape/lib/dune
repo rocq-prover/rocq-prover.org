@@ -13,8 +13,6 @@
   ; RSS/Atom parsing for blog scraper
   river
   syndic
-  ; JSON for watch scraper
-  ezjsonm
   ; XML for youtube scraper
   xmlm
   ; Common utilities
