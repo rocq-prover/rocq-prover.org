@@ -18,6 +18,6 @@ difficulty: advanced
 pricing: free
 ---
 
-**  Certified Programming with Dependent Types (CPDT)** is a hands-on guide to advanced programming and proving using the Rocq Prover.
+**Certified Programming with Dependent Types (CPDT)** is a hands-on guide to advanced programming and proving using the Rocq Prover.
 
 The book focuses on leveraging Roqc’s dependent type system to write certified programs, where correctness is formally verified alongside implementation. It introduces key concepts such as inductive types, type theory, proof automation, and advanced tactics, providing a blend of theoretical foundations and practical examples. CPDT is particularly known for its focus on proof engineering and building large-scale verified systems efficiently. Aimed at readers with some prior exposure to Rocq, it serves as an invaluable resource for those looking to master the interplay between programming and formal verification.

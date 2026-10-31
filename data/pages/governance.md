@@ -28,7 +28,7 @@ Rocq Projects, that is:
 - The official documentation and communication channels:
   - The [rocq-prover.org](https://github.com/rocq-prover/rocq-prover.org) website (rocq-prover/rocq-prover.org)
   - The [Rocq Platform Docs](/platform-docs) (rocq-prover/platform-docs)
-  - The [Rocq workshops](https://coq-workshop.gitlab.io/) 
+  - The [Rocq workshops](https://coq-workshop.gitlab.io/)
   - The [Zulip chat](https://rocq-prover.zulipchat.com/)
   - The [Discourse forum](https://discourse.rocq-prover.org/)
   - The social media accounts ([@RocqProver](https://mastodon.acm.org/@RocqProver) on Mastodon)
@@ -53,7 +53,7 @@ things are.
 
 ### C. Guiding Principles
 
-The Rocq governance is guided by key principles such as openness, community focus, 
+The Rocq governance is guided by key principles such as openness, community focus,
 and attention to compatibility. Each project that falls under the Rocq governance should align with these
 principles, fostering a community that is open, collaborative, and dedicated to
 the continued development and advancement of the Rocq Prover and its
@@ -73,12 +73,12 @@ The Rocq Core team has a formal [voting process](#a1-voting-process)
 that can be used to resolve conflicts in case consensus cannot be reached.
 The Core team uses the [rocq-core Zulip channel](https://rocq-prover.zulipchat.com/#narrow/channel/293606-rocq-core) as its main means of communication between Rocq Core members.
 
-The Core Team elects a Project Leader among them, who is in charge of representing the 
-Core Team and maintaining the long term roadmap of the Rocq Prover and official Rocq Projects. 
-The current Project Leader is Matthieu Sozeau. The Project Leader's mandate is for one year, 
-renewable each year. The Project Leader is elected each calendar year on the anniversary date 
+The Core Team elects a Project Leader among them, who is in charge of representing the
+Core Team and maintaining the long term roadmap of the Rocq Prover and official Rocq Projects.
+The current Project Leader is Matthieu Sozeau. The Project Leader's mandate is for one year,
+renewable each year. The Project Leader is elected each calendar year on the anniversary date
 of the Rocq 9.0 release (March 12th), or the date of the previous Project Leader's resignation. If there is no other declared candidate than the Project Lead among the Core Team members by that date, he or she is automatically re-elected. Otherwise
-the Core Team must proceed with a Condorcet vote on [Belenios](https://vote.belenios.org), 
+the Core Team must proceed with a Condorcet vote on [Belenios](https://vote.belenios.org),
 with a two weeks notice and 72hr voting window.
 
 It is the community's role to guide the decisions of the Core Team through active engagement,
@@ -91,8 +91,8 @@ the Project Leader needs to become involved, he/she will act as arbitrator.
 
 #### A.1 Voting process
 
-To resolve certain conflicting situations, the Core Team can proceed to vote on a binary decision, 
-as an ultimate recourse in case consensus cannot be reached. The result binds the core team only 
+To resolve certain conflicting situations, the Core Team can proceed to vote on a binary decision,
+as an ultimate recourse in case consensus cannot be reached. The result binds the core team only
 and it is its responsibility to enforce the decision.
 
 Each Core Team member has a vote (including the Project Leader).
@@ -103,8 +103,8 @@ Each Core Team member has a vote (including the Project Leader).
 - The vote must be announced on the rocq-core Zulip channel with precise options 2 weeks in advance by the Project Leader.
 - The Project Leader is in charge of gathering the email adresses of the core team members used to cast votes.
 - Decision to take a vote is taken by the Project Leader, taking input from the core team members.
-- In case a majority of >= 2/3 cannot be reached, the Project Leader can decide to launch a second 
-  vote with the same announcement conditions and same rules except it is to be decided by > 50% majority. 
+- In case a majority of >= 2/3 cannot be reached, the Project Leader can decide to launch a second
+  vote with the same announcement conditions and same rules except it is to be decided by > 50% majority.
   The Project Leader's vote is decisive in case of a tie in this second round.
 
 ### B. Delegates
@@ -176,7 +176,7 @@ making sure that the system's maintenance is well funded is essential.
 They can do so by providing resources either as donations, Consortium membership
 or support service subscriptions. Furthermore, Consortium members and support
 service subscribers get a voice in the evolution of Rocq, by determining where
-some engineering resources are allocated. 
+some engineering resources are allocated.
 
 ## III. Processes
 
@@ -202,7 +202,7 @@ the process for submitting patches. Contributions from the community are
 encouraged and can take many forms including, bug fixes, new features, content,
 or documentation.
 
-All Projects under the Rocq governance are expected to be free and open source 
+All Projects under the Rocq governance are expected to be free and open source
 software, and the licensing arrangements should reflect this.
 
 The [detailed contributing guidelines](https://github.com/rocq-prover/rocq/blob/master/CONTRIBUTING.md)
@@ -238,6 +238,7 @@ role by the [Code of Conduct enforcement team](/rocq-team/community#Code%20of%20
 The version number should be changed for *any* edits that are made to this
 document, even typos. Otherwise disambiguating between versions is awkward.
 -->
+<!-- markdownlint-disable MD036 -->
 **Version 1.0 - June 15th 2026**
 
 - Reviewed or approved by the Rocq Core team.
@@ -259,4 +260,5 @@ document, even typos. Otherwise disambiguating between versions is awkward.
 
 - This first version of the document was adapted from the [OCaml governance](https://ocaml.org/policies/governance/)
   by the Rocq Coordination team, attempting to describe the current reality of the Rocq governance
-  for discussion by the Rocq Core team. 
+  for discussion by the Rocq Core team.
+<!-- markdownlint-enable MD036 -->

@@ -807,3 +807,46 @@ module Planet = struct
     | BlogPost { date; _ } -> date
     | Video { published; _ } -> published
 end
+
+(* Aggregate of all the site data. The data-packer (tool/data-packer) builds a
+   value of this type from data/ and Marshals it into data.bin, which is
+   embedded in the server binary; Data deserialises it at startup. *)
+module All_data = struct
+  type t = {
+    academic_institutions : Academic_institution.t list;
+    academic_testimonials : Academic_testimonial.t list;
+    books : Book.t list;
+    changelog : Changelog.t list;
+    code_examples : Code_examples.t list;
+    conferences : Conference.t list;
+    consortium_pages : Consortium_page.t list;
+    events : Event.t list;
+    recurring_events : Event.recurring_event list;
+    exercises : Exercise.t list;
+    governance_teams : Governance.team list;
+    governance_working_groups : Governance.team list;
+    industrial_users : Industrial_user.t list;
+    jobs : Job.t list;
+    news : News.t list;
+    opam_users : Opam_user.t list;
+    pages : Page.t list;
+    papers : Paper.t list;
+    planet : Planet.entry list;
+    releases : Release.t list;
+    release_latest : Release.t;
+    release_latest_prerelease : Release.t option;
+    release_latest_stdlib : Release.t;
+    release_latest_platform : Release.t;
+    release_lts : Release.t;
+    resources : Resource.t list;
+    featured_resources : Resource.t list;
+    roadmap : Roadmap.t;
+    success_stories : Success_story.t list;
+    testimonials : Testimonial.t list;
+    tools : Tool.t list;
+    tool_pages : Tool_page.t list;
+    tutorials : Tutorial.t list;
+    tutorial_search_documents : Tutorial.search_document list;
+    videos : Video.t list;
+  }
+end

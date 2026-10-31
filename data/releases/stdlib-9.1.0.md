@@ -19,6 +19,6 @@ highlights: |
   - Deprecation of Rtauto (looking for maintainer)
 ---
 
-## Changes 
+## Changes
 
 See the full [changelog](https://rocq-prover.org/doc/V9.1.0/refman-stdlib/changes.html) in the Standard Library reference manual.

@@ -8,19 +8,19 @@
 
 [![Actions Status](https://github.com/rocq-prover/rocq-prover.org/workflows/CI/badge.svg)](https://github.com/rocq-prover/rocq-prover.org/actions)
 
-This repository contains the sources of the Rocq website. It is served at https://rocq-prover.org/.
+This repository contains the sources of the Rocq website. It is served at <https://rocq-prover.org/>.
 
 ## Acknowledgments
 
-This website is a fork and customization of the [https://github.com/ocaml/ocaml.org](OCaml.org) website, 
-reusing its infrastructure and package managment facilities. We are very thankful and grateful for the 
-great work done by the OCaml developers! Please consult that repository for acknowledgments of the 
+This website is a fork and customization of the [https://github.com/ocaml/ocaml.org](OCaml.org) website,
+reusing its infrastructure and package managment facilities. We are very thankful and grateful for the
+great work done by the OCaml developers! Please consult that repository for acknowledgments of the
 website developers of the original website.
 
 ## Features
 
 - **Integrated documentation and package management:** The site combines the
-  package management (https://rocq-prover.org/packages) with a new central
+  package management (<https://rocq-prover.org/packages>) with a new central
   documentation source (codenamed 'docs.ocaml.org') for all 400+ opam packages
   directly within the rocq-prover.org site.
 
@@ -44,25 +44,25 @@ Before you begin, make sure you have opam (OCaml Package Manager) installed on y
 
 Once opam is installed, you can set up the project with the following command:
 
-```
+```shell
 make switch
 ```
 
 Or alternatively (using your current switch):
 
-```
+```shell
 opam install . --deps-only --with-test --with-doc
 ```
 
 Users of NixOS can get all external dependencies needed to run the above commands by running:
 
-```
+```shell
 nix-shell -p binutils pkg-config curl gmp libev oniguruma
 ```
 
 Then, you can build and run the website with:
 
-```
+```shell
 make start
 ```
 
@@ -74,10 +74,10 @@ The rocq-prover.org maintainer's team is composed of the following community mem
 - Nicolas Tabareau [tabareau](https:/github.com/tabareau), Owner (Inria)
 - Théo Zimmermann [Zimmi48](https:/github.com/Zimmi48), Owner (Télécom Paris)
 
-The original graphic design and Rocq Prover identity are due to Bastien Sozeau [BastienSozeau](https://github.com/bastiensozeau), 
+The original graphic design and Rocq Prover identity are due to Bastien Sozeau [BastienSozeau](https://github.com/bastiensozeau),
 from the [Noir Blanc Rouge](https://noirblancrouge.com/) type foundry.
 
-The rocq-prover.org website benefits from the work of the upstream OCaml.org maintainers, their team 
+The rocq-prover.org website benefits from the work of the upstream OCaml.org maintainers, their team
 being composed of the following community members:
 
 - Anil Madhavapeddy ([@avsm](https://github.com/avsm)), Owner (University of Cambridge)

@@ -5,20 +5,19 @@
 ### Setting Up the Project
 
 Before starting to hack, you need a properly configured development environment. Linux and macOS are supported and used daily by the core team. System dependencies include:
-* Libev: http://software.schmorp.de/pkg/libev.html
-* Oniguruma: https://github.com/kkos/oniguruma
-* OpenSSL: https://www.openssl.org/
-* GNU Multiple Precision: https://gmplib.org/
+* Libev: <http://software.schmorp.de/pkg/libev.html>
+* Oniguruma: <https://github.com/kkos/oniguruma>
+* OpenSSL: <https://www.openssl.org/>
+* GNU Multiple Precision: <https://gmplib.org/>
 
-The project [`Dockerfile`](./Dockerfile) contains up-to-date system configuration instructions, as used to ship into production. It is written for the Alpine Linux distribution, but it is meant to be adapted to other environments such as Ubuntu, macOS+Homebrew, or others. The GitHub workflow file [`.github/workflows/ci.yml`](.github/workflows/ci.yml) also contains useful commands for Ubuntu and macOS. Since rocq-prover.org is mostly written in OCaml, a properly configured OCaml development environment is also required, but is not detailed here. Although Docker is used to ship, it is not a requirement to begin hacking. It is possible to run workflow files in `.github/workflows` using the [`nektos/act`](https://github.com/nektos/act) tool. For instance, the following command runs the CI checks through GitHub on each pull request (where `ghghgh` is replace by an _ad-hoc_ GitHub token, see: https://github.com/nektos/act#github_token)
-```
+The project [`Dockerfile`](./Dockerfile) contains up-to-date system configuration instructions, as used to ship into production. It is written for the Alpine Linux distribution, but it is meant to be adapted to other environments such as Ubuntu, macOS+Homebrew, or others. The GitHub workflow file [`.github/workflows/ci.yml`](.github/workflows/ci.yml) also contains useful commands for Ubuntu and macOS. Since rocq-prover.org is mostly written in OCaml, a properly configured OCaml development environment is also required, but is not detailed here. Although Docker is used to ship, it is not a requirement to begin hacking. It is possible to run workflow files in `.github/workflows` using the [`nektos/act`](https://github.com/nektos/act) tool. For instance, the following command runs the CI checks through GitHub on each pull request (where `ghghgh` is replace by an _ad-hoc_ GitHub token, see: <https://github.com/nektos/act#github_token>)
+```shell
 act -s GITHUB_TOKEN=ghghgh .github/workflows/ci.yml -j build
 ```
 
-
 The Makefile contains many commands that can get you up and running. A typical workflow is to clone the repository after forking it.
 
-```
+```shell
 git clone https://github.com/<username>/rocq-prover.org.git
 cd rocq-prover.org
 ```
@@ -29,13 +28,13 @@ With opam installed, you can now initialise opam with `opam init`. Note that in 
 
 Finally from the root of your project, you can setup a [local opam switch](https://opam.ocaml.org/doc/Manual.html#Switches) and install the dependencies. There is a single `make` target to do just that.
 
-```
+```shell
 make switch
 ```
 
 If you don't want a local opam switch and are happy to install everything globally (in the opam sense), then you can just install the dependencies directly.
 
-```
+```shell
 make deps
 ```
 
@@ -45,13 +44,13 @@ Opam will likely ask questions about installing system dependencies. For the pro
 
 We use a git submodule to refer to the documentation. Use:
 
-``` 
+```shell
 git submodule init
 git submodule --depth 1 update
 ```
 
-This will fetch the latest version of the rocq-docs. Beware that this is large: 8GB of data 
-for a shallow clone. This step is currently optional unless you want to test integration with the documentation 
+This will fetch the latest version of the rocq-docs. Beware that this is large: 8GB of data
+for a shallow clone. This step is currently optional unless you want to test integration with the documentation
 or build a fully working Docker image.
 
 ### Running the Server
@@ -87,29 +86,29 @@ You can build the playground from the root of the project. There is no need to m
 
 To regenerate the playground, you need to install the playground's dependencies first:
 
-```
+```shell
 make deps -C playground
 ```
 
 After the dependencies have been installed, simply build the project to regenerate the JavaScript assets:
 
-```
+```shell
 make playground
 ```
 
-Once the compilation is complete and successuful, commit the newly-generated assets in rocq-prover.org's Git repo and merge the pull request. 
+Once the compilation is complete and successuful, commit the newly-generated assets in rocq-prover.org's Git repo and merge the pull request.
 
 ### Deploying
 
 Commits added on some branches are automatically deployed:
-- `main` on <https://rocq-prover.org/>
-- `staging` on <https://staging.rocq-prover.org/>
+* `main` on <https://rocq-prover.org/>
+* `staging` on <https://staging.rocq-prover.org/>
 
 The deployment pipeline is managed in <https://github.com/ocurrent/ocurrent-deployer>, which listens to the `main` and `staging` branches and builds the site using the `Dockerfile` at the project's root. You can monitor the state of each deployment on [`deploy.ci.rocq-prover.org`](https://deploy.ci.rocq-prover.org/?repo=rocq-prover/rocq-prover.org).
 
 To test the deployment locally, run the following commands:
 
-```
+```shell
 docker build -t rocqproverorg .
 docker run -p 8080:8080  rocqproverorg
 ```
@@ -118,7 +117,7 @@ This will build the Docker image and run a Docker container with the port `8080`
 
 With the Docker container running, visit the site at <http://localhost:8080/>.
 
-The Docker images automatically build from the `live` and `staging` branches. They are then pushed to Docker Hub: https://hub.docker.com/r/ocurrent/v3.OCaml.org-server.
+The Docker images automatically build from the `live` and `staging` branches. They are then pushed to Docker Hub: <https://hub.docker.com/r/ocurrent/v3.OCaml.org-server>.
 
 ### Staging Pull Requests
 
@@ -133,7 +132,7 @@ before they get merged.
 ### Managing Dependencies
 
 rocq-prover.org is using an opam switch that is local and bound to a pinned commit in `opam-repository`. This is intended to protect the build from upstream regressions. The opam repository is specified in three (3) places:
-```
+```text
 Dockerfile
 Makefile
 .github/workflows/*.yml

@@ -45,14 +45,14 @@ affect a person's ability to participate within them.
 - **Be careful in the words that you choose.**
   Be kind to others. Do not insult or put down other participants. Harassment
   and other exclusionary behavior aren't acceptable.
-  * Violent language or threats or personal insults have no chance to
+  - Violent language or threats or personal insults have no chance to
     resolve a dispute or to let a discussion flourish. Worse, they can
     hurt durably, or generate durable fears. They are thus unwelcome.
-  * Not everyone is comfortable with sexually explicit or violent
+  - Not everyone is comfortable with sexually explicit or violent
     material, even as a joke. In an online open multicultural world, you
     don't know who might be listening. So be cautious and responsible
     with your words.
-  * Discussions are online and recorded for posterity; we all have our
+  - Discussions are online and recorded for posterity; we all have our
     right for privacy and online gossiping as well as posting or threatening to
     post other people's personally identifying information is prohibited.
 - **Remember that what you write in a public online forum might be read by

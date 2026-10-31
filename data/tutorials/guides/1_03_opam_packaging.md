@@ -51,8 +51,8 @@ You can then record its checksum which will be used in the package definition us
     YOURHASH=`shasum -a 512 1.0.0.tar.gz`
 
 Finally, you must upload the archive on GitHub as an asset of your release (using Edit Release).
-This is necessary as GitHub does not guarantee the checksum stability of auto-generated `/archive/` 
-tarballs. One can also use the [`gh` CLI tool](https://cli.github.com/) to upload an archive to 
+This is necessary as GitHub does not guarantee the checksum stability of auto-generated `/archive/`
+tarballs. One can also use the [`gh` CLI tool](https://cli.github.com/) to upload an archive to
 a release (`gh release upload tag archive.tar.gz`). Your release will then have an url of shape:
 
     https://github.com/$YOU/foo/releases/download/1.0.0/1.0.0.tar.gz
@@ -153,11 +153,11 @@ is a template for `released/packages/rocq-foo/rocq-foo.1.0.0/opam`:
 
 The last two fields are of particular interest:
 
--   The `url` section describes where to find your package. It must have
+- The `url` section describes where to find your package. It must have
     at least the following fields: the `src` field with the URL of the
     package archive, and the `checksum` field with the checksum of that
     archive prefixed by `sha512=`.
--   The `tags` field contains Rocq-specific metadata. See also the [RFC
+- The `tags` field contains Rocq-specific metadata. See also the [RFC
     on Opam
     metadata](https://github.com/rocq-prover/rfcs/blob/master/text/003-opam-metadata.md).
 
@@ -207,14 +207,14 @@ pull request* button, or simply click the link printed in the console when pushi
 
 ### Conventions
 
-1.  The archive follows a [layout](opam-layout). Regular packages
+1. The archive follows a [layout](opam-layout). Regular packages
     shall be placed in the `released` directory. One can also write
     packages that install development branches of a software. In that
     case `extra-dev` directory has to be used and the version has to end
     in `dev` like `mybranch.dev`.
-2.  The package name should start with `rocq-`, for example `rocq-color`
+2. The package name should start with `rocq-`, for example `rocq-color`
     or `rocq-interval`.
-3.  The `tags` field in the `opam` file can contain additional metadata
+3. The `tags` field in the `opam` file can contain additional metadata
     (like a categorization or the Rocq logical path the package
     populates) as described in
     [RFC3](https://github.com/rocq-prover/rfcs/blob/master/text/003-opam-metadata.md)
@@ -231,14 +231,14 @@ successfully.
 We advise package authors to make sure that the following conditions are
 met:
 
-1.  Includes a *Changelog* that lists the main changes between any two
+1. Includes a *Changelog* that lists the main changes between any two
     versions part of this archive
-2.  The *License* must allow free redistribution (even if it is not a
+2. The *License* must allow free redistribution (even if it is not a
     free software license)
-3.  *No* *Admitted* proofs
-4.  All *Axioms* used are documented
-5.  ML code is *reviewed* by a Rocq developer
-6.  *Documentation* should be available (see the `doc:` field in the
+3. *No* *Admitted* proofs
+4. All *Axioms* used are documented
+5. ML code is *reviewed* by a Rocq developer
+6. *Documentation* should be available (see the `doc:` field in the
     Opam metadata)
 
 In any case the Rocq development team keeps the right to refuse the
@@ -246,10 +246,10 @@ integration of a package or remove any package at any time.
 
 ### Updating a package to a new version
 
-1.  Like the initial version, the new version of the package should be
+1. Like the initial version, the new version of the package should be
     submitted in a pull request and is encouraged to follow the
     guidelines above
-2.  We recommend to ease the transition from the old to the new version
+2. We recommend to ease the transition from the old to the new version
     by providing a transition strategy (a document helping a user to
     perform the switch: e.g. documenting all renamings).
-3.  The old version stays in the repository.
+3. The old version stays in the repository.

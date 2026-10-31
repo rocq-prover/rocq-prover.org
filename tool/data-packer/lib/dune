@@ -1,0 +1,22 @@
+(library
+ (name data_packer)
+ (public_name rocqproverorg.data_packer)
+ (libraries
+  rocqproverorg.data_intf
+  rocqproverorg.global
+  bos
+  cmarkit
+  ezjsonm
+  fmt
+  fpath
+  hilite.markdown
+  ptime
+  re
+  str
+  syndic
+  timedesc
+  unix
+  uri
+  yaml)
+ (preprocess
+  (pps ppx_deriving_yaml ppx_stable ppx_deriving.show)))

@@ -9,8 +9,7 @@
   dream-encoding
   cmarkit
   rocqproverorg.data
-  timedesc
-  mirage-kv-mem))
+  timedesc))
 
 (rule
  (deps (universe))

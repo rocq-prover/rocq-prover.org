@@ -26,7 +26,7 @@ deps: create_switch ## Install development dependencies
 
 .PHONY: create_switch
 create_switch: ## Create switch and pinned opam repo
-	opam switch create . 5.2.0 --no-install --repos pin=git+https://github.com/ocaml/opam-repository#dbc9ec7b83bac3673185542221a571372b6abb35
+	opam switch create . 5.2.0 --no-install --repos ssl-fixes=file://$(CURDIR)/ci/opam,pin=git+https://github.com/ocaml/opam-repository#8cdfa3296d9bc7d93273f46eb2438757e4fd5cf0
 
 .PHONY: switch
 switch: deps ## Create an opam switch and install development dependencies
@@ -85,15 +85,23 @@ watch: update-local-doc ## Watch for the filesystem and rebuild on every change
 utop: ## Run a REPL and link with the project's libraries
 	opam exec -- dune utop --root . . -- -implicit-bindings
 
+SCRAPE ?= opam exec -- dune exec --root . tool/data-scrape/bin/scrape.exe --
+
 .PHONY: scrape
-scrape: ## Generate the po files
-	opam exec -- dune exec --root . tool/ood-gen/bin/scrape.exe planet
-	opam exec -- dune exec --root . tool/ood-gen/bin/scrape.exe video
+scrape: ## Scrape the Rocq Planet blog posts and videos into data/
+	$(SCRAPE) planet $(if $(COMMIT_FILE),--commit-file $(COMMIT_FILE)) \
+	                 $(if $(REPORT_FILE),--report-file $(REPORT_FILE))
+	$(SCRAPE) video $(if $(COMMIT_FILE),--commit-file $(COMMIT_FILE)) \
+	                $(if $(REPORT_FILE),--report-file $(REPORT_FILE))
 
 .PHONY: docker
 docker: ## Generate docker container
 	docker build --build-arg GIT_COMMIT=${GIT_COMMIT} --build-arg GIT_BRANCH=${GIT_BRANCH} -f Dockerfile . -t rocqproverorg:latest
 
+.PHONY: lint-md
+lint-md: ## Lint Markdown files with the CI configuration (FIX=1 to apply fixes)
+	npx --yes markdownlint-cli2@0.23.3 $(if $(FIX),--fix) "**/*.md" "#_build" "#_opam" "#**/node_modules"
+
 .PHONY: linkcheck
-linkcheck:
-	opam exec -- dune exec --root . olinkcheck md data
+linkcheck: ## Check links in data/ (needs: opam pin add olinkcheck git+https://github.com/tarides/olinkcheck)
+	opam exec -- olinkcheck md data

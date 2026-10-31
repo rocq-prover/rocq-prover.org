@@ -18,11 +18,11 @@ jobs:
         os:
           - ubuntu-latest
         ocaml-compiler:
-          - "4.14"
+          - "5.2.0"
 
     steps:
       - name: Checkout code
-        uses: actions/checkout@v6
+        uses: actions/checkout@v7
 
       - name: Use OCaml ${{ matrix.ocaml-compiler }}
         uses: ocaml/setup-ocaml@v3
@@ -30,7 +30,7 @@ jobs:
           ocaml-compiler: ${{ matrix.ocaml-compiler }}
           dune-cache: ${{ matrix.os != 'macos-latest' }}
           opam-repositories: |
-            pin: git+https://github.com/ocaml/opam-repository#dbc9ec7b83bac3673185542221a571372b6abb35
+            pin: git+https://github.com/ocaml/opam-repository#8cdfa3296d9bc7d93273f46eb2438757e4fd5cf0
           opam-disable-sandboxing: true
 
       - name: Install system dependencies
@@ -40,22 +40,26 @@ jobs:
         run: opam install --deps-only --with-test .
 
       - name: Build scraper
-        run: |
-          opam exec -- dune build tool/ood-gen/bin/scrape.exe
+        run: opam exec -- dune build tool/data-scrape/bin/scrape.exe
 
       - name: Run scrapers
         run: |
-          opam exec -- dune exec tool/ood-gen/bin/scrape.exe planet
-          opam exec -- dune exec tool/ood-gen/bin/scrape.exe video
+          make scrape \
+            COMMIT_FILE=_scrape_commit.md \
+            REPORT_FILE=_scrape_report.md
+
+      - name: Read commit message
+        id: scrape
+        run: |
+          { echo "msg<<EOF"; cat _scrape_commit.md; echo "EOF"; } >> "$GITHUB_OUTPUT"
 
       - name: Create Pull Request
         uses: peter-evans/create-pull-request@v8
         with:
-          title: '[scrape.yml] New OCaml blog posts and videos'
+          title: '[scrape] New Rocq Planet posts and videos'
           labels: scrape
           add-paths: |
-            data/video-watch.yml
             data/video-youtube.yml
             data/planet/*/*.md
-          commit-message: |
-            [scrape.yml] New OCaml Planet blog posts and videos
+          commit-message: ${{ steps.scrape.outputs.msg }}
+          body-path: _scrape_report.md
