@@ -7,6 +7,8 @@ description: "Write a function that returns the last element of a list."
 tutorials: [ "lists"]
 ---
 
+<!-- markdownlint-disable MD025 -->
+
 # Solution
 
 ```ocaml

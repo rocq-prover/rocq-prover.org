@@ -10,7 +10,7 @@ This guide documents the best way to contribute to the project when adding thing
 
 ## Reporting Bugs
 
-We use GitHub issues to track all bugs and feature requests. Feel free to open an issue over [here](https://github.com/ocaml/ocaml.org/issues/new) if you have found a bug or wish to see a feature implemented.
+We use GitHub issues to track all bugs and feature requests. Feel free to [open an issue](https://github.com/rocq-prover/rocq-prover.org/issues/new) if you have found a bug or wish to see a feature implemented.
 
 Please include images and browser-specific information if the bug is related to some visual aspect of the site. This tends to make it easier to reproduce and fix.
 
@@ -38,9 +38,9 @@ Images can be added to the corresponding subfolder in the `data/media/` folder.
 
 For example, to add a university logo associated with an academic institution, you have to add the image file to the `data/media/academic_institution/` folder.
 
-Videos or other media should not be added to the OCaml.org GitHub repository.
+Videos or other media should not be added to the rocq-prover.org GitHub repository.
 
-### <a name="rocq-planet"></a>Add Your RSS Feed or YouTube Channel to the OCaml Planet
+### <a name="rocq-planet"></a>Add Your RSS Feed or YouTube Channel to the Rocq Planet
 
 Anyone can contribute to the [Rocq Planet](https://rocq-prover.org/rocq-planet), which is composed of three types of content:
 
@@ -66,7 +66,7 @@ To contribute an individual link to your original blog post to the OCaml Planet,
 
 Create a `.md` file with the following header:
 
-```
+```markdown
 ---
 title: Title of Your Self-Hosted Post Here (title case)
 description: one-sentence description
@@ -142,7 +142,7 @@ The Changelog covers developments across:
 
 #### Purpose and Audience
 
-The primary audience for the Changelog is OCaml users. Content should focus on changes, updates, and news that directly impact users of OCaml and its ecosystem. 
+The primary audience for the Changelog is OCaml users. Content should focus on changes, updates, and news that directly impact users of OCaml and its ecosystem.
 
 Good candidates for Changelog posts include:
 

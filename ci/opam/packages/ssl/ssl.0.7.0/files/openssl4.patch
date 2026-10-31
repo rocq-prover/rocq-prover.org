@@ -1,0 +1,12 @@
+--- a/src/ssl_stubs.c
++++ b/src/ssl_stubs.c
+@@ -485,7 +485,8 @@
+   int max_proto = TLS1_3_VERSION;
+   switch (protocol) {
+   case 0:
+-    if (!SSL_CTX_set_min_proto_version(ssl_context, SSL3_VERSION) ||
++    /* SSLv23 accepts the library default minimum; OpenSSL 4 rejects SSLv3. */
++    if (!SSL_CTX_set_min_proto_version(ssl_context, 0) ||
+         !SSL_CTX_set_max_proto_version(ssl_context, max_proto)) {
+       caml_acquire_runtime_system();
+       caml_invalid_argument("Failed to set protocol to SSLv3");

@@ -1,9 +1,9 @@
 ## Vision
 
 The Rocq Development Team, building on 40 years of experience with
-Coq, is pleased to announce the launch of The Rocq Prover, a 
+Coq, is pleased to announce the launch of The Rocq Prover, a
 next-generation proof assistant. The Rocq Prover is designed to
-empower a diverse range of users, from mathematicians seeking 
+empower a diverse range of users, from mathematicians seeking
 formal rigor to software engineers building high-assurance systems.
 
 The Rocq Prover builds upon the rich heritage and diverse ecosystem of Coq. We
@@ -138,8 +138,7 @@ key pillars:
   framework with core libraries while simultaneously supporting
   domain-specific libraries (*e.g.,* Iris) (all audiences).
 
-
-**_This roadmap represents our ongoing commitment to making the Rocq
+***This roadmap represents our ongoing commitment to making the Rocq
   Prover a powerful, user-friendly, and reliable proof assistant for a
   broad range of users. We welcome feedback and contributions from the
-  community to help us achieve this vision._**
+  community to help us achieve this vision.***

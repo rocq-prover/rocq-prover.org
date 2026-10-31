@@ -14,6 +14,6 @@ Sakhalin develops marine charting apps for Apple iPads and iPhones. The full-fea
 
  1. enables the rapid development of extremely reliable and high-performance software,
  2. is a mature stable platform
- 3. has a wide range of libraries. 
- 
+ 3. has a wide range of libraries.
+
 It was made possible by the great work done by Psellos in porting OCaml to the Apple iOS platform. Feel free to contact Sakhalin if you have any questions about using OCaml on iOS.

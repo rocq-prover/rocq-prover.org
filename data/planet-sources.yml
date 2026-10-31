@@ -1,11 +1,7 @@
 - id: type-theory-forall
   name: Pedro Abreu
-  url: https://www.typetheoryforall.com/
+  url: https://www.typetheoryforall.com/episodes.mp3.rss
+  publish_all: false
 - id: andrej
   name: Andrej Bauer
   url: http://math.andrej.com/feed.xml
-- id: dbaelde
-  name: David Baelde
-  url: http://www.blogger.com/feeds/17133288/posts/default/-/ocaml
-  name: Yan Shvartzshnaider
-  url: http://yansnotes.blogspot.com/feeds/posts/default/-/ocaml

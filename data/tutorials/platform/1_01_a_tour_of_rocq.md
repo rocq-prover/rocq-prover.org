@@ -7,6 +7,8 @@ category: "First Steps"
 recommended_next_tutorials:
 ---
 
+<!-- markdownlint-disable MD013 -->
+
 <div class="document">
 <div class="alectryon-container docutils container">
 <p>The Rocq Prover is an interactive theorem prover. It means that it is designed to develop mathematical proofs, and especially to write formal specifications, programs and proofs that programs comply to their specifications. An interesting additional feature of Rocq is that it can automatically extract executable programs from specifications, as either OCaml or Haskell source code.</p>
@@ -40,13 +42,13 @@ recommended_next_tutorials:
 </span><span class="alectryon-sentence"><span class="alectryon-input"><span class="kn">Inductive</span> <span class="nf">list</span> (<span class="nv">A</span>:<span class="kt">Type</span>) : <span class="kt">Type</span> :=
   | nil : list A
   | cons : A -&gt; list A -&gt; list A.</span></span></pre><p>or types for tuples, e.g.:</p>
-<pre class="alectryon-io highlight"><!-- Generator: Alectryon --><span class="alectryon-sentence"><span class="alectryon-input"><span class="kn">Structure</span> <span class="nf">monoid</span> := { 
-   dom : <span class="kt">Type</span> ; 
-   op : dom -&gt; dom -&gt; dom <span class="kn">where</span> <span class="s2">&quot;x * y&quot;</span> := (op x y); 
-   id : dom <span class="kn">where</span> <span class="s2">&quot;1&quot;</span> := id; 
-   assoc : <span class="kr">∀</span> <span class="nv">x</span> <span class="nv">y</span> <span class="nv">z</span>, x * (y * z) = (x * y) * z ; 
+<pre class="alectryon-io highlight"><!-- Generator: Alectryon --><span class="alectryon-sentence"><span class="alectryon-input"><span class="kn">Structure</span> <span class="nf">monoid</span> := {
+   dom : <span class="kt">Type</span> ;
+   op : dom -&gt; dom -&gt; dom <span class="kn">where</span> <span class="s2">&quot;x * y&quot;</span> := (op x y);
+   id : dom <span class="kn">where</span> <span class="s2">&quot;1&quot;</span> := id;
+   assoc : <span class="kr">∀</span> <span class="nv">x</span> <span class="nv">y</span> <span class="nv">z</span>, x * (y * z) = (x * y) * z ;
    left_neutral : <span class="kr">∀</span> <span class="nv">x</span>, <span class="mi">1</span> * x = x ;
-   right_neutral : <span class="kr">∀</span> <span class="nv">x</span>, x * <span class="mi">1</span> = x 
+   right_neutral : <span class="kr">∀</span> <span class="nv">x</span>, x * <span class="mi">1</span> = x
  }.</span></span></pre><p>or a form of subset types called Σ-types, e.g. the type of even natural numbers:</p>
 <pre class="alectryon-io highlight"><!-- Generator: Alectryon --><span class="alectryon-sentence"><input class="alectryon-toggle" id="a-tour-of-rocq-md-orig-chk0" style="display: none" type="checkbox"><label class="alectryon-input" for="a-tour-of-rocq-md-orig-chk0"><span class="kn">Check</span> {n : N | even n}.</label><small class="alectryon-output"><div><div class="alectryon-messages"><blockquote class="alectryon-message">{n : N | even n}
      : <span class="kt">Set</span></blockquote></div></div></small></span></pre><p>Rocq implements a functional programming language supporting these types. For instance, the pairing function of type <code class="highlight coq"><span class="n">Z</span> <span class="o">-&gt;</span> <span class="n">Z</span> <span class="o">*</span> <span class="n">Z</span></code> is written <code class="highlight coq"><span class="kr">fun</span> <span class="nv">x</span> <span class="o">=&gt;</span> <span class="o">(</span><span class="n">x</span><span class="o">,</span><span class="n">x</span><span class="o">)</span></code> and <code class="highlight coq"><span class="n">cons</span> <span class="o">(</span><span class="n">S</span> <span class="o">(</span><span class="n">S</span> <span class="n">O</span><span class="o">))</span> <span class="o">(</span><span class="n">cons</span> <span class="o">(</span><span class="n">S</span> <span class="n">O</span><span class="o">)</span> <span class="n">nil</span><span class="o">)</span></code> (shortened to <code class="highlight coq"><span class="mi">2</span><span class="o">::</span><span class="mi">1</span><span class="o">::</span><span class="n">nil</span></code> in Rocq) denotes a list of type list nat made of the two elements <code class="highlight coq"><span class="mi">2</span></code> and <code class="highlight coq"><span class="mi">1</span></code>.
@@ -71,7 +73,7 @@ Using Σ-types, a sorting function over lists of natural numbers can be given th
 <h1>Proving in Rocq</h1>
 <p>Proof development in Rocq is done through a language of tactics that allows a user-guided proof process. At the end, the curious user can check that tactics build lambda-terms. For example the tactic intro n, where n is of type nat, builds the term (with a hole):</p>
 <pre class="code coq literal-block">
-<span class="kr">fun</span> <span class="o">(</span><span class="nv">n</span><span class="o">:</span><span class="n">nat</span><span class="o">)</span> <span class="o">=&gt;</span> <span class="n">_</span> 
+<span class="kr">fun</span> <span class="o">(</span><span class="nv">n</span><span class="o">:</span><span class="n">nat</span><span class="o">)</span> <span class="o">=&gt;</span> <span class="n">_</span>
 </pre>
 <p>where <tt class="docutils literal">_</tt> represents a term that will be constructed after, using other tactics.</p>
 <p>Here is an example of a proof in the Rocq Prover:</p>
@@ -119,11 +121,11 @@ Using Σ-types, a sorting function over lists of natural numbers can be given th
 <pre class="code coq literal-block">
   <span class="n">length_corr</span> <span class="o">=</span>
     <span class="kr">fun</span> <span class="o">(</span><span class="nv">n</span> <span class="o">:</span> <span class="n">nat</span><span class="o">)</span> <span class="o">(</span><span class="nv">s</span> <span class="o">:</span> <span class="n">seq</span> <span class="n">n</span><span class="o">)</span> <span class="o">=&gt;</span>
-      <span class="n">seq_ind</span> <span class="o">(</span><span class="kr">fun</span> <span class="o">(</span><span class="nv">n0</span> <span class="o">:</span> <span class="n">nat</span><span class="o">)</span> <span class="o">(</span><span class="nv">s0</span> <span class="o">:</span> <span class="n">seq</span> <span class="n">n0</span><span class="o">)</span> <span class="o">=&gt;</span> <span class="n">length</span> <span class="n">n0</span> <span class="n">s0</span> <span class="o">=</span> <span class="n">n0</span><span class="o">)</span> 
+      <span class="n">seq_ind</span> <span class="o">(</span><span class="kr">fun</span> <span class="o">(</span><span class="nv">n0</span> <span class="o">:</span> <span class="n">nat</span><span class="o">)</span> <span class="o">(</span><span class="nv">s0</span> <span class="o">:</span> <span class="n">seq</span> <span class="n">n0</span><span class="o">)</span> <span class="o">=&gt;</span> <span class="n">length</span> <span class="n">n0</span> <span class="n">s0</span> <span class="o">=</span> <span class="n">n0</span><span class="o">)</span>
         <span class="o">(</span><span class="n">refl_equal</span> <span class="mi">0</span><span class="o">)</span>
         <span class="o">(</span><span class="kr">fun</span> <span class="o">(</span><span class="nv">n0</span> <span class="nv">_</span> <span class="o">:</span> <span class="n">nat</span><span class="o">)</span> <span class="o">(</span><span class="nv">s0</span> <span class="o">:</span> <span class="n">seq</span> <span class="n">n0</span><span class="o">)</span> <span class="o">(</span><span class="nv">IHs</span> <span class="o">:</span> <span class="n">length</span> <span class="n">n0</span> <span class="n">s0</span> <span class="o">=</span> <span class="n">n0</span><span class="o">)</span> <span class="o">=&gt;</span>
-          <span class="n">eq_ind_r</span> 
-            <span class="o">(</span><span class="kr">fun</span> <span class="nv">n2</span> <span class="o">:</span> <span class="n">nat</span> <span class="o">=&gt;</span> <span class="n">S</span> <span class="n">n2</span> <span class="o">=</span> <span class="n">S</span> <span class="n">n0</span><span class="o">)</span> 
+          <span class="n">eq_ind_r</span>
+            <span class="o">(</span><span class="kr">fun</span> <span class="nv">n2</span> <span class="o">:</span> <span class="n">nat</span> <span class="o">=&gt;</span> <span class="n">S</span> <span class="n">n2</span> <span class="o">=</span> <span class="n">S</span> <span class="n">n0</span><span class="o">)</span>
             <span class="o">(</span><span class="n">refl_equal</span> <span class="o">(</span><span class="n">S</span> <span class="n">n0</span><span class="o">))</span> <span class="n">IHs</span><span class="o">)</span> <span class="n">n</span> <span class="n">s</span>
   <span class="o">:</span> <span class="kr">forall</span> <span class="o">(</span><span class="nv">n</span> <span class="o">:</span> <span class="n">nat</span><span class="o">)</span> <span class="o">(</span><span class="nv">s</span> <span class="o">:</span> <span class="n">seq</span> <span class="n">n</span><span class="o">),</span> <span class="n">length</span> <span class="n">n</span> <span class="n">s</span> <span class="o">=</span> <span class="n">n</span>
 </pre>

@@ -36,9 +36,9 @@ To link a directory and all its subdirectories to a particular switch, use:
 opam switch link with-rocq
 ```
 
-This creates a symbolic link `_opam` in the current working directory, pointing 
-to the switch to be used when calling `opam` under this working directory. It does 
-not require using `eval $(opam env)` anymore. You can remove the link by simply 
+This creates a symbolic link `_opam` in the current working directory, pointing
+to the switch to be used when calling `opam` under this working directory. It does
+not require using `eval $(opam env)` anymore. You can remove the link by simply
 removing the symbolic link:
 
 ```console
@@ -53,12 +53,10 @@ path to the root can be set using the `$OPAMROOT`
 environment variable, providing an alternative way of creating fresh
 opam environments.
 
-
 The main benefit of roots is that they can be used simultaneously,
 but they require some external bookkeeping. In comparison. switches
 are entirely managed by opam, and they can share the global
 configuration of a single root.
-
 
 ```console
 # Set a new root location export
@@ -73,7 +71,6 @@ opam install rocq-prover rocq-core=9.0.0
 
 Every time a new shell is opened, or you want to use a different
 root, type in the following lines:
-
 
 ```console
 export OPAMROOT=~/.opam-rocq.9.0.0

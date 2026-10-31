@@ -14,7 +14,6 @@ author_notification_date:
 
 The Eleventh International Workshop on Coq for Programming Languages: [CoqPL](https://popl25.sigplan.org/home/CoqPL-2025)
 
-
 The series of CoqPL workshops provide an opportunity for programming languages researchers and practitioners with an interest in Coq to meet and interact with one another and members from the core Coq development team. At the meeting, we will discuss upcoming new features, see talks and demonstrations of exciting current projects, solicit feedback for potential future changes to Coq itself, and generally work to strengthen the vibrant community around our favorite proof assistant.
 
 Topics in scope include:

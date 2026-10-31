@@ -4,14 +4,13 @@
   <img alt="Rocq logo" src="logos/SVG/logo-rocq-orange_blue.svg">
 </picture>
 
-# ROCQ Identity 
+# ROCQ Identity
 
-Welcome to the ROCQ Identity Guidelines and Logos sub repository. This repository provides comprehensive guidance on the visual and branding standards for ROCQ. 
+Welcome to the ROCQ Identity Guidelines and Logos sub repository. This repository provides comprehensive guidance on the visual and branding standards for ROCQ.
 
 > **Download Logos**: [Logos Zip](https://github.com/rocq-prover/rocq-prover.org/raw/refs/heads/main/rocq-id/rocq-logos.zip)
-
+>
 > **Identity Guidelines**: [Rocq Id PDF](https://github.com/rocq-prover/rocq-prover.org/raw/refs/heads/main/rocq-id/ROCQ_ID-guidelines.pdf)
-
 
 ---
 
@@ -20,6 +19,7 @@ Welcome to the ROCQ Identity Guidelines and Logos sub repository. This repositor
 The ROCQ Identity Guidelines focus on maintaining consistency in the use of logos, typography, and color palettes. These standards are essential for creating a cohesive visual identity that represents the ROCQ community across all platforms and applications.
 
 ### 1. **Logos**
+
 - **Primary Logo**: Carefully designed for maximum legibility at different sizes and applications.
 - **Vertical Logo**: Used sparingly for specific layouts requiring central alignment or standalone usage.
 - **Badge Logos**: Compact versions for use in social media, merchandise, and small-scale applications.
@@ -29,8 +29,8 @@ The ROCQ Identity Guidelines focus on maintaining consistency in the use of logo
 - Maintain clear space (2x the height of the bird icon).
 - Avoid modifications such as stretching, rotating, altering colors, or adding effects (e.g., shadows, gradients).
 
-
 ### 2. **Typography**
+
 - **Primary Font**: *Instrument Rocq*  
   - Bold: For headlines, titles, and certain call-to-actions (avoid all caps unless required).
   - Regular: For body text, labels, and lists.
@@ -43,6 +43,7 @@ The ROCQ Identity Guidelines focus on maintaining consistency in the use of logo
 - [Source Code Pro](https://github.com/pauldhunt/SourceCodePro): Designed by Paul D. Hunt for programming environments.
 
 ### 3. **Color Palette**
+
 The ROCQ brand uses a distinct and minimalist color palette:
 
 - ![#260085](https://placehold.co/15x15/260085/260085.png) **Rocq Blue** — `rgb(38, 0, 133)` | `#260085`
@@ -54,6 +55,7 @@ The ROCQ brand uses a distinct and minimalist color palette:
 - ![#0D0D0D](https://placehold.co/15x15/0D0D0D/0D0D0D.png) **Charcoal Black (Text)** — `rgb(13, 13, 13)` | `#0D0D0D`
 
 ### 4. **Improper Usage**
+
 The following practices are strictly prohibited to ensure brand integrity:
 1. Do not stretch, rotate, or resize individual elements of the logo.
 2. Do not use unapproved colors, gradients, or transparency.
@@ -63,6 +65,7 @@ The following practices are strictly prohibited to ensure brand integrity:
 For a full list of prohibited practices, refer to the Logo Usage section.
 
 ## Key Resources
+
 - **Official Website**: [rocq-prover.org](https://rocq-prover.org)
 - **Repository for Assets**: [Logos Directory](https://github.com/rocq-prover/rocq-prover.org/tree/main/rocq-id)
 
