@@ -11,12 +11,18 @@ If you want to work with the latest development version of the Rocq prover, foll
 
 First, create a dedicated switch to follow the development branch of Rocq:
 ```shell
-opam switch create rocq-master 4.14.2+options
+opam switch create rocq-master 4.14.4+options
 opam repo add core-dev https://rocq-prover.org/opam/core-dev
 opam install rocq-core.dev 
 opam pin add rocq-core --current
 ```
 Here we call the new switch `rocq-master`, you can of course pick any name you want.
+
+**Note: macOS 26 with Command Line Tools shipping the macOS 27 SDK:**
+If you happen to use macOS 26 and experience a `dune` segmentation fault during install, just
+create the switch with
+`ac_cv_func_pipe2=no ac_cv_func_dup3=no opam switch create rocq-master 4.14.4+options`
+(see ocaml/ocaml#15067).
 
 ## Install packages
 
@@ -35,7 +41,7 @@ opam install rocq-equations
 
 If you're using VS Code, install the language server:
 ```shell
-opam pin add -n vsrocq-language-server.dev https://github.com/rocq-prover/vsrocq.git --subpath=language-server
+opam pin add vsrocq-language-server.dev https://github.com/rocq-prover/vsrocq.git --subpath=language-server
 ```
 
 Inside VS Code, go to `Extensions > VsRocq`, then click on `Settings`, and set `Vsrocq: Path` to the path obtained via `which vsrocqtop` in a shell session.
