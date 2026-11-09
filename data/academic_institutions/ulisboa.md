@@ -10,7 +10,7 @@ location:
     long: -9.1384
 courses:
     - name: Programming Languages
-      url: https://fenix.tecnico.ulisboa.pt/disciplinas/LPro2646/2020-2021/2-semestre/teaching-material
+      url: https://fenix.tecnico.ulisboa.pt/disciplinas/LPro2646/2020-2021/2-semestre/teaching-material - [401 Unauthorized]
       year: 2021
       lecture_notes: true
 ---

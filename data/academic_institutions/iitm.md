@@ -10,7 +10,7 @@ location:
     long: 80.2344
 courses:
     - name: Programs and Proofs
-      url: https://www.cse.iitm.ac.in/course_details.php?arg=MTQ5
+      url: https://www.cse.iitm.ac.in/course_details.php?arg=MTQ5 - [404 Not Found]
       teacher: K. C. Sivaramakrishnan
       year: 2021
 ---
