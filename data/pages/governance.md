@@ -205,7 +205,7 @@ or documentation.
 All Projects under the Rocq governance are expected to be free and open source
 software, and the licensing arrangements should reflect this.
 
-The [detailed contributing guidelines](https://github.com/rocq-prover/rocq/blob/master/CONTRIBUTING.md)
+The [detailed contributing guidelines](https://github.com/rocq-prover/rocq/blob/master/CONTRIBUTING.md - [429 Too Many Requests])
 are kept in the repository of the Rocq Prover.
 
 ### C. Dispute Resolution

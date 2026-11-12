@@ -2,7 +2,7 @@
 name: "Purdue University"
 description: >
   Purdue University is a public land-grant research university in West Lafayette, Indiana, United States, and the flagship campus of the Purdue University system.
-url: "https://purdue.edu/"
+url: "https://purdue.edu/ - [1 Client error: Failure when receiving data from the peer]"
 logo: academic_institution/purdue.png
 continent: North America
 location:

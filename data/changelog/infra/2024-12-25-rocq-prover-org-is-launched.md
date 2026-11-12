@@ -15,4 +15,4 @@ along with its new [logo](/logo) and visual identity.
 This website is based on a fork of the [www.ocaml.org](https://www.ocaml.org) website.
 The Rocq developers are extremely grateful to the OCaml.org developers for making their sophisticated website open-source 🙏🏼.
 
-The new identity was designed by Bastien Sozeau, founder of the [Noir Blanc Rouge](https://noirblancrouge.com/) type foundry.
+The new identity was designed by Bastien Sozeau, founder of the [Noir Blanc Rouge](https://noirblancrouge.com/ - [503 Service Unavailable]) type foundry.
