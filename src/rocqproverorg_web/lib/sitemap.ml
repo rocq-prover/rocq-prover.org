@@ -32,6 +32,7 @@ let urls =
     Url.platform;
     Url.playground;
     Url.privacy_policy;
+    Url.ai_policy;
     Url.releases;
   ]
 

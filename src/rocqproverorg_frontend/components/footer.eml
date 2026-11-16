@@ -32,6 +32,7 @@ let ecosystem = [
 let policies = [
   (Url.governance_policy, "Governance");
   (Url.privacy_policy, "Privacy");
+  (Url.ai_policy, "AI policy");
   (Url.code_of_conduct, "Code of Conduct");
   ]
 

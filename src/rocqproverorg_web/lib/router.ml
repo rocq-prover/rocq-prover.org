@@ -53,6 +53,7 @@ let page_routes _t =
       Dream.get (Url.news_post ":id") Handler.news_post;
       Dream.get Url.jobs Handler.jobs;
       Dream.get Url.privacy_policy Handler.privacy_policy;
+      Dream.get Url.ai_policy Handler.ai_policy;
       Dream.get Url.code_of_conduct Handler.code_of_conduct;
       Dream.get (Url.rocq_team None) Handler.governance;
       Dream.get (Url.rocq_team (Some ":id")) Handler.governance_team;
