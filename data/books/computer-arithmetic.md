@@ -15,7 +15,7 @@ language:
   - english
 links:
   - description: Publisher's Book Website
-    uri: https://www.sciencedirect.com/book/9781785481123/computer-arithmetic-and-formal-proofs
+    uri: https://www.sciencedirect.com/book/9781785481123/computer-arithmetic-and-formal-proofs - [403 Forbidden]
 difficulty: advanced
 pricing: paid
 ---

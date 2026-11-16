@@ -2,7 +2,7 @@
 name: Arena
 description: > 
   Arena helps organizations hire the right people.
-url: "https://www.arena.io"
+url: "https://www.arena.io - [1 Client error: SSL peer certificate or SSH remote key was not OK]"
 logo: users/arena.jpg
 locations: 
   - United States

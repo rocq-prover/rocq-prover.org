@@ -2,7 +2,7 @@
 name: UPenn
 description: >
   The University of Pennsylvania (commonly known as Penn or UPenn) is a private Ivy League research university in Philadelphia, Pennsylvania, United States.
-url: "https://www.upenn.edu/"
+url: "https://www.upenn.edu/ - [403 Forbidden]"
 logo: academic_institution/upenn.png
 continent: North America
 featured: true
