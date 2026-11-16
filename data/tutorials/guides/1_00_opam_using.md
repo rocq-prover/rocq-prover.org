@@ -34,7 +34,7 @@ and `opam-depext` might still be unable to detect external
 dependencies, which will mean you have to check and install them
 yourself. To see more detailed information on external dependencies
 please consult
-the [INSTALL.md documentation in the GitHub repository](https://github.com/rocq-prover/rocq/blob/master/INSTALL.md).
+the [INSTALL.md documentation in the GitHub repository](https://github.com/rocq-prover/rocq/blob/master/INSTALL.md - [429 Too Many Requests]).
 
 ## The Rocq Platform scripts
 
