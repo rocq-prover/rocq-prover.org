@@ -623,6 +623,7 @@ let page canonical (_req : Dream.request) =
        ~content:page.body_html ~canonical)
 
 let privacy_policy = page Url.privacy_policy
+let ai_policy = page Url.ai_policy
 let governance_policy = page Url.governance_policy
 let code_of_conduct = page Url.code_of_conduct
 

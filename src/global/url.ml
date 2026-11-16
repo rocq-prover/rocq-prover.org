@@ -100,6 +100,7 @@ let rocq_team id =
   | None -> "/rocq-team"
   | Some id -> "/rocq-team/" ^ id
 let privacy_policy = "/policies/privacy-policy"
+let ai_policy = "/policies/ai-policy"
 let governance_policy = "/policies/governance"
 let code_of_conduct = "/policies/code-of-conduct"
 let playground = "https://x80.org/rhino-down/"
