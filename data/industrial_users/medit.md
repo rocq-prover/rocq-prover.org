@@ -2,7 +2,7 @@
 name: MEDIT
 description: > 
   MEDIT develops SuMo, an advanced bioinformatic system, for the analysis of protein 3D structures and the identification of drug-design targets. 
-url: "https://www.medit-pharma.com/"
+url: "https://www.medit-pharma.com/ - [1 Client error: Failure when receiving data from the peer]"
 logo: users/medit.jpg
 locations: 
   - France

@@ -2,7 +2,7 @@
 name: Psellos
 description: > 
   Psellos is a small group of computer scientists who became intrigued by the idea of coding iOS apps in OCaml.
-url: "https://www.psellos.com"
+url: "https://www.psellos.com - [1 Client error: Could not connect to server]"
 logo: users/psellos.png
 locations: 
   - United States

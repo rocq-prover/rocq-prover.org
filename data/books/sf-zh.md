@@ -17,7 +17,7 @@ language:
   - chinese
 links:
   - description: Read Online
-    uri: https://coq-zh.github.io/SF-zh/
+    uri: https://coq-zh.github.io/SF-zh/ - [404 Not Found]
 difficulty: beginner
 pricing: free
 ---

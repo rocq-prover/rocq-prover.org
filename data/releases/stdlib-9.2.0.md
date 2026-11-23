@@ -8,7 +8,7 @@ is_lts: false
 intro: |
   This page describes The Rocq Standard Library version **9.2.0**, released on
   July 24th, 2026. Go [here](/releases) for a list of all releases and
-  on [github](https://github.com/rocq-prover/stdlib/releases) for a list of all
+  on [github](https://github.com/rocq-prover/stdlib/releases) - [404 Not Found] for a list of all
   Standard Library releases.
 
   This release of the standard library is compatible with Rocq 9.1, 9.2 and 9.3.
