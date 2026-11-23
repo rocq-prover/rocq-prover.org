@@ -2,7 +2,7 @@
 kind: stdlib
 version: 9.1.0
 date: 2026-02-10
-is_latest: true
+is_latest: false
 is_prerelease: false
 is_lts: false
 intro: |
