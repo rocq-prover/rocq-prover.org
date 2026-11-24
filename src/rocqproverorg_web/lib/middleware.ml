@@ -12,44 +12,20 @@ let no_trailing_slash next_handler request =
   else Dream.redirect request target
 
 let language_manual_version next_handler request =
-  let open Data in
   let init_path = request |> Dream.target |> String.split_on_char '/' in
-  let patch (release : Release.t) = Rocqproverorg.Url.patch release.version in
-  let tweak_base u =
-    match List.rev u with
-    | base :: _ when String.contains base '.' -> u
-    | htap -> List.rev ("index.html" :: htap)
-  in
   let path =
     match init_path with
-    (* When using the /doc/ path, a version is always already provided. *)
+    (* Versioned documentation: complete directory paths with index.html. *)
     | "" :: "doc" :: version :: (_ :: _ as path) ->
-        "" :: "doc" :: version :: tweak_base path
-    (* We provide shorter paths that always redirect to the latest version. *)
-    | ""
-      :: (("api" | "corelib" | "refman" | "stdlib" | "refman-stdlib") as head :: tail as
-          path) ->
-        let version = 
-          match Release.latest.stdlib_version with
-          | None -> patch Release.latest 
-          | Some v -> (match head with
-            | "stdlib" | "refman-stdlib" -> Rocqproverorg.Url.patch v
-            | _ -> patch Release.latest)
-        in
-        let path = 
-          match Release.latest.kind with
-          | `Rocq -> path
-          | `Coq -> (match head with 
-              | "refman-stdlib" -> "refman" :: tail
-              | "corelib" -> "stdlib" :: tail
-              | _ -> path)
-          | _ -> assert false
-        in
-        "" :: "doc" :: version :: tweak_base path
+        "" :: "doc" :: version :: Doc.index_if_dir path
+    (* Stable paths serving the current release (see [Doc]). *)
+    | "" :: (head :: _ as path) when Doc.is_component head ->
+        "" :: Doc.index_if_dir path
     | u -> u
   in
   if init_path = path then next_handler request
-  else Dream.redirect ~status:`Found request (String.concat "/" path)
+  else
+    Dream.redirect ~status:`Moved_Permanently request (String.concat "/" path)
 
 let head handler request =
   match Dream.method_ request with

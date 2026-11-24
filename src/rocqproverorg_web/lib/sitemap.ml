@@ -54,24 +54,9 @@ let urlables =
       Urlable (Conference.all, fun r -> to_url @@ Url.conference r.slug);
     ]
 
-let doc =
-  let path_to_url path = path |> Fpath.to_string |> ( ^ ) "/doc/" |> to_url in
-  let add_url doc path urls =
-    Fpath.relativize ~root:doc path
-    |> Option.fold
-         ~some:(fun path -> path |> path_to_url |> Fun.flip List.cons urls)
-         ~none:urls
-  in
-  let releases =
-    let open Data.Release in
-    List.map (fun (r : t) -> Url.minor r.version) all |> List.sort_uniq compare
-  in
-  Fpath.of_string Config.doc_path
-  |> Fun.flip Result.bind (fun doc ->
-         Bos.OS.Path.fold ~elements:`Files (add_url doc) []
-           (List.map (Fpath.add_seg doc) releases))
-  |> Result.value ~default:[] |> List.to_seq
-
+(* Pages of the current release of the documentation, under the stable paths at
+   which it is served. *)
+let doc = Doc.sitemap_urls Config.doc_path |> List.map to_url |> List.to_seq
 let urlset (Urlable (all, show)) = Seq.map show (List.to_seq all)
 
 let data =
