@@ -30,13 +30,18 @@ let urls =
     Url.packages_search;
     Url.papers;
     Url.platform;
-    Url.playground;
     Url.privacy_policy;
     Url.ai_policy;
     Url.releases;
   ]
 
-let to_url u = "\n<url><loc>https://rocq-prover.org" ^ u ^ "</loc></url>"
+(* Only paths of this site belong in its sitemap; pages hosted elsewhere (such
+   as the playground) are skipped. *)
+let is_local u = not (String.starts_with ~prefix:"http" u)
+
+let to_url u =
+  if is_local u then "\n<url><loc>https://rocq-prover.org" ^ u ^ "</loc></url>"
+  else ""
 
 let urlables =
   let open Data in
