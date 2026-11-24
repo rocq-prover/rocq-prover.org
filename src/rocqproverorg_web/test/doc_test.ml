@@ -58,9 +58,17 @@ let inject_canonical () =
   check_string "no head" "<p>x</p>"
     (Doc.inject_canonical ~href:"/refman/x.html" "<p>x</p>")
 
-(* A small documentation tree with the current Rocq release ([V9.3.0]), the
-   current standard library ([v9.2]), an old release and a prerelease. *)
+(* Directories of a small documentation tree: the current Rocq release and
+   standard library as given by the site data, an old release, a prerelease and
+   a version with an unknown layout. *)
+let current = Doc.latest_dir "refman"
+let current_stdlib = Doc.latest_dir "refman-stdlib"
+let old = "V0.1.0"
+let prerelease = "V99.0+alpha"
+let unknown = "V0.0"
+
 let with_doc_tree f =
+  assert (old <> current && prerelease <> current && unknown <> current);
   let root = Filename.temp_file "rocq-doc" "" in
   Sys.remove root;
   let write path content =
@@ -74,62 +82,51 @@ let with_doc_tree f =
     Out_channel.with_open_bin file (fun oc -> output_string oc content)
   in
   let html title = "<html><head><title>" ^ title ^ "</title></head></html>" in
-  write "V9.3.0/refman/index.html" (html "9.3.0");
-  write "V9.3.0/refman/new.html" (html "9.3.0 new");
-  write "V9.3.0/refman/_static/theme.css" "body {}";
-  write "V9.2.0/refman/index.html" (html "9.2.0");
-  write "V9.2.0/refman/removed.html" (html "9.2.0 removed");
-  write "V9.4+alpha/refman/index.html" (html "9.4+alpha");
+  write (current ^ "/refman/index.html") (html "current");
+  write (current ^ "/refman/new.html") (html "current new");
+  write (current ^ "/refman/_static/theme.css") "body {}";
+  write (old ^ "/refman/index.html") (html "old");
+  write (old ^ "/refman/removed.html") (html "old removed");
+  write (prerelease ^ "/refman/index.html") (html "prerelease");
   write "master/refman/_static/theme.css" "body {}";
-  write "v9.2/refman-stdlib/index.html" (html "stdlib 9.2.0");
-  write "V8.0/doc/index.html" (html "8.0");
+  write (current_stdlib ^ "/refman-stdlib/index.html") (html "current stdlib");
+  write (unknown ^ "/doc/index.html") (html "unknown layout");
   f root
 
 let run handler = Dream.test handler (Dream.request ~target:"/" "")
 let body response = Lwt_main.run (Dream.body response)
 let status response = Dream.status_to_int (Dream.status response)
-
-let has_canonical href response =
-  Doc.find_substring ~sub:(Doc.canonical_tag href) (body response) <> None
-
+let contains sub response = Doc.find_substring ~sub (body response) <> None
+let has_canonical href = contains (Doc.canonical_tag href)
 let robots response = Dream.header response "X-Robots-Tag"
-
-(* The loaders look up the current release in the site data; the tree above must
-   match it for these tests to be meaningful. *)
-let current_matches_data () =
-  check_string "current refman directory" "V9.3.0" (Doc.latest_dir "refman");
-  check_string "current stdlib directory" "v9.2" (Doc.latest_dir "stdlib")
 
 let doc_loader () =
   with_doc_tree @@ fun root ->
   let get path = run (Doc.doc_loader root path) in
-  let r = get "V9.2.0/refman/index.html" in
+  let r = get (old ^ "/refman/index.html") in
   Alcotest.(check int) "old page status" 200 (status r);
   check_bool "old page canonical" true (has_canonical "/refman/index.html" r);
   Alcotest.(check (option string)) "old page indexable" None (robots r);
-  let r = get "V9.2.0/refman/removed.html" in
-  check_bool "removed page has no canonical" false
-    (Doc.find_substring ~sub:"canonical" (body r) <> None);
-  let r = get "V9.3.0/refman/new.html" in
+  let r = get (old ^ "/refman/removed.html") in
+  check_bool "removed page has no canonical" false (contains "canonical" r);
+  let r = get (current ^ "/refman/new.html") in
   check_bool "current page canonical" true (has_canonical "/refman/new.html" r);
-  let r = get "V9.3.0/refman/_static/theme.css" in
+  let r = get (current ^ "/refman/_static/theme.css") in
   check_string "asset untouched" "body {}" (body r);
-  let r = get "V9.4+alpha/refman/index.html" in
+  let r = get (prerelease ^ "/refman/index.html") in
   Alcotest.(check (option string))
     "prerelease noindex" (Some "noindex") (robots r);
-  check_bool "prerelease has no canonical" false
-    (Doc.find_substring ~sub:"canonical" (body r) <> None);
+  check_bool "prerelease has no canonical" false (contains "canonical" r);
   let r = get "master/refman/_static/theme.css" in
   Alcotest.(check (option string))
     "prerelease asset noindex" (Some "noindex") (robots r);
-  let r = get "v9.2/refman-stdlib/index.html" in
+  let r = get (current_stdlib ^ "/refman-stdlib/index.html") in
   check_bool "stdlib canonical" true
     (has_canonical "/refman-stdlib/index.html" r);
-  let r = get "V8.0/doc/index.html" in
+  let r = get (unknown ^ "/doc/index.html") in
   Alcotest.(check int) "unknown layout served" 200 (status r);
-  check_bool "unknown layout untouched" false
-    (Doc.find_substring ~sub:"canonical" (body r) <> None);
-  let r = get "V9.2.0/refman/missing.html" in
+  check_bool "unknown layout untouched" false (contains "canonical" r);
+  let r = get (old ^ "/refman/missing.html") in
   Alcotest.(check int) "missing page" 404 (status r)
 
 let stable_loader () =
@@ -137,12 +134,10 @@ let stable_loader () =
   let get component rest = run (Doc.stable_loader component root rest) in
   let r = get "refman" "new.html" in
   Alcotest.(check int) "current page status" 200 (status r);
-  check_bool "serves current release" true
-    (Doc.find_substring ~sub:"9.3.0 new" (body r) <> None);
+  check_bool "serves current release" true (contains "current new" r);
   check_bool "self canonical" true (has_canonical "/refman/new.html" r);
   let r = get "refman-stdlib" "index.html" in
-  check_bool "stdlib from its own directory" true
-    (Doc.find_substring ~sub:"stdlib 9.2.0" (body r) <> None);
+  check_bool "stdlib from its own directory" true (contains "current stdlib" r);
   let r = get "refman" "removed.html" in
   Alcotest.(check int) "page absent from current release" 404 (status r)
 
@@ -166,8 +161,6 @@ let () =
         ] );
       ( "serving",
         [
-          Alcotest.test_case "current release matches data" `Quick
-            current_matches_data;
           Alcotest.test_case "doc_loader" `Quick doc_loader;
           Alcotest.test_case "stable_loader" `Quick stable_loader;
           Alcotest.test_case "sitemap_urls" `Quick sitemap_urls;
