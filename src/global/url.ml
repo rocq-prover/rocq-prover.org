@@ -69,15 +69,16 @@ let manual_with_version v = "/doc/" ^ patch v ^ "/refman/index.html"
 let manual = "/refman"
 let corelib_with_version v = "/doc/" ^ patch v ^ "/corelib/index.html"
 let corelib = "/corelib"
+(* The standard library is documented in the directory of its minor version
+   ([v9.2]); before it was split from Rocq it was documented with Rocq. *)
+let stdlib_dir v stdlibv =
+  match stdlibv with None -> patch v | Some v -> "v" ^ minor v
+
 let stdlib_with_version v stdlibv =
-  match stdlibv with
-  | None -> "/doc/" ^ patch v ^ "/stdlib/index.html"
-  | Some v -> "/doc/" ^ patch v ^ "/stdlib/index.html"  
+  "/doc/" ^ stdlib_dir v stdlibv ^ "/stdlib/index.html"
 let stdlib = "/stdlib"
 let stdlib_manual_with_version v stdlibv =
-  match stdlibv with
-  | None -> "/doc/" ^ patch v ^ "/refman-stdlib/index.html"
-  | Some v -> "/doc/" ^ patch v ^ "/refman-stdlib/index.html"
+  "/doc/" ^ stdlib_dir v stdlibv ^ "/refman-stdlib/index.html"
 let stdlib_manual = "/refman-stdlib"
 let api_with_version v = "/doc/" ^ patch v ^ "/api/index.html"
 let api = "/api"

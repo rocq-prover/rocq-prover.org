@@ -133,7 +133,16 @@ let router t =
       sitemap_routes;
       Dream.scope ""
         [ Dream_encoding.compress ]
-        [ Dream.get "/doc/**" (Dream.static Config.doc_path) ];
+        (List.map
+           (fun component ->
+             Dream.get ("/" ^ component ^ "/**")
+               (Dream.static ~loader:(Doc.stable_loader component)
+                  Config.doc_path))
+           Doc.components
+        @ [
+            Dream.get "/doc/**"
+              (Dream.static ~loader:Doc.doc_loader Config.doc_path);
+          ]);
       Dream.scope ""
         [ ]
         [ Dream.get "/media/**" (Dream.static ~loader:media_loader "") ];

@@ -9,7 +9,10 @@
   dream-encoding
   cmarkit
   rocqproverorg.data
-  timedesc))
+  timedesc
+  lwt.unix
+  bos
+  fpath))
 
 (rule
  (deps (universe))

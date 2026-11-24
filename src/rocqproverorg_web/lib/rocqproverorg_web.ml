@@ -2,6 +2,8 @@ module Handler = Handler
 (** Entrypoint to OCaml.org' web library. *)
 
 module Graphql = Graphql
+module Doc = Doc
+module Middleware = Middleware
 
 (* Set up basic logging for logs that would happen before Dream is set up. *)
 let () =
